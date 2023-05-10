@@ -1,0 +1,86 @@
+[
+  {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 1,
+    "status": "Critical"
+  },
+  {
+    "patient_name": "Jane Smith",
+    "doctor": "Dr. Johnson",
+    "bed_number": 2,
+    "status": "Stable"
+  },
+  {
+    "patient_name": "Bob Johnson",
+    "doctor": "Dr. Lee",
+    "bed_number": 3,
+    "status": "Serious"
+  },
+  {
+    "patient_name": "Sally Lee",
+    "doctor": "Dr. Doe",
+    "bed_number": 4,
+    "status": "Critical"
+  },
+  {
+    "patient_name": "Joe Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 5,
+    "status": "Stable"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 6,
+    "status": "Critical"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 7,
+    "status": "Critical"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 8,
+    "status": "Critical"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 9,
+    "status": "Critical"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 10,
+    "status": "Critical"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 11,
+    "status": "Critical"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 12,
+    "status": "Critical"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 13,
+    "status": "Critical"
+    },
+    {
+    "patient_name": "John Doe",
+    "doctor": "Dr. Smith",
+    "bed_number": 14,
+    "status": "Critical"
+    }
+]

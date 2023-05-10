@@ -4,7 +4,8 @@ class AddPatientForm extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = `<form id="form" class="p-4 sm:ml-64 m-16">
+        this.innerHTML = `
+        <form id="form" class="p-4 sm:ml-64 m-16">
         <div class="space-y-12">
                 <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>

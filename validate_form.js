@@ -255,7 +255,7 @@ let hospitals = {
   ],
 };
 
-function loadDepartments(hositals) {
+function loadDepartments() {
   let departmentsElement = document.getElementById("departments");
   for (let department of hospitals.departments) {
     let optionElement = document.createElement("option");
@@ -264,7 +264,7 @@ function loadDepartments(hositals) {
     departmentsElement.appendChild(optionElement);
   }
 }
-function loadDoctors(hositals) {
+function loadDoctors() {
   let doctorsElement = document.getElementById("doctors");
   let selectedDepartment = document.getElementById("departments").value;
   doctorsElement.innerHTML = "";
@@ -280,7 +280,7 @@ function loadDoctors(hositals) {
   }
 }
 
-function loadNurses(hositals) {
+function loadNurses() {
   let nursesElement = document.getElementById("nurses");
   let selectedDepartment = document.getElementById("departments").value;
   nursesElement.innerHTML = "";
