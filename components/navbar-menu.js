@@ -104,14 +104,6 @@ class NavbarMenu extends HTMLElement {
             </ul>
          </div>
       </aside>
-
-      <!-- Main container -->
-        <!-- FORM  Start-->
-        <!--
-  This example requires some changes to your config:
-      
- 
--->
 ${this.innerHTML}
      `;
     }
