@@ -1,0 +1,29 @@
+#continer {
+    display: flex;
+}
+#col1 {
+    margin-left: 70px;
+    margin-top: 119px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+#col2 {
+    margin-top: 70px;
+    margin-right: 119px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+.rec {
+    margin-top: 70px;
+    width: 457px;
+    height: 299px;
+    background-color: #C4C4C4;
+}
+.content-none {
+    margin-top: 70px;
+    width: 457px;
+    height: 299px;
+    background-color: #C4C4C4;
+}
