@@ -5,12 +5,17 @@
     <title>Add Patient</title>
     <script src="components/navbar-menu.js"></script>
     <script src="components/add-patient-form.js"> </script>
+    <script src="components/alert-message.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="application/json" id="hospitals-data"></script>
+    
     <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
 </head>
 <body>
     <navbar-menu>
+        <alert-message></alert-message>
         <add-patient-form></add-patient-form>
     </navbar-menu>
+    <script src="validate_form.js"></script>
 </body>
 </html>
