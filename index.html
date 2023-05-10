@@ -7,7 +7,7 @@
         <script src="../components/navbar-menu.js"></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <!--bootstrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">   
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
@@ -16,36 +16,28 @@
         <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
     </head>
     <body>
-    <navbar-menu></navbar-menu>
-    <main>
-        <div class="card" style="width:470px; height:370px; left:720px; top:135px;">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment1</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+    <navbar-menu>
+        <section class="p-4 sm:ml-64 m-16">
+        <div class="space-y-12">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-gray-400">
+              <div class="flex-shrink-0">
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </div>
+              <div class="min-w-0 flex-1">
+                <a href="#" class="focus:outline-none">
+                  <span class="absolute inset-0" aria-hidden="true"></span>
+                  <p class="text-sm font-medium text-gray-900">Leslie Alexander</p>
+                  <p class="truncate text-sm text-gray-500">Co-Founder / CEO</p>
+                </a>
+              </div>
             </div>
+          
+            <!-- More people... -->
           </div>
-          <div class="card" style="width:470px; height:370px; left:720px; top:150px;">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment2</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width:470px; height:370px; left:150px; top:-605px;">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment3</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card" style="width:470px; height:370px; left:150px; top:-590px;">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment4</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-    </main>
+        </div>
+        </section>
+    </navbar-menu>
+    
 </body>
 </html>
