@@ -143,7 +143,7 @@ class NavbarMenu extends HTMLElement {
             </ul>
          </div>
       </aside>
-${this.innerHTML}
+        <div class = "flex m-16 p-4 sm:ml-64">${this.innerHTML}</div>
      `;
     }
 }

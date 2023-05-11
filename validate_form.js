@@ -254,7 +254,17 @@ let hospitals = {
     },
   ],
 };
+function loadHospital() {
+  fetch('assets/hospitals.json')
+ .then(response => response.json())
+ .then(data => {
+   console.log(data);
+   return data;
+  })
+   // Loop through the patient data and create a card for each patient
+  //  data.forEach(patient => {
 
+}
 function loadDepartments() {
   let departmentsElement = document.getElementById("departments");
   for (let department of hospitals.departments) {
@@ -296,6 +306,7 @@ function loadNurses() {
   }
 }
 window.onload = function () {
+  let hospitals = loadHospital();
   loadDepartments(hospitals);
   loadDoctors(hospitals);
   loadNurses(hospitals);
