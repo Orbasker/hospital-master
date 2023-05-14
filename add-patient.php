@@ -8,18 +8,18 @@
 </head>
 <body>
      <?php 
-        $firstname = $_GET['firstname'];
-        $lastname = $_GET['lastname'];
-        $ID = $_GET['ID'];
-        $department = $_GET['department'];
-        $doctor = $_GET['doctor'];
-        $date = $_GET['date'];
-        $time = $_GET['time'];
-        $status = $_GET['status'];
-        $conn = mysqli_connect('localhost', 'root', '', 'hospital');
-        $sql = "INSERT INTO patient (firstname, lastname, ID, department, doctor, date, time, status) VALUES ('$firstname', '$lastname', '$ID', '$department', '$doctor', '$date', '$time', '$status')";
-        mysqli_query($conn, $sql);
-        header("Location: index.php");
+        $firstname = $_GET['first-name'];
+        $lastname = $_GET['last-name'];
+        $ID = $_GET['id'];
+        $department = $_GET['departments'];
+        $doctor = $_GET['doctors'];
+        // $date = $_GET['date'];
+        // $time = $_GET['time'];
+        // $status = $_GET['status'];
+        // $conn = mysqli_connect('localhost', 'root', '', 'hospital');
+        // $sql = "INSERT INTO patient (firstname, lastname, ID, department, doctor, date, time, status) VALUES ('$firstname', '$lastname', '$ID', '$department', '$doctor', '$date', '$time', '$status')";
+        // mysqli_query($conn, $sql);
+        // header("Location: index.php");
 
         echo "<h1>Added:
             $firstname <br>

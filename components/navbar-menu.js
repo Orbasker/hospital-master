@@ -56,7 +56,7 @@ class NavbarMenu extends HTMLElement {
         </div>
       </nav>
       <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
-         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+         <div class="h-full m-4 px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
             <ul class="space-y-2 font-medium">
                <li>
                   <a href="/index.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -89,7 +89,7 @@ class NavbarMenu extends HTMLElement {
                   </a>
                </li>
                <li>
-                  <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <a href="list-view.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                   <svg fill="#000000" width="25px" height="25px" viewBox="0 0 200 200" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><title/><path d="M100,15a85,85,0,1,0,85,85A84.93,84.93,0,0,0,100,15Zm0,150a65,65,0,1,1,65-65A64.87,64.87,0,0,1,100,165Zm0-82.5a10,10,0,0,0-10,10V140a10,10,0,0,0,20,0V92.5A10,10,0,0,0,100,82.5ZM100,50A10,10,0,0,0,90,60v5a10,10,0,0,0,20,0V60A10,10,0,0,0,100,50Z"/></svg>
                   <span class="flex-1 ml-3 whitespace-nowrap">Department information</span>
                   </a>
@@ -141,7 +141,7 @@ class NavbarMenu extends HTMLElement {
             </ul>
          </div>
       </aside>
-        <div class = "flex m-16 p-4 sm:ml-64">${this.innerHTML}</div>
+        <div class = "flex m-16 p-4 ">${this.innerHTML}</div>
      `;
     }
 }

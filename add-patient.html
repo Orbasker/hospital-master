@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Add Patient</title>
     <script src="components/navbar-menu.js"></script>
-    <script src="components/add-patient-form.js"> </script>
     <script src="components/alert-message.js"></script>
     <script src="components/Breadcrumb.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +14,7 @@
 <body>
     <navbar-menu>
         <alert-message></alert-message>
-        <bread-crumbs></bread-crumbs>
+        <!-- <bread-crumbs></bread-crumbs> -->
           
        
   
@@ -23,7 +22,10 @@
             
         </add-patient-form>
     </navbar-menu>
+    <script src="components/add-patient-form.js"> </script>
+
     <script src="validate_form.js"></script>
+
     <script>
         const breadcrumbItem = document.getElementById('personalDetails');
         let lastKnownScrollPosition = 0;
