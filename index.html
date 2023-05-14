@@ -14,6 +14,7 @@
         <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
         <!--bootstrap-->
         <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -22,16 +23,120 @@
             <section id = "continer" class="p-4 lg:ml-64 m-16">
                 <div class="container mx-auto">
                     <div class="grid grid-cols-2 grid-rows-2 gap-4 h-screen w-full">
-                      <div class="bg-gray-500"></div>
                       <div class="bg-gray-500">
-                        <img src="../svg/file1.svg">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" left="845px" top="194px" fill="#ffc40d" class="bi bi-diamond-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435z"/>
-                          </svg> -->
+                        <table class="table caption-top">
+                          <h1 class="text-center" style="font-size: 20px;">Doctors on call</h1>
+                          <thead>
+                            <tr>
+                              <th scope="col">Doctor's name</th>
+                              <th scope="col">Department</th>
+                              <th scope="col">Phone number</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">Prof. Uri Peled</th>
+                              <td>Otolaryngology</td>
+                              <td>0524443230</td>
+                              <!-- <td>Prof. Uri Peled</td>
+                              <td>Dr. Schwartz Odel</td>
+                              <td>Dr. Bar Or Shira</td>
+                              <td>Prof. Uri Peled</td> -->
+                            </tr>
+                            <tr>
+                              <th scope="row">Dr. Schwartz Or</th>
+                              <td>Maternity</td>
+                              <td>0524371230</td>
+                          
+                            </tr>
+                            <tr>
+                              <th scope="row">Dr. Bar Or Shira</th>
+                              <td>Radiology</td>
+                              <td>0535743230</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Prof. Uri Peled</th>
+                              <td>Radiology</td>
+                              <td>0535743230</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="bg-gray-500"></div>
+
                       <div class="bg-gray-500">
-                        <img src="../svg/emerdes.svg">
+                        <h1 class="text-center" style="font-size: 20px;">Department load in real time</h1>
+                        <img src="../svg/file1.svg" style="width: 140px; height: 125px; margin: -10px auto;">
+                        <h2 class="text-center" style="font-size: 16px;">2824</h2>
+                        <h3 class="text-center" style="font-size: 15px;">Hospital Burden Index</h3>
+                        <h3 class="text-center" style="font-size: 15px;">176 Available Beds</h3>
+                        <table class="table caption-top">
+                          <!-- <caption>List of users</caption> -->
+                          <thead>
+                            <tr>
+                              <!-- <th scope="col">#</th> -->
+                              <th scope="col">First</th>
+                              <th scope="col">Last</th>
+                              <!-- <th scope="col">Handle</th> -->
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <!-- <th scope="row">1</th> -->
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <!-- <td>@mdo</td> -->
+                            </tr>
+                            <tr>
+                              <!-- <th scope="row">2</th> -->
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <!-- <td>@fat</td> -->
+                            </tr>
+                            <!-- <tr>
+                              <th scope="row">3</th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                            </tr> -->
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div class="bg-gray-500">
+                        <h1 class="text-center" style="font-size: 20px;">System Recommendations</h1>
+                      </div>
+
+                      <div class="bg-gray-500">
+                        <h1 class="text-center" style="font-size: 20px;">General Bed Occupancy</h1>
+                        <!-- <img src="../svg/EMERGENCY1.svg" style="width: 750px; height: 650px; margin-top: -140px;"> -->
+                        <div class="mb-1 text-base font-medium dark:text-white">Emergency</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                          <div class="bg-gray-600 h-2.5 rounded-full dark:bg-gray-300" style="width: 87%"></div>
+                        </div>
+                        <div class="mb-1 text-base font-medium text-blue-700 dark:text-blue-500">Children</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                          <div class="bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div>
+                        </div>
+                        <div class="mb-1 text-base font-medium text-red-700 dark:text-red-500">Cardiology</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                          <div class="bg-red-600 h-2.5 rounded-full dark:bg-red-500" style="width: 27%"></div>
+                        </div>
+                        <div class="mb-1 text-base font-medium text-green-700 dark:text-green-500">Radiology</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                          <div class="bg-green-600 h-2.5 rounded-full dark:bg-green-500" style="width: 32%"></div>
+                        </div>
+                        <div class="mb-1 text-base font-medium text-yellow-700 dark:text-yellow-500">Neurology</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                          <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 12%"></div>
+                        </div>
+                        <div class="mb-1 text-base font-medium text-indigo-700 dark:text-indigo-500">Maternity</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                          <div class="bg-indigo-600 h-2.5 rounded-full dark:bg-indigo-500" style="width: 45%"></div>
+                        </div>
+                        <div class="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Otolaryngology</div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                          <div class="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500" style="width: 40%"></div>
+                        </div>
                       </div>
                     </div>
                 </div>      
