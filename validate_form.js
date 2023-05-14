@@ -261,8 +261,6 @@ function loadHospital() {
    console.log(data);
    return data;
   })
-   // Loop through the patient data and create a card for each patient
-  //  data.forEach(patient => {
 
 }
 function loadDepartments() {
