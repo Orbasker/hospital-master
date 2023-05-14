@@ -5,13 +5,13 @@ class AddPatientForm extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-        <form id="form" class="p-4 sm:ml-64 m-16">
+        <form id="form" class="p-4 lg:ml-64 m-16" action="add-patient.php" method="GET">
         <div class="space-y-12">
                 <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
                 <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
               </div>
-          <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">
+          <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20 ">
             
             <div>
               <div class="sm:col-span-3">

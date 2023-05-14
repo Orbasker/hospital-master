@@ -1,273 +1,42 @@
-let hospitals = {
-  name: "Hospital XYZ",
-  departments: [
-    {
-      name: "Cardiology",
-      doctors: [
-        {
-          name: "Dr. Smith",
-          specialty: "Cardiologist",
-        },
-        {
-          name: "Dr. Johnson",
-          specialty: "Cardiologist",
-        },
-        {
-          name: "Dr. Lee",
-          specialty: "Cardiologist",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Cardiology Nurse",
-        },
-        {
-          name: "Linda Cohen",
-          specialty: "Cardiology Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Cardiology Nurse",
-        },
-      ],
-    },
-    {
-      name: "Orthopedics",
-      doctors: [
-        {
-          name: "Dr. Davis",
-          specialty: "Orthopedic Surgeon",
-        },
-        {
-          name: "Dr. Brown",
-          specialty: "Orthopedic Surgeon",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Orthopedic Nurse",
-        },
-        {
-          name: "Linda Cohen",
-          specialty: "Orthopedic Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Orthopedic Nurse",
-        },
-      ],
-    },
-    {
-      name: "Gastroenterology",
-      doctors: [
-        {
-          name: "Dr. Patel",
-          specialty: "Gastroenterologist",
-        },
-        {
-          name: "Dr. Kim",
-          specialty: "Gastroenterologist",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Gastroenterologist",
-        },
-        {
-          name: "Dr. Kim",
-          specialty: "Gastroenterologist",
-        },
-        {
-          name: "Dr. Noya",
-          specialty: "Gastroenterologist",
-        },
-      ],
-    },
-    {
-      name: "Neurology",
-      doctors: [
-        {
-          name: "Dr. Lee",
-          specialty: "Neurologist",
-        },
-        {
-          name: "Dr. Kim",
-          specialty: "Neurologist",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Neurology Nurse",
-        },
-        {
-          name: "Linda Cohen",
-          specialty: "Neurology Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Neurology Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Neurology Nurse",
-        },
-      ],
-    },
-    {
-      name: "Oncology",
-      doctors: [
-        {
-          name: "Dr. Lee",
-          specialty: "Oncologist",
-        },
-        {
-          name: "Dr. Kim",
-          specialty: "Oncologist",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Oncology Nurse",
-        },
-        {
-          name: "Linda Cohen",
-          specialty: "Oncology Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Oncology Nurse",
-        },
-      ],
-    },
-    {
-      name: "Pediatrics",
-      doctors: [
-        {
-          name: "Dr. Lee",
-          specialty: "Pediatrician",
-        },
-        {
-          name: "Dr. Kim",
-          specialty: "Pediatrician",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Pediatric Nurse",
-        },
-        {
-          name: "Linda Cohen",
-          specialty: "Pediatric Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Pediatric Nurse",
-        },
-      ],
-    },
-    {
-      name: "Psychiatry",
-      doctors: [
-        {
-          name: "Dr. Lee",
-          specialty: "Psychiatrist",
-        },
-        {
-          name: "Dr. Kim",
-          specialty: "Psychiatrist",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Psychiatry Nurse",
-        },
-        {
-          name: "Linda Cohen",
-          specialty: "Psychiatry Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Psychiatry Nurse",
-        },
-      ],
-    },
-    {
-      name: "Radiology",
-      doctors: [
-        {
-          name: "Dr. Lee",
-          specialty: "Radiologist",
-        },
-        {
-          name: "Dr. Kim",
-          specialty: "Radiologist",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Radiology Nurse",
-        },
-        {
-          name: "Linda Cohen",
-          specialty: "Radiology Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Radiology Nurse",
-        },
-      ],
-    },
-    {
-      name: "Urology",
-      doctors: [
-        {
-          name: "Dr. Lee",
-          specialty: "Urologist",
-        },
-        {
-          name: "Dr. Kim",
-          specialty: "Urologist",
-        },
-      ],
-      nurse: [
-        {
-          name: "Sara Smith",
-          specialty: "Urology Nurse",
-        },
-        {
-          name: "Linda Cohen",
-          specialty: "Urology Nurse",
-        },
-        {
-          name: "Kim Wilson",
-          specialty: "Urology Nurse",
-        },
-      ],
-    },
-  ],
-};
-function loadHospital() {
-  fetch('assets/hospitals.json')
+ function loadHospital() {
+  return fetch('assets/hospitals.json')
  .then(response => response.json())
  .then(data => {
    console.log(data);
-   return data;
+  return data;
   })
-   // Loop through the patient data and create a card for each patient
-  //  data.forEach(patient => {
 
 }
+
+let hospitals;
+
+window.onload = function () {
+  console.log("window loaded");
+
+  loadHospital()
+    .then((loadedHospitals) => {
+      hospitals = loadedHospitals;
+      console.log(hospitals);
+
+      loadDepartments();
+      loadDoctors();
+      loadNurses();
+
+      let depElement = document.getElementById("departments");
+      depElement.addEventListener("change", loadDoctors);
+      depElement.addEventListener("change", loadNurses);
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during the data loading
+      console.error("Error loading hospitals:", error);
+    });
+   
+};
+
+
 function loadDepartments() {
   let departmentsElement = document.getElementById("departments");
-  for (let department of hospitals.departments) {
+  for (let department of Array.from(hospitals.departments) ) {
     let optionElement = document.createElement("option");
     optionElement.value = department.name;
     optionElement.innerHTML = department.name;
@@ -305,15 +74,7 @@ function loadNurses() {
     }
   }
 }
-window.onload = function () {
-  let hospitals = loadHospital();
-  loadDepartments(hospitals);
-  loadDoctors(hospitals);
-  loadNurses(hospitals);
-  let depElement = document.getElementById("departments");
-  depElement.addEventListener("change", loadDoctors);
-  depElement.addEventListener("change", loadNurses);
-};
+
 
 function isDoctorExists(doctorName) {
   for (let department of hositals.departments) {

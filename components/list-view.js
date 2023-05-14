@@ -19,7 +19,7 @@ class listView extends HTMLElement {
            </div>
 
        <!-- Table -->
-       <table id="table_view" class="table-auto mx-auto w-4/5 md:w-2/3 lg:w-3/4 my-8">
+       <table id="table_view" class="table-auto mx-auto w-full md:w-2/3 lg:w-3/4 my-8 ">
            <thead>
                <tr>
                    
@@ -38,8 +38,9 @@ class listView extends HTMLElement {
 
       
        <!-- Map View with Cards -->
-       <div id="map_view" class="hidden">
-           <div id="patients" class="nflex flex-wrap justify-center gap-4 grid grid-cols-2" >
+       <div id="map_view" class="hidden ">
+           <div id="patients" class="nflex flex-wrap justify-center gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+            " >
                
            </div>
        </div>
@@ -120,22 +121,38 @@ fetch('patients.json')
    data.forEach(patient => {
      // Create a card element
      const card = document.createElement('div');
-     card.classList.add('bg-white', 'rounded-lg', 'shadow-md', 'p-4', 'w-64','m-4');
+     card.classList.add(
+        // 'bg-white',
+        'rounded-lg',
+        'shadow-md',
+        'p-4',
+        'm-4',
+        'flex',
+        'flex-col',
+        'justify-between',
+        'sm:w-64',
+        'md:w-48',
+        'lg:w-32',
+        'xl:w-48',
+        `${getStatusClass(patient.status)}`
+      );
+      
+    //  card.classList.add('bg-white', 'rounded-lg', 'shadow-md', 'p-4','m-4' ,'sm:w-64', 'md:w-48' ,'lg:w-32');
      // Populate the card with patient data
      const title = document.createElement('h2');
      title.classList.add('text-lg', 'font-medium');
      title.textContent = `Bed ${patient.bed_number}`;
 
      const name = document.createElement('p');
-     name.classList.add('text-gray-500');
+     name.classList.add('text-black-500');
      name.textContent = `Patient Name: ${patient.patient_name}`;
 
      const doctor = document.createElement('p');
-     doctor.classList.add('text-gray-500');
+     doctor.classList.add('text-black-500');
      doctor.textContent = `Doctor: ${patient.doctor}`;
 
      const status = document.createElement('p');
-     status.classList.add('text-gray-500');
+     status.classList.add('text-black-500');
      status.textContent = `Status: ${patient.status}`;
 
      card.appendChild(title);
@@ -150,4 +167,18 @@ fetch('patients.json')
    console.error(error);
  });
 });
+
+function getStatusClass(status) {
+    switch (status) {
+      case 'Critical':
+        return 'bg-red-500';
+      case 'Stable':
+        return 'bg-yellow-500';
+      case 'Serious':
+        return 'bg-green-500';
+      default:
+        return '';
+    }
+  }
+  
 

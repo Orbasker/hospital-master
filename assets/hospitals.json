@@ -1,258 +1,256 @@
 {
-    "name": "Hospital XYZ",
-    "departments": [
-      {
-        "name": "Cardiology",
-        "doctors": [
-          {
-            "name": "Dr. Smith",
-            "specialty": "Cardiologist"
-          },
-          {
-            "name": "Dr. Johnson",
-            "specialty": "Cardiologist"
-          },
-          {
-            "name": "Dr. Lee",
-            "specialty": "Cardiologist"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Cardiology Nurse"
-          },
-          {
-            "name": "Linda Cohen",
-            "specialty": "Cardiology Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Cardiology Nurse"
-          }
-        ]
-
-      },
-      {
-        "name": "Orthopedics",
-        "doctors": [
-          {
-            "name": "Dr. Davis",
-            "specialty": "Orthopedic Surgeon"
-          },
-          {
-            "name": "Dr. Brown",
-            "specialty": "Orthopedic Surgeon"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Orthopedic Nurse"
-          },
-          {
-            "name": "Linda Cohen",
-            "specialty": "Orthopedic Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Orthopedic Nurse"
-          }
-        ]
-
-      },
-      {
-        "name": "Gastroenterology",
-        "doctors": [
-          {
-            "name": "Dr. Patel",
-            "specialty": "Gastroenterologist"
-          },
-          {
-            "name": "Dr. Kim",
-            "specialty": "Gastroenterologist"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Gastroenterologist"
-          },
-          {
-            "name": "Dr. Kim",
-            "specialty": "Gastroenterologist"
-          },
-          {
-            "name": "Dr. Noya",
-            "specialty": "Gastroenterologist"
-          }
-        ]
-      },
-      {
-        "name": "Neurology",
-        "doctors": [
-          {
-            "name": "Dr. Lee",
-            "specialty": "Neurologist"
-          },
-          {
-            "name": "Dr. Kim",
-            "specialty": "Neurologist"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Neurology Nurse"
-          },
-          {
-            "name": "Linda Cohen",
-            "specialty": "Neurology Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Neurology Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Neurology Nurse"
-          }
-        ]
-      },
-      {
-        "name": "Oncology",
-        "doctors": [
-          {
-            "name": "Dr. Lee",
-            "specialty": "Oncologist"
-          },
-          {
-            "name": "Dr. Kim",
-            "specialty": "Oncologist"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Oncology Nurse"
-          },
-          {
-            "name": "Linda Cohen",
-            "specialty": "Oncology Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Oncology Nurse"
-          }
-        ]
-      },
-      {
-        "name": "Pediatrics",
-        "doctors": [
-          {
-            "name": "Dr. Lee",
-            "specialty": "Pediatrician"
-          },
-          {
-            "name": "Dr. Kim",
-            "specialty": "Pediatrician"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Pediatric Nurse"
-          },
-          {
-            "name": "Linda Cohen",
-            "specialty": "Pediatric Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Pediatric Nurse"
-          }
-        ]
-      },
-      {
-        "name": "Psychiatry",
-        "doctors": [
-          {
-            "name": "Dr. Lee",
-            "specialty": "Psychiatrist"
-          },
-          {
-            "name": "Dr. Kim",
-            "specialty": "Psychiatrist"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Psychiatry Nurse"
-          },
-          {
-            "name": "Linda Cohen",
-            "specialty": "Psychiatry Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Psychiatry Nurse"
-          }
-        ]
-      },
-      {
-        "name": "Radiology",
-        "doctors": [
-          {
-            "name": "Dr. Lee",
-            "specialty": "Radiologist"
-          },
-          {
-            "name": "Dr. Kim",
-            "specialty": "Radiologist"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Radiology Nurse"
-          },
-          {
-            "name": "Linda Cohen",
-            "specialty": "Radiology Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Radiology Nurse"
-          }
-        ]
-      },
-      {
-        "name": "Urology",
-        "doctors": [
-          {
-            "name": "Dr. Lee",
-            "specialty": "Urologist"
-          },
-          {
-            "name": "Dr. Kim",
-            "specialty": "Urologist"
-          }
-        ],
-        "nurse": [
-          {
-            "name": "Sara Smith",
-            "specialty": "Urology Nurse"
-          },
-          {
-            "name": "Linda Cohen",
-            "specialty": "Urology Nurse"
-          },
-          {
-            "name": "Kim Wilson",
-            "specialty": "Urology Nurse"
-          }
-        ] 
-      }
-    ]
-  }
+  "name": "Hospital XYZ",
+  "departments": [
+    {
+      "name": "Cardiology",
+      "doctors": [
+        {
+          "name": "Dr. Smith",
+          "specialty": "Cardiologist"
+        },
+        {
+          "name": "Dr. Johnson",
+          "specialty": "Cardiologist"
+        },
+        {
+          "name": "Dr. Lee",
+          "specialty": "Cardiologist"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Cardiology Nurse"
+        },
+        {
+          "name": "Linda Cohen",
+          "specialty": "Cardiology Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Cardiology Nurse"
+        }
+      ]
+    },
+    {
+      "name": "Orthopedics",
+      "doctors": [
+        {
+          "name": "Dr. Davis",
+          "specialty": "Orthopedic Surgeon"
+        },
+        {
+          "name": "Dr. Brown",
+          "specialty": "Orthopedic Surgeon"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Orthopedic Nurse"
+        },
+        {
+          "name": "Linda Cohen",
+          "specialty": "Orthopedic Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Orthopedic Nurse"
+        }
+      ]
+    },
+    {
+      "name": "Gastroenterology",
+      "doctors": [
+        {
+          "name": "Dr. Patel",
+          "specialty": "Gastroenterologist"
+        },
+        {
+          "name": "Dr. Kim",
+          "specialty": "Gastroenterologist"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Gastroenterologist"
+        },
+        {
+          "name": "Dr. Kim",
+          "specialty": "Gastroenterologist"
+        },
+        {
+          "name": "Dr. Noya",
+          "specialty": "Gastroenterologist"
+        }
+      ]
+    },
+    {
+      "name": "Neurology",
+      "doctors": [
+        {
+          "name": "Dr. Lee",
+          "specialty": "Neurologist"
+        },
+        {
+          "name": "Dr. Kim",
+          "specialty": "Neurologist"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Neurology Nurse"
+        },
+        {
+          "name": "Linda Cohen",
+          "specialty": "Neurology Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Neurology Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Neurology Nurse"
+        }
+      ]
+    },
+    {
+      "name": "Oncology",
+      "doctors": [
+        {
+          "name": "Dr. Lee",
+          "specialty": "Oncologist"
+        },
+        {
+          "name": "Dr. Kim",
+          "specialty": "Oncologist"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Oncology Nurse"
+        },
+        {
+          "name": "Linda Cohen",
+          "specialty": "Oncology Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Oncology Nurse"
+        }
+      ]
+    },
+    {
+      "name": "Pediatrics",
+      "doctors": [
+        {
+          "name": "Dr. Lee",
+          "specialty": "Pediatrician"
+        },
+        {
+          "name": "Dr. Kim",
+          "specialty": "Pediatrician"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Pediatric Nurse"
+        },
+        {
+          "name": "Linda Cohen",
+          "specialty": "Pediatric Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Pediatric Nurse"
+        }
+      ]
+    },
+    {
+      "name": "Psychiatry",
+      "doctors": [
+        {
+          "name": "Dr. Lee",
+          "specialty": "Psychiatrist"
+        },
+        {
+          "name": "Dr. Kim",
+          "specialty": "Psychiatrist"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Psychiatry Nurse"
+        },
+        {
+          "name": "Linda Cohen",
+          "specialty": "Psychiatry Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Psychiatry Nurse"
+        }
+      ]
+    },
+    {
+      "name": "Radiology",
+      "doctors": [
+        {
+          "name": "Dr. Lee",
+          "specialty": "Radiologist"
+        },
+        {
+          "name": "Dr. Kim",
+          "specialty": "Radiologist"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Radiology Nurse"
+        },
+        {
+          "name": "Linda Cohen",
+          "specialty": "Radiology Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Radiology Nurse"
+        }
+      ]
+    },
+    {
+      "name": "Urology",
+      "doctors": [
+        {
+          "name": "Dr. Lee",
+          "specialty": "Urologist"
+        },
+        {
+          "name": "Dr. Kim",
+          "specialty": "Urologist"
+        }
+      ],
+      "nurse": [
+        {
+          "name": "Sara Smith",
+          "specialty": "Urology Nurse"
+        },
+        {
+          "name": "Linda Cohen",
+          "specialty": "Urology Nurse"
+        },
+        {
+          "name": "Kim Wilson",
+          "specialty": "Urology Nurse"
+        }
+      ]
+    }
+  ]
+}
