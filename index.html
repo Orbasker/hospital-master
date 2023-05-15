@@ -20,123 +20,213 @@
     <body>
     <navbar-menu></navbar-menu>
         <main>
-            <section id = "continer" class="p-4 lg:ml-64 m-16">
+            <section id="container" class="p-4 sm:ml-64 m-16">
                 <div class="container mx-auto">
-                    <div class="grid grid-cols-2 grid-rows-2 gap-4 h-screen w-full">
-                      <div class="bg-gray-500">
-                        <table class="table caption-top">
-                          <h1 class="text-center" style="font-size: 20px;">Doctors on call</h1>
-                          <thead>
-                            <tr>
-                              <th scope="col">Doctor's name</th>
-                              <th scope="col">Department</th>
-                              <th scope="col">Phone number</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">Prof. Uri Peled</th>
-                              <td>Otolaryngology</td>
-                              <td>0524443230</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Dr. Schwartz Or</th>
-                              <td>Maternity</td>
-                              <td>0524371230</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Dr. Bar Or Shira</th>
-                              <td>Radiology</td>
-                              <td>0535743230</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Prof. Uri Peled</th>
-                              <td>Radiology</td>
-                              <td>0535743230</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <div class="bg-gray-500">
-                        <h1 class="text-center" style="font-size: 20px;">Department load in real time</h1>
-                        <img src="../svg/file1.svg" style="width: 140px; height: 125px; margin: -10px auto;">
-                        <h2 class="text-center" style="font-size: 16px;">2824</h2>
-                        <h3 class="text-center" style="font-size: 15px;">Hospital Burden Index</h3>
-                        <h3 class="text-center" style="font-size: 15px;">176 Available Beds</h3>
-                        <table class="table caption-top">
-                          <thead>
-                            <tr>
-                              <th scope="col">First</th>
-                              <th scope="col">Last</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                            </tr>
-                            <tr>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                      <div class="bg-gray-500">
-                        <h1 class="text-center" style="font-size: 20px;">System Recommendations</h1>
-                        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                          <h4 id="list-item-1">Item 1</h4>
-                          <p>Bed 237 in the emergency department is waiting for release. Click for more details.</p>
-                          <h4 id="list-item-2">Item 2</h4>
-                          <p>The maternity department has a medium load, it is recommended to prepare for a heavy load in the next day.</p>
-                          <h4 id="list-item-3">Item 3</h4>
-                          <p>Bed 257, children's department, exceeds the time estimated by the doctor's recommendation by 13 hours. Please change the patient classification.</p>
-                          <h4 id="list-item-4">Item 4</h4>
-                          <p>Bed 278 in the emergency department exceeds the defined treatment time. It is recommended to be transferred to the internal departments for further appropriate treatment. Click to transfer</p>
-                          <h4 id="list-item-5">Item 5</h4>
-                          <p>The emergency department is at maximum load. Please refer patients to other hospitals or transfer beds from the following departments: Internal A, Internal B, Children.</p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-screen">
+                    <div class="bg-gray-500 p-4" >
+                        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            Doctor's name
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Department
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            Phone number
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            Prof. Uri Peled
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            Otolaryngology
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            0524443230
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            Dr. Schwartz Or
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            Maternity
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            0524371230
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            Dr. Bar Or Shira
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            Radiology
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            0535743230
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-white dark:bg-gray-800">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            Prof. Uri Peled
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            Radiology
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            0535743230
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- <div class="squr1" style="text-align:center; margin:0 auto;" >Bed 237 in the emergency department is waiting for release. Click for more details.</div>
-                        <div class="squr2" style="text-align:center; margin:0 auto;">The maternity department has a medium load, it is recommended to prepare for a heavy load in the next day.</div> -->
-                      </div>
-
-                      <div class="bg-gray-500">
-                        <h1 class="text-center" style="font-size: 20px;">General Bed Occupancy</h1>
-                        <!-- <img src="../svg/EMERGENCY1.svg" style="width: 750px; height: 650px; margin-top: -140px;"> -->
-                        <div class="mb-1 text-base font-medium dark:text-white">Emergency</div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-                          <div class="bg-gray-600 h-2.5 rounded-full dark:bg-gray-300" style="width: 87%"></div>
-                        </div>
-                        <div class="mb-1 text-base font-medium text-blue-700 dark:text-blue-500">Children</div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-                          <div class="bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div>
-                        </div>
-                        <div class="mb-1 text-base font-medium text-red-700 dark:text-red-500">Cardiology</div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-                          <div class="bg-red-600 h-2.5 rounded-full dark:bg-red-500" style="width: 27%"></div>
-                        </div>
-                        <div class="mb-1 text-base font-medium text-green-700 dark:text-green-500">Radiology</div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-                          <div class="bg-green-600 h-2.5 rounded-full dark:bg-green-500" style="width: 32%"></div>
-                        </div>
-                        <div class="mb-1 text-base font-medium text-yellow-700 dark:text-yellow-500">Neurology</div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-                          <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 12%"></div>
-                        </div>
-                        <div class="mb-1 text-base font-medium text-indigo-700 dark:text-indigo-500">Maternity</div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-                          <div class="bg-indigo-600 h-2.5 rounded-full dark:bg-indigo-500" style="width: 45%"></div>
-                        </div>
-                        <div class="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Otolaryngology</div>
-                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                          <div class="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500" style="width: 40%"></div>
-                        </div>
-                      </div>
                     </div>
-                </div>      
-            </section>
+                    
+              
+                    <div class="bg-gray-500 p-4">
+                      <h1 class="text-center" style="font-size: 20px;">Department load in real time</h1>
+                      <img src="../svg/file1.svg" style="width: 140px; height: 125px; margin: 0 auto;">
+                      <h2 class="text-center" style="font-size: 16px;">2824</h2>
+                      <h3 class="text-center" style="font-size: 15px;">Hospital Burden Index</h3>
+                      <h3 class="text-center" style="font-size: 15px;">176 Available Beds</h3>
+                      <table class="table caption-top">
+                        <thead>
+                          <tr>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                          </tr>
+                          <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+              
+                    <div class="bg-gray-500 p-4">
+                        <h1 class="text-center" style="font-size: 20px;">System Recommendations</h1>
+                        <div class="container mx-auto p-4 h-80 overflow-y-auto">
+                          <h1 class="text-2xl font-bold mb-4">System Logs</h1>
+                          
+                          <ul class=" shadow-md rounded-lg divide-y divide-gray-200">
+                            <li class="p-4">
+                              <div class="flex items-center justify-between">
+                                <span class="text-gray-700">Log 1</span>
+                                <span class="text-gray-500 text-sm">Timestamp 1</span>
+                              </div>
+                              <p class="text-gray-600">
+                                  Log details...
+                                  Bed 237 in the emergency department is waiting for release. Click for more details.
+                              </p>
+                            </li>
+                            <li class="p-4">
+                              <div class="flex items-center justify-between">
+                                <span class="text-gray-700">Log 2</span>
+                                <span class="text-gray-500 text-sm">Timestamp 2</span>
+                              </div>
+                              <p class="text-gray-600">
+                                  Log details...
+                                  The maternity department has a medium load, it is recommended to prepare for a heavyload in the next day.
+                              </p>
+                            </li>
+                            <li class="p-4">
+                              <div class="flex items-center justify-between">
+                                <span class="text-gray-700">Log 3</span>
+                                <span class="text-gray-500 text-sm">Timestamp 3</span>
+                              </div>
+                              <p class="text-gray-600">
+                                  Log details...
+                                  Bed 257, children's department, exceeds the time estimated by the doctor's recommendation by 13 hours. Please change the patient classification.
+                              </p>
+                            </li>
+                            <li class="p-4">
+                              <div class="flex items-center justify-between">
+                                <span class="text-gray-700">Log 3</span>
+                                <span class="text-gray-500 text-sm">Timestamp 3</span>
+                              </div>
+                              <p class="text-gray-600">
+                                  Log details...
+                                  Bed 278 in the emergency department exceeds the defined treatment time. It is recommended to be transferred to the internal departments for further appropriate treatment. Click to transfer
+                                  
+                              </p>
+                            </li>
+                            <li class="p-4">
+                              <div class="flex items-center justify-between">
+                                <span class="text-gray-700">Log 3</span>
+                                <span class="text-gray-500 text-sm">Timestamp 3</span>
+                              </div>
+                              <p class="text-gray-600">
+                                  Log details...
+                                  The emergency department is at maximum load. Please refer patients to other hospitals or transfer beds from the following departments: Internal A, Internal B, Children.
+                                  
+                              </p>
+                            </li>
+                            <li class="p-4">
+                              <div class="flex items-center justify-between">
+                                <span class="text-gray-700">Log 3</span>
+                                <span class="text-gray-500 text-sm">Timestamp 3</span>
+                              </div>
+                              <p class="text-gray-600">
+                                  Log details...
+                                  In the children's ward there are 10 beds waiting to be released - please contact the doctor in the ward to release them.
+                                  
+                              </p>
+                            </li>
+                            <!-- Add more log items as needed -->
+                          </ul>
+                        </div>
+                        </div>
+                        <div class="bg-gray-500 p-4">
+                            <h1 class="text-center" style="font-size: 20px;">General Bed Occupancy</h1>
+                            <!-- <img src="../svg/EMERGENCY1.svg" style="width: 750px; height: 650px; margin-top: -140px;"> -->
+                            <div class="mb-1 text-base font-medium dark:text-white">Emergency</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                              <div class="bg-gray-600 h-2.5 rounded-full dark:bg-gray-300" style="width: 87%"></div>
+                            </div>
+                            <div class="mb-1 text-base font-medium text-blue-700 dark:text-blue-500">Children</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                              <div class="bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div>
+                            </div>
+                            <div class="mb-1 text-base font-medium text-red-700 dark:text-red-500">Cardiology</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                              <div class="bg-red-600 h-2.5 rounded-full dark:bg-red-500" style="width: 27%"></div>
+                            </div>
+                            <div class="mb-1 text-base font-medium text-green-700 dark:text-green-500">Radiology</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                              <div class="bg-green-600 h-2.5 rounded-full dark:bg-green-500" style="width: 32%"></div>
+                            </div>
+                            <div class="mb-1 text-base font-medium text-yellow-700 dark:text-yellow-500">Neurology</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                              <div class="bg-yellow-400 h-2.5 rounded-full" style="width: 12%"></div>
+                            </div>
+                            <div class="mb-1 text-base font-medium text-indigo-700 dark:text-indigo-500">Maternity</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+                              <div class="bg-indigo-600 h-2.5 rounded-full dark:bg-indigo-500" style="width:45%"></div>
+                            </div>
+                            <div class="mb-1 text-base font-medium text-purple-700 dark:text-purple-500">Otolaryngology</div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div class="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500" style="width: 40%"></div>
+                            </div>
+                            </div>
+                            </div>
+                            
+                              </div>
+                            </section> 
+                        
+              
         </main>
     </body>
 </html>
