@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Prof. Uri Peled",
+      "department": "Otolaryngology",
+      "phoneNumber": "0524443230"
+    },
+    {
+      "name": "Dr. Schwartz Or",
+      "department": "Maternity",
+      "phoneNumber": "0524371230"
+    },
+    {
+      "name": "Dr. Bar Or Shira",
+      "department": "Radiology",
+      "phoneNumber": "0535743230"
+    },
+    {
+      "name": "Prof. Uri Peled",
+      "department": "Radiology",
+      "phoneNumber": "0535743230"
+    },
+    {
+      "name": "Dr. Bar On Odel",
+      "department": "Children",
+      "phoneNumber": "0505223230"
+    }
+  ]

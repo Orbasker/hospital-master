@@ -1,0 +1,28 @@
+{
+    "logs": [
+      {
+        "department": "Children",
+        "occupancyLevel": "high"
+      },
+      {
+        "department": "Neurology",
+        "occupancyLevel": "medium"
+      },
+      {
+        "department": "Maternity",
+        "occupancyLevel": "low"
+      },
+      {
+        "department": "Surgery",
+        "occupancyLevel": "medium"
+      },
+      {
+        "department": "Emergency A",
+        "occupancyLevel": "low"
+      },
+      {
+        "department": "Emergency B",
+        "occupancyLevel": "low"
+      }
+    ]
+  }

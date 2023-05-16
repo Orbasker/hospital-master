@@ -1,0 +1,34 @@
+[
+    {
+      "logId": "1",
+      "logText": "Bed 237 in the emergency department is waiting for release.",
+      "detailsLink": "#.html"
+    },
+    {
+      "logId": "2",
+      "logText": "The maternity department has a medium load, it is recommended to prepare for a heavy load in the next day."
+    },
+    {
+      "logId": "3",
+      "logText": "Bed 257, children's department, exceeds the time estimated by the doctor's recommendation by 13 hours.",
+      "detailsLink": "#.html"
+    },
+    {
+      "logId": "4",
+      "logText": "Bed 278 in the emergency department exceeds the defined treatment time. It is recommended to be transferred to the internal departments for further appropriate treatment.",
+      "detailsLink": "#.html"
+    },
+    {
+      "logId": "5",
+      "logText": "The emergency department is at maximum load. Please refer patients to other hospitals or transfer beds from the following departments: Internal A, Internal B, Children."
+    },
+    {
+      "logId": "6",
+      "logText": "In the children's ward, there are 10 beds waiting to be released - please contact the doctor in the ward to release them."
+    },
+    {
+        "logId": "7",
+        "logText": "In the children's ward, there are 10 beds waiting to be released - please contact the doctor in the ward to release them."
+    }
+  ]
+  
