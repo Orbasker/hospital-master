@@ -5,13 +5,13 @@ class AddPatientForm extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-        <form id="form" class="p-4 lg:ml-64 m-16" action="add-patient.php" method="GET">
+        <form id="form" class="p-4 " action="add-patient.php" method="GET">
         <div class="space-y-12">
                 <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
                 <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
               </div>
-          <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20 ">
+          <div id="personal-info-section" class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20 ">
             
             <div>
               <div class="sm:col-span-3">
@@ -38,7 +38,7 @@ class AddPatientForm extends HTMLElement {
             </div>
           </div>
       
-          <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">
+          <div id="medical-info-section" class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">
             <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
               <div class="sm:col-span-3">
                 <label for="Department" class="block text-sm font-medium leading-6 text-gray-900">Department</label>
@@ -102,3 +102,5 @@ class AddPatientForm extends HTMLElement {
 };
 
 customElements.define('add-patient-form', AddPatientForm);
+
+
