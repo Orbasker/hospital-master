@@ -1,85 +1,85 @@
 [
   {
     "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "doctor": "Dr. Braydon Smith",
     "bed_number": 1,
     "status": "Critical"
   },
   {
     "patient_name": "Jane Smith",
-    "doctor": "Dr. Johnson",
+    "doctor": "Dr. Olivia Henton",
     "bed_number": 2,
     "status": "Stable"
   },
   {
     "patient_name": "Bob Johnson",
-    "doctor": "Dr. Lee",
+    "doctor": "Dr. Lee Soltes",
     "bed_number": 3,
     "status": "Serious"
   },
   {
     "patient_name": "Sally Lee",
-    "doctor": "Dr. Doe",
+    "doctor": "Dr. Earl Doe",
     "bed_number": 4,
     "status": "Critical"
   },
   {
     "patient_name": "Joe Doe",
-    "doctor": "Dr. Smith",
+    "doctor": "Dr. Fred Kolppa ",
     "bed_number": 5,
     "status": "Stable"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Woody Leela",
+    "doctor": "Dr. Drew Witherbee",
     "bed_number": 6,
     "status": "Critical"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Marion Naveen",
+    "doctor": "Dr. Olivia Henton",
     "bed_number": 7,
     "status": "Critical"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Theo Vitus",
+    "doctor": "Dr. Annabelle Allende",
     "bed_number": 8,
     "status": "Critical"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Ani Takouhi",
+    "doctor": "Dr. Ryan Soltes",
     "bed_number": 9,
     "status": "Critical"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Manvel Maria",
+    "doctor": "Dr. Braydon Vanzante",
     "bed_number": 10,
     "status": "Critical"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Angelina Elen",
+    "doctor": "Dr. Marco Briceno",
     "bed_number": 11,
     "status": "Critical"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Arpi Vahan",
+    "doctor": "Dr. Cleo Littrell",
     "bed_number": 12,
     "status": "Critical"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Lena Almast",
+    "doctor": "Dr. Earl Lehnhoff",
     "bed_number": 13,
     "status": "Critical"
     },
     {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Smith",
+    "patient_name": "Elen Arevig",
+    "doctor": "Dr. Kevin Russwurm",
     "bed_number": 14,
     "status": "Critical"
     }
