@@ -112,28 +112,34 @@ function load_data() {
                               console.log(data);  
                               // Loop through the data and create a table row for each patient
                               data.forEach(patient => {
-                                  let row = document.createElement('tr');
-                                  let nameCell = document.createElement('td');
-                                  let doctorCell = document.createElement('td');
-                                  let bedCell = document.createElement('td');
-                                  let statusCell = document.createElement('td');
-                  
-                                  nameCell.textContent = patient.patient_name;
-                                  doctorCell.textContent = patient.doctor;
-                                  bedCell.textContent = patient.bed_number;
-                                  statusCell.textContent = patient.status;
-                  
-                                  nameCell.classList.add('border', 'px-4', 'py-2');
-                                  doctorCell.classList.add('border', 'px-4', 'py-2');
-                                  bedCell.classList.add('border', 'px-4', 'py-2');
-                                  statusCell.classList.add('border', 'px-4', 'py-2');
 
-                                  row.appendChild(nameCell);
-                                  row.appendChild(doctorCell);
-                                  row.appendChild(bedCell);
-                                  row.appendChild(statusCell);
-                  
-                                  table.appendChild(row);
+                                let row = document.createElement('tr');
+                                let nameCell = document.createElement('td');
+                                let doctorCell = document.createElement('td');
+                                let bedCell = document.createElement('td');
+                                let statusCell = document.createElement('td');
+                                let link = document.createElement('a');
+                                
+                                link.href = `showDetails.html?bed_number=${patient.bed_number}`;
+                                link.textContent = patient.patient_name;
+                                
+                                nameCell.appendChild(link);
+                                doctorCell.appendChild(document.createTextNode(patient.doctor));
+                                bedCell.appendChild(document.createTextNode(patient.bed_number));
+                                statusCell.appendChild(document.createTextNode(patient.status));
+                                
+                                nameCell.classList.add('border', 'px-4', 'py-2');
+                                doctorCell.classList.add('border', 'px-4', 'py-2');
+                                bedCell.classList.add('border', 'px-4', 'py-2');
+                                statusCell.classList.add('border', 'px-4', 'py-2');
+                                
+                                row.appendChild(nameCell);
+                                row.appendChild(doctorCell);
+                                row.appendChild(bedCell);
+                                row.appendChild(statusCell);
+                                
+                                table.appendChild(row);
+                                
                               });
                           });
                 // enter cards refernces
