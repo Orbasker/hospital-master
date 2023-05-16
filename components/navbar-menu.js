@@ -15,7 +15,7 @@ class NavbarMenu extends HTMLElement {
               </svg>
             </button>
             <div class="flex items-center justify-center flex-1">
-              <a href="/index.html" class="flex items-center ml-2 md:mr-24">
+              <a href="/index.html" class="flex items-center ml-3 md:mr-24">
                 <img src="../svg/logo1.svg" class="h-8" alt="Hospital Master">
                 <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
               </a>
@@ -26,13 +26,12 @@ class NavbarMenu extends HTMLElement {
               <img class="w-16 h-16 rounded-full" src="../svg/hadsa.svg" alt="hadasa">
               </button>
               </div>
-                          
-             
-
           </div>
               <!-- Your other content here -->
-              <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
-
+              
+            </div>
+          </div>
+          <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="/docs/images/people/profile-picture-5.jpg" alt="User dropdown">
               <!-- Dropdown menu -->
               <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                   <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
@@ -54,13 +53,8 @@ class NavbarMenu extends HTMLElement {
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
                   </div>
               </div>
-            </div>
-          </div>
         </div>
       </nav>
-    
-
-
       <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
          <div class="h-full m-4 px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
             <ul class="space-y-2 font-medium">
