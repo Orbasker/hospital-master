@@ -23,8 +23,8 @@
     const {occupancyLevel} = log;
     const fillColor = getFillColor(occupancyLevel);
     return `
-      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-      <th scope="row" class="px-2 py-3 md:px-6 md:py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${departmentName}</th>
+      <tr class="bg-white border-b">
+      <th scope="row" class="px-2 py-3 md:px-6 md:py-4 font-medium text-gray-900 whitespace-nowrap ">${departmentName}</th>
         <td class="flex justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="${fillColor}" class="bi bi-circle-fill" viewBox="0 0 16 16">
             <circle cx="8" cy="8" r="8"/>
@@ -35,8 +35,8 @@
        }).join('');
        // Set the generated HTML markup inside the logs container
        loadContainer.innerHTML = `
-         <table class="w-full text-sm text-center text-gray-500 dark:text-gray-400">
-           <thead class="text-xs md:text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+         <table class="w-full text-sm text-center text-gray-500">
+           <thead class="text-xs md:text-sm text-gray-700 uppercase bg-gray-50">
              <tr>
                <th scope="col" class="px-2 py-2 md:px-6 md:py-3">Department</th>
                <th scope="col" class="px-2 py-2 md:px-6 md:py-3">Occupancy Level</th>
@@ -45,7 +45,6 @@
            <tbody>${logsHTML}</tbody>
          </table>
        `;
-        // Rest of the code for processing department load data
           })
         .catch(error => {
           console.error('Error fetching department load data:', error);
@@ -54,13 +53,12 @@
           .then(response => response.json())
           .then(data => {
             const tbody = document.getElementById('doctorsContainer');
-            // Rest of the code for processing doctors data
             data.forEach(doctor => {
                 const row = document.createElement('tr');
-                row.classList.add('bg-white', 'border-b', 'dark:bg-gray-800', 'dark:border-gray-700');
+                row.classList.add('bg-white', 'border-b', 'bg-white', 'border-b');
                 const nameCell = document.createElement('th');
                 nameCell.scope = 'row';
-                nameCell.classList.add('px-6', 'py-4', 'font-medium', 'text-gray-900', 'whitespace-nowrap', 'dark:text-white');
+                nameCell.classList.add('px-6', 'py-4', 'font-medium', 'text-neutral-950', 'whitespace-nowrap', 'text-neutral-950');
                 nameCell.textContent = doctor.name;
                 const departmentCell = document.createElement('td');
                 departmentCell.classList.add('px-6', 'py-4');

@@ -4,7 +4,6 @@ class listView extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
-        <!-- Map View Toggle -->
        <div class="flex flex-col relative w-full h-96">
            <div id="toggle" class="flex items-center mt-8">
              <label class="flex items-center cursor-pointer">
@@ -16,7 +15,6 @@ class listView extends HTMLElement {
                <div class="ml-3 text-gray-700 font-medium">Toggle Map View</div>
              </label>
            </div>
-       <!-- Table -->
        <table id="table_view" class="table-auto mx-auto w-full md:w-2/3 lg:w-3/4 my-8 ">
            <thead>
                <tr></tr>
@@ -29,7 +27,6 @@ class listView extends HTMLElement {
            </thead>
            <tbody></tbody>
        </table>
-       <!-- Map View with Cards -->
        <div id="map_view" class="hidden ">
            <div id="patients" class="nflex flex-wrap justify-center gap-4 sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5" >    
            </div>
@@ -48,8 +45,8 @@ class listView extends HTMLElement {
             </button>
           </div>
           <p>
-            <label for="departments" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
-            <select id="departments" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <label for="departments" class="block mb-2 text-sm font-medium text-gray-900">Select an option</label>
+            <select id="departments" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                 <option selected>Choose a department</option>
               </select>
           </p>
