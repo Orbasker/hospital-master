@@ -1,4 +1,3 @@
-
 class AddPatientForm extends HTMLElement {
     constructor() {
         super();
@@ -12,62 +11,52 @@ class AddPatientForm extends HTMLElement {
                 <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
               </div>
           <div id="personal-info-section" class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20 ">
-            
             <div>
               <div class="sm:col-span-3">
-                <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+                <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
                 <div class="mt-2">
-                  <input type="text" placeholder=" first name" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <input type="text" placeholder=" First Name" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
                 </div>
               </div>
               <div class="sm:col-span-3 my-2">
-                <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+                <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last Name</label>
                 <div class="mt-2">
-                  <input type="text" placeholder=" last name" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <input type="text" placeholder=" Last Name" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
                 </div>
               </div>
             </div>
-      
             <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
                 <div class="col-span-3">
                     <label for="id" class="block text-sm font-medium leading-6 text-gray-900">ID</label>
                     <div class="mt-2">
-                      <input type="text" placeholder=" Id number" name="id" id="id" autocomplete="ID number" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                      <input type="text" placeholder=" ID Number - 9 digits" name="id" id="id" autocomplete="ID number" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" pattern=".{9}" required>
                     </div>
                   </div>
             </div>
           </div>
-      
           <div id="medical-info-section" class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">
             <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
               <div class="sm:col-span-3">
                 <label for="Department" class="block text-sm font-medium leading-6 text-gray-900">Department</label>
                 <div class="mt-2">
                   <select id="departments" name="departments" autocomplete="department-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                    
                   </select>
                 </div>
               </div>
               <div class="sm:col-span-3">
                 <label for="Department" class="block text-sm font-medium leading-6 text-gray-900">Doctor</label>
                 <div class="mt-2">
-                  <select id="doctors" name="doctors" autocomplete="doctor-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                    
-                  </select>
+                  <select id="doctors" name="doctors" autocomplete="doctor-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"></select>
                 </div>
               </div>
               <div class="sm:col-span-3">
                 <label for="nurse" class="block text-sm font-medium leading-6 text-gray-900">Nurse</label>
                 <div class="mt-2">
-                  <select id="nurses" name="nurses" autocomplete="Nurse-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                  
-                    
-                  </select>
+                  <select id="nurses" name="nurses" autocomplete="Nurse-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"></select>
                 </div>
               </div>
             </div>
           </div>
-      
           <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
             <div class="max-w-2xl space-y-10 md:col-span-2">
               <fieldset>
@@ -100,7 +89,4 @@ class AddPatientForm extends HTMLElement {
     `;
     }
 };
-
 customElements.define('add-patient-form', AddPatientForm);
-
-

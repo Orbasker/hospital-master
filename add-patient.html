@@ -1,73 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Add Patient</title>
-    <script src="components/navbar-menu.js"></script>
-    <script src="components/alert-message.js"></script>
-    <script src="components/Breadcrumb.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="application/json" id="hospitals-data"></script>
-    
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
-</head>
-<body>
-    <navbar-menu>
-        <alert-message></alert-message>
-        <section class="sm:ml-64">
+    <head>
+        <meta charset="UTF-8" />
+        <script src="components/navbar-menu.js"></script>
+        <script src="components/alert-message.js"></script>
+        <script src="components/Breadcrumb.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="application/json" id="hospitals-data"></script>
+        <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
+        <title>Add Patient - Hospital Master</title>
+    </head>
+    <body>
+        <navbar-menu>
+            <alert-message></alert-message>
+            <section class="sm:ml-64">
+                <bread-crumbs></bread-crumbs>
+            </section>
+            <section class="sm:ml-64">
+                <add-patient-form></add-patient-form>
+            </section>
+        </navbar-menu>
+        <script src="components/add-patient-form.js"> </script>
+        <script src="validate_form.js"></script>
+        <script>
+            const breadcrumbItem = document.getElementById('personalDetails');
+            let lastKnownScrollPosition = 0;
+            let ticking = false;
+            function doSomething(scrollPos) {
+                const scrollPosition = window.scrollY;
+                console.log(scrollPosition);
+                if (scrollPosition < 500) {
+                    breadcrumbItem.classList.remove('text-gray-700');
+                    breadcrumbItem.classList.add('text-red-700');
+                }
+                else if (scrollPosition < 1000) {
+                    breadcrumbItem = document.getElementById('MedicInfo');
+                    breadcrumbItem.classList.remove('text-gray-700');
+                    breadcrumbItem.classList.add('text-red-700');
+                }
+                else {
+                }
+            }
+            document.addEventListener("scroll", (event) => {
+                lastKnownScrollPosition = window.scrollY;
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        doSomething(lastKnownScrollPosition);
+                        ticking = false;
+                    });
 
-        <bread-crumbs></bread-crumbs>
-        </section>
-          
-       
-        <section class="sm:ml-64">
-        <add-patient-form>
-            
-        </add-patient-form>
-    </section>
-    </navbar-menu>
-    <script src="components/add-patient-form.js"> </script>
-
-    <script src="validate_form.js"></script>
-
-    <script>
-        const breadcrumbItem = document.getElementById('personalDetails');
-        let lastKnownScrollPosition = 0;
-        let ticking = false;
-
-        function doSomething(scrollPos) {
-        // Do something with the scroll position
-        const scrollPosition = window.scrollY;
-        console.log(scrollPosition);
-        if (scrollPosition < 500) {
-            breadcrumbItem.classList.remove('text-gray-700') ;
-            breadcrumbItem.classList.add('text-red-700');
-        } else if (scrollPosition < 1000) {
-            breadcrumbItem = document.getElementById('MedicInfo');
-            breadcrumbItem.classList.remove('text-gray-700') ;
-            breadcrumbItem.classList.add('text-red-700');
-        } else {
-            // breadcrumbItem.style.color = 'green';
-        }
-        }
-
-        document.addEventListener("scroll", (event) => {
-        lastKnownScrollPosition = window.scrollY;
-
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-            doSomething(lastKnownScrollPosition);
-            ticking = false;
+                    ticking = true;
+                }
             });
-
-            ticking = true;
-        }
-        });
-
-        window.addEventListener('scroll', () => {
-        
-        });
-
-    </script>
-</body>
+            window.addEventListener('scroll', () => {
+            });
+        </script>
+    </body>
 </html>
