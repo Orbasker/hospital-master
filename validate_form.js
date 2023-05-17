@@ -5,14 +5,10 @@
    console.log(data);
   return data;
   })
-
 }
-
 let hospitals;
-
 window.onload = function () {
   console.log("window loaded");
-
   loadHospital()
     .then((loadedHospitals) => {
       hospitals = loadedHospitals;
@@ -27,13 +23,9 @@ window.onload = function () {
       depElement.addEventListener("change", loadNurses);
     })
     .catch((error) => {
-      // Handle any errors that occurred during the data loading
       console.error("Error loading hospitals:", error);
     });
-   
 };
-
-
 function loadDepartments() {
   let departmentsElement = document.getElementById("departments");
   for (let department of Array.from(hospitals.departments) ) {
@@ -58,7 +50,6 @@ function loadDoctors() {
     }
   }
 }
-
 function loadNurses() {
   let nursesElement = document.getElementById("nurses");
   let selectedDepartment = document.getElementById("departments").value;
@@ -74,8 +65,6 @@ function loadNurses() {
     }
   }
 }
-
-
 function isDoctorExists(doctorName) {
   for (let department of hositals.departments) {
     for (let doctor of department.doctors) {
@@ -86,9 +75,7 @@ function isDoctorExists(doctorName) {
   }
   return false;
 }
-
 let formElement = document.getElementById("form");
-
 formElement.onsubmit = function (event) {
   if (isFormValid()) {
     return true;
@@ -96,9 +83,7 @@ formElement.onsubmit = function (event) {
     event.preventDefault();
   }
 };
-
 let alertRaised = false;
-
 function isFormValid() {
   if (alertRaised == true) {
     return false;
@@ -113,7 +98,6 @@ function isFormValid() {
       message: "Please enter a valid name, valid name: 2 or more characters",
     },
   };
-
   let alertElement = document.getElementById("alert");
   let errorMessageElement = document.getElementById("errorMessage");
   let ulElement = document.createElement("ul");
@@ -135,7 +119,6 @@ function isFormValid() {
       }
     }
   }
-
   if (shouldAlert) {
     alertElement.removeAttribute("hidden");
     alertRaised = true;
@@ -163,8 +146,3 @@ Array.from(radioButtons).forEach((radioButton) => {
     });
   });
 });
-
-// function handleAlertClose() {
-//   let alertElement = document.getElementById("alert");
-//   alertElement.setAttribute("hidden", true);
-// }

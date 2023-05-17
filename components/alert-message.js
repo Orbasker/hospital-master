@@ -1,10 +1,9 @@
 class alert extends HTMLElement {
-    constructor() {
-        super();
-    }
-    connectedCallback() {
-        this.innerHTML = `<script src="https://cdn.tailwindcss.com"></script>
-
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `<script src="https://cdn.tailwindcss.com"></script>
         <section hidden id="alert">
         <div aria-live="assertive" class="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6">
            <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
@@ -15,8 +14,6 @@ class alert extends HTMLElement {
                    <div class="flex w-0 flex-1 justify-between">
                      <p class="w-0 flex-1 text-sm font-medium text-gray-900">Validation error!<br>
                      </p>
-                       
-  
                    </div>
                    <div class="ml-4 flex flex-shrink-0">
                      <button type="button" class="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -26,16 +23,13 @@ class alert extends HTMLElement {
                        </svg>
                      </button>
                    </div>
-  
                  </div>
                  <div  id='errorMessage' class="mt-2 text-sm text-red-700"></div>
-  
                </div>
              </div>
            </div>
          </div>
      </section>${this.innerHTML}`
-}
+  }
 };
-
 customElements.define('alert-message', alert);

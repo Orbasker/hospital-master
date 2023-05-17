@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
     <link rel="stylesheet" href="style.css"></link>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,18 +26,12 @@
 
             <bread-crumbs></bread-crumbs>
             <form id="form" class="" action="/add-patient.php" method="get">
-                
-                <!-- <div class="space-y-12"> -->
-                     
-          <!-- Step 1 content -->
           <div class="step step-1">
-            <!-- <h2>Step 1</h2> -->
             <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
                 <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
               </div>
-            <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">
-                    
+            <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">  
                 <div>
                   <div class="sm:col-span-3">
                     <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
@@ -53,8 +46,6 @@
                     </div>
                   </div>
                 </div>
-                
-          
                 <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
                     <div class="col-span-3">
                         <label for="id" class="block text-sm font-medium leading-6 text-gray-900">ID</label>
@@ -64,19 +55,14 @@
                       </div>
                 </div>
               </div>
-            <!-- Step 1 content here -->
           </div>
-      
-          <!-- Step 2 content -->
           <div class="step step-2 hidden">
-            <!-- <h2>Step 2</h2> -->
             <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">
                 <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
                   <div class="sm:col-span-3">
                     <label for="Department" class="block text-sm font-medium leading-6 text-gray-900">Department</label>
                     <div class="mt-2">
-                      <select id="departments" name="departments" autocomplete="department-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                        
+                      <select id="departments" name="departments" autocomplete="department-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"> 
                       </select>
                     </div>
                   </div>
@@ -92,20 +78,13 @@
                     <label for="nurse" class="block text-sm font-medium leading-6 text-gray-900">Nurse</label>
                     <div class="mt-2">
                       <select id="nurses" name="nurses" autocomplete="Nurse-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                      
-                        
                       </select>
                     </div>
                   </div>
                 </div>
               </div>
-            <!-- Step 2 content here -->
           </div>
-      
-          <!-- Step 3 content -->
           <div class="step step-3 hidden">
-            <!-- <h2>Step 3</h2> -->
-            <!-- Step 3 content here -->
             <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
                 <div class="max-w-2xl space-y-10 md:col-span-2">
                   <fieldset>
@@ -128,23 +107,14 @@
                   </fieldset>
                 </div>
               </div>
-              
           </div>
-          
-        <!-- </div> -->
-          
-          <!-- Buttons to navigate between steps -->
           <div class="flex justify-between mt-4">
-            
             <button class="btn-prev" onclick="changeStep(-1)" type="button">Previous</button>
             <button class="btn-next" onclick="changeStep(1)" type="button">Next</button>
             <button id="submit" type="submit" class="hidden rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
-
           </div>
     </form>
-
         </div>
-
       </div>
       <script src="components/navbar-menu.js"></script>
       <script src="components/add-patient-form.js"> </script>
@@ -189,9 +159,6 @@
     document.getElementById('submit').classList.add('hidden');
   }
 }
-
-
-
       </script>
       <script src="validate_form.js"></script>
 </body>
