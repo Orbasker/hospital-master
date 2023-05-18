@@ -7,20 +7,28 @@
         <title>Add Patient php - Hospital Master</title>
     </head>
     <body>
+    <navbar-menu>
+        <section class="p-4 sm:ml-64 m-16">
          <?php 
             $firstname = $_GET['first-name'];
             $lastname = $_GET['last-name'];
             $ID = $_GET['id'];
             $department = $_GET['departments'];
             $doctor = $_GET['doctors'];
-
-            echo "<h1>Added:
+            echo "<h1>Added new Patient!</h1>";
+            echo "<h2>Added:
                 $firstname <br>
                 $lastname <br>
                 $ID <br>
                 $department <br>
                 $doctor <br>
-            </h1>";
+            </h2>";
         ?>
+        </section>
+        </navbar-menu>
+        
     </body>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="../js/components/navbar-menu.js"></script>
 </html>

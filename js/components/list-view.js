@@ -38,10 +38,7 @@ class listView extends HTMLElement {
           <div class="flex justify-between items-center pb-3">
             <p class="text-2xl font-bold">Please choose a department</p>
             <button id="modalClose" class="modal-close cursor-pointer z-50">
-              <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                <path
-                  d="M1 17.804l.706.707L9 10.706l7.293 7.293.707-.707L9.707 10l7.293-7.293-.707-.707L9 9.293 1.707 1 .293 1.707l7.293 7.293L.293 17.097l.707.707L9 10.707l7.293 7.293.707-.707L9.707 10l7.293-7.293-.707-.707L9 .293.707 9.293l.707.707z" />
-              </svg>
+              
             </button>
           </div>
           <p>
@@ -77,7 +74,7 @@ function load_data() {
     }
   });
   const table = document.getElementById('table_view');
-  fetch('patients.json')
+  fetch('../assets/json/patients.json')
     .then(response => response.json())
     .then(data => {
       console.log(data);
@@ -106,7 +103,7 @@ function load_data() {
       });
     });
   const container = document.getElementById('patients');
-  fetch('patients.json')
+  fetch('../assets/json/patients.json')
     .then(response => response.json())
     .then(data => {
       console.log(data);
@@ -176,7 +173,7 @@ function closeModal() {
     load_data();
   }
 };
-fetch('assets/hospitals.json')
+fetch('../assets/json/hospitals.json')
   .then(response => response.json())
   .then(data => {
     data.departments.forEach(department => {

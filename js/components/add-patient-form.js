@@ -4,7 +4,7 @@ class AddPatientForm extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-        <form id="form" class="p-4 " action="add-patient.php" method="GET">
+        <form id="form" class="p-4 " action="../php/add-patient.php" method="GET">
         <div class="space-y-12">
                 <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
@@ -34,7 +34,10 @@ class AddPatientForm extends HTMLElement {
                   </div>
             </div>
           </div>
+          <legend class="text-sm font-semibold leading-6 text-gray-900">Medical information</legend>
+                <p class="mt-1 text-sm leading-6 text-gray-600">Here you need to fill the patients medical details.</p>
           <div id="medical-info-section" class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">
+          
             <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
               <div class="sm:col-span-3">
                 <label for="Department" class="block text-sm font-medium leading-6 text-gray-900">Department</label>
@@ -85,7 +88,7 @@ class AddPatientForm extends HTMLElement {
           <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
         </div>
       </form>
-        ${this.innerHTML}
+       
     `;
     }
 };
