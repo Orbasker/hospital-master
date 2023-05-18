@@ -9,7 +9,7 @@ class NavbarMenu extends HTMLElement {
           <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div id="avatarButton" class="flex items-center justify-between">
               <div class="flex items-start relative">
-                  <img src="../assets/svg/peled.jpg" class="h-8" style="width: 50px; height: 50px; margin-left: 15px; border-radius: 50%;" alt="propeleduser">
+                  <img src="assets/svg/peled.jpg" class="h-8" style="width: 50px; height: 50px; margin-left: 15px; border-radius: 50%;" alt="propeleduser">
                   <div id="userDropdown" class="hidden m-6 z-10 absolute bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                 <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
                   <div>Prof Ori Peled</div>
@@ -20,14 +20,14 @@ class NavbarMenu extends HTMLElement {
                     <a href="index.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                   </li>
                   <li>
-                    <a href="../list-view.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Department info</a>
+                    <a href="list-view.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Department info</a>
                   </li>
                   <li>
-                    <a href="../add-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add patient</a>
+                    <a href="add-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add patient</a>
                   </li>
                 </ul>
                 <div class="py-1">
-                  <a href="/404_page.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                  <a href="404_page.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
                 </div>
               </div>
                 </div>
@@ -38,15 +38,15 @@ class NavbarMenu extends HTMLElement {
                 </svg>
               </button>
               <div class="flex items-center justify-center flex-1">
-                <a href="/index.html" class="flex items-center ml-3 md:mr-24">
-                  <img src="../assets/svg/logo1.svg" class="h-8" alt="Hospital Master">
+                <a href="index.html" class="flex items-center ml-3 md:mr-24">
+                  <img src="assets/svg/logo1.svg" class="h-8" alt="Hospital Master">
                   <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap"></span>
                 </a>
               </div>
             <div class="flex items-center">
               <div class="flex items-center ml-3">
                 <div>
-                  <img class="w-16 h-16 rounded-full" src="../assets/svg/hadsa.svg" alt="hadasa">
+                  <img class="w-16 h-16 rounded-full" src="assets/svg/hadsa.svg" alt="hadasa">
                 </button>
                 </div>
             </div>
@@ -58,7 +58,7 @@ class NavbarMenu extends HTMLElement {
          <div class="h-full m-4 px-3 pb-4 overflow-y-auto bg-gray-200">
             <ul class="space-y-2 font-medium">
                <li>
-                  <a href="/index.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="index.html" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/></svg>
                   <span class="ml-3 hover:text-white" id="rubik">Home Page</span>
                   </a>
@@ -70,19 +70,19 @@ class NavbarMenu extends HTMLElement {
                   </a>
                </li>
                <li>
-                  <a href="../404_page.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="404_page.html" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M1,20a1,1,0,0,0,1,1h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5Zm12.707,9.707L20.414,17l2.293,2.293a1,1,0,1,1-1.414,1.414L19,18.414l-2.293,2.293a1,1,0,0,1-1.414-1.414L17.586,17l-2.293-2.293a1,1,0,0,1,1.414-1.414L19,15.586l2.293-2.293a1,1,0,0,1,1.414,1.414Z"></path></g></svg>
                      <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Release Patient</span>
                   </a>
                </li>
                <li>
-                  <a href="../404_page.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="404_page.html" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21H8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5ZM20.207,9.293a1,1,0,0,0-1.414,0l-6.25,6.25a1.011,1.011,0,0,0-.241.391l-1.25,3.75A1,1,0,0,0,12,21a1.014,1.014,0,0,0,.316-.051l3.75-1.25a1,1,0,0,0,.391-.242l6.25-6.25a1,1,0,0,0,0-1.414Zm-5,8.583-1.629.543.543-1.629L19.5,11.414,20.586,12.5Z"/></svg>
                      <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Edit Patient</span>
                   </a>
                </li>
                <li>
-               <a href="../list-view.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+               <a href="list-view.html" class="flex items-center p-2 text-gray-900 rounded-lg">
                 <svg width="25px" height="25px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                   <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -94,7 +94,7 @@ class NavbarMenu extends HTMLElement {
               </a>
                </li>
                <li>
-                  <a href="../404_page.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="404_page.html" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" height="25px" width="25px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     viewBox="0 0 340.279 340.279" xml:space="preserve">
                     <g>
@@ -137,7 +137,7 @@ class NavbarMenu extends HTMLElement {
                   </a>
                </li>
                <li>
-                  <a href="/404_page.html" class="flex items-center p-2 text-black rounded-lg">
+                  <a href="404_page.html" class="flex items-center p-2 text-black rounded-lg">
                     <svg width="25px" height="25px" class="flex-shrink-0 w-6 h-6 text-black transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Log Out</span>
                   </a>
@@ -150,6 +150,4 @@ class NavbarMenu extends HTMLElement {
      `;
   }
 }
-customElements.define('navbar-menu', NavbarMenu);
-
-
+customElements.define("navbar-menu", NavbarMenu);

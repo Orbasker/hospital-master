@@ -23,6 +23,14 @@
       {
         "department": "Emergency B",
         "occupancyLevel": "low"
+      },
+      {
+        "department": "Emergency C",
+        "occupancyLevel": "low"
+      },
+      {
+        "department": "Emergency D",
+        "occupancyLevel": "low"
       }
     ]
   }

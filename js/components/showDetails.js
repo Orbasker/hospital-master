@@ -15,7 +15,7 @@ function getParameterByName(name, url) {
 }
 function showPatientDetails() {
   let bed_number = getParameterByName("bed_number");
-  fetch("../assets/json/patients.json")
+  fetch("assets/json/patients.json")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((patient) => {

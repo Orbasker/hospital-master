@@ -73,7 +73,7 @@ function load_data() {
     }
   });
   const table = document.getElementById("table_view");
-  fetch("../assets/json/patients.json")
+  fetch("assets/json/patients.json")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((patient) => {
@@ -101,7 +101,7 @@ function load_data() {
       });
     });
   const container = document.getElementById("patients");
-  fetch("../assets/json/patients.json")
+  fetch("assets/json/patients.json")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((patient) => {
@@ -178,7 +178,7 @@ function closeModal() {
     load_data();
   }
 }
-fetch("../assets/json/hospitals.json")
+fetch("assets/json/hospitals.json")
   .then((response) => response.json())
   .then((data) => {
     data.departments.forEach((department) => {

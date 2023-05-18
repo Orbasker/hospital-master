@@ -1,5 +1,5 @@
 function loadHospital() {
-  return fetch("../assets/json/hospitals.json")
+  return fetch("assets/json/hospitals.json")
     .then((response) => response.json())
     .then((data) => {
       return data;
