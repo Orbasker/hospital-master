@@ -1,57 +1,53 @@
 let is_clicked_dropdown = true;
-    avatarButton = document.getElementById('avatarButton');
-    avatarButton.addEventListener('click', function() {
-     
-    userDropdown = document.getElementById('userDropdown');
-    if (is_clicked_dropdown) {
-    userDropdown.classList.remove('hidden');
+avatarButton = document.getElementById("avatarButton");
+avatarButton.addEventListener("click", function () {
+  userDropdown = document.getElementById("userDropdown");
+  if (is_clicked_dropdown) {
+    userDropdown.classList.remove("hidden");
     is_clicked_dropdown = false;
-    } else {
-      userDropdown.classList.add('hidden');
-      is_clicked_dropdown = true;
-    }
-    });
+  } else {
+    userDropdown.classList.add("hidden");
+    is_clicked_dropdown = true;
+  }
+});
 
-  let is_clicked_hamburger = true;
-    hamburgerButton = document.getElementById('hamburger');
-    hamburgerButton.addEventListener('click', function() {
-      logo_side_bar = document.getElementById('logo-sidebar');
-      if (is_clicked_hamburger) {
-        logo_side_bar.classList.remove('hidden');
-        is_clicked_hamburger = false;
-      } else {
-        logo_side_bar.classList.add('hidden');
-        is_clicked_hamburger = true;
-      }
-    });
+let is_clicked_hamburger = true;
+hamburgerButton = document.getElementById("hamburger");
+hamburgerButton.addEventListener("click", function () {
+  logo_side_bar = document.getElementById("logo-sidebar");
+  if (is_clicked_hamburger) {
+    logo_side_bar.classList.remove("hidden");
+    is_clicked_hamburger = false;
+  } else {
+    logo_side_bar.classList.add("hidden");
+    is_clicked_hamburger = true;
+  }
+});
 
-
-  
-    function getFillColor(occupancyLevel) {
-      switch (occupancyLevel) {
-        case 'high':
-          return '#BD362F';
-        case 'medium':
-          return '#4ECB71';
-        case 'low':
-          return '#FFC40D';
-        default:
-          return '#000000';
-      }
-  }  
-    window.onload = function () {
-    fetch('assets/json/department-load.json')
-    .then(response => response.json())
-    .then(data => {
+function getFillColor(occupancyLevel) {
+  switch (occupancyLevel) {
+    case "high":
+      return "#BD362F";
+    case "medium":
+      return "#4ECB71";
+    case "low":
+      return "#FFC40D";
+    default:
+      return "#000000";
+  }
+}
+window.onload = function () {
+  fetch("assets/json/department-load.json")
+    .then((response) => response.json())
+    .then((data) => {
       const loads = data.logs;
-      // Get the logs container element
-      const loadContainer = document.getElementById('loadContainer'); 
-      // Create HTML markup for each log entry
-      const logsHTML = loads.map(log => {
-      const departmentName = log.department;
-      const {occupancyLevel} = log;
-      const fillColor = getFillColor(occupancyLevel);
-      return `
+      const loadContainer = document.getElementById("loadContainer");
+      const logsHTML = loads
+        .map((log) => {
+          const departmentName = log.department;
+          const { occupancyLevel } = log;
+          const fillColor = getFillColor(occupancyLevel);
+          return `
         <tr class="bg-white border-b">
         <th scope="row" class="px-2 py-3 md:px-6 md:py-4 font-medium text-gray-900 whitespace-nowrap ">${departmentName}</th>
           <td class="flex justify-center items-center">
@@ -61,9 +57,9 @@ let is_clicked_dropdown = true;
           </td>
         </tr>
            `;
-         }).join('');
-         // Set the generated HTML markup inside the logs container
-         loadContainer.innerHTML = `
+        })
+        .join("");
+      loadContainer.innerHTML = `
            <table class="w-full text-sm text-center text-gray-500">
              <thead class="text-xs md:text-sm text-gray-700 uppercase bg-gray-50">
                <tr>
@@ -74,46 +70,52 @@ let is_clicked_dropdown = true;
              <tbody>${logsHTML}</tbody>
            </table>
          `;
-            })
-          .catch(error => {
-            console.error('Error fetching department load data:', error);
-          });
-          fetch('assets/json/doctors.json')
-            .then(response => response.json())
-            .then(data => {
-              const tbody = document.getElementById('doctorsContainer');
-              data.forEach(doctor => {
-                  const row = document.createElement('tr');
-                  row.classList.add('bg-white', 'border-b', 'bg-white', 'border-b');
-                  const nameCell = document.createElement('th');
-                  nameCell.scope = 'row';
-                  nameCell.classList.add('px-6', 'py-4', 'font-medium', 'text-neutral-950', 'whitespace-nowrap', 'text-neutral-950');
-                  nameCell.textContent = doctor.name;
-                  const departmentCell = document.createElement('td');
-                  departmentCell.classList.add('px-6', 'py-4');
-                  departmentCell.textContent = doctor.department;
-                  const phoneNumberCell = document.createElement('td');
-                  phoneNumberCell.classList.add('px-6', 'py-4');
-                  phoneNumberCell.textContent = doctor.phoneNumber;
-                  row.appendChild(nameCell);
-                  row.appendChild(departmentCell);
-                  row.appendChild(phoneNumberCell);
-                  tbody.appendChild(row);
-                });
-            })
-            .catch(error => {
-              console.error('Error fetching doctors data:', error);
-            });
-          fetch('assets/json/logs.json')
-            .then(response => response.json())
-            .then(data => {
-              const logsContainer = document.getElementById('logsContainer');
-              // Rest of the code for processing logs data
-              // Generate HTML content for each log
-          const logsHTML = data.map(log => {
-              const {logId, logText} = log;
-              const detailsLink = log.detailsLink || '';
-              return `
+    })
+    .catch((error) => {
+      console.error("Error fetching department load data:", error);
+    });
+  fetch("assets/json/doctors.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const tbody = document.getElementById("doctorsContainer");
+      data.forEach((doctor) => {
+        const row = document.createElement("tr");
+        row.classList.add("bg-white", "border-b", "bg-white", "border-b");
+        const nameCell = document.createElement("th");
+        nameCell.scope = "row";
+        nameCell.classList.add(
+          "px-6",
+          "py-4",
+          "font-medium",
+          "text-neutral-950",
+          "whitespace-nowrap",
+          "text-neutral-950"
+        );
+        nameCell.textContent = doctor.name;
+        const departmentCell = document.createElement("td");
+        departmentCell.classList.add("px-6", "py-4");
+        departmentCell.textContent = doctor.department;
+        const phoneNumberCell = document.createElement("td");
+        phoneNumberCell.classList.add("px-6", "py-4");
+        phoneNumberCell.textContent = doctor.phoneNumber;
+        row.appendChild(nameCell);
+        row.appendChild(departmentCell);
+        row.appendChild(phoneNumberCell);
+        tbody.appendChild(row);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching doctors data:", error);
+    });
+  fetch("assets/json/logs.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const logsContainer = document.getElementById("logsContainer");
+      const logsHTML = data
+        .map((log) => {
+          const { logId, logText } = log;
+          const detailsLink = log.detailsLink || "";
+          return `
               <li class="p-4">
                   <div class="flex items-center justify-between">
                   <span class="tdark:text-white">Log ${logId}</span>
@@ -121,16 +123,13 @@ let is_clicked_dropdown = true;
                   <p class="tdark:text-white">${logText}<a href="${detailsLink}" color="#2563eb">Click for more details.</a></p>
               </li>
               `;
-          }).join('');
-          // Insert the generated HTML content into the logs container
-          logsContainer.innerHTML = `
+        })
+        .join("");
+      logsContainer.innerHTML = `
               <ul class="shadow-md rounded-lg divide-y divide-gray-50">${logsHTML}</ul>
           `;
-            })
-            .catch(error => {
-              console.error('Error fetching system recommendation logs:', error);
-            });
-        
-          console.log("window loaded");
-        };
-             
+    })
+    .catch((error) => {
+      console.error("Error fetching system recommendation logs:", error);
+    });
+};

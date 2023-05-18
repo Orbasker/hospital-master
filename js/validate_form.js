@@ -1,19 +1,15 @@
- function loadHospital() {
-  return fetch('../assets/json/hospitals.json')
- .then(response => response.json())
- .then(data => {
-   console.log(data);
-  return data;
-  })
+function loadHospital() {
+  return fetch("../assets/json/hospitals.json")
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
 }
 let hospitals;
 window.onload = function () {
-  console.log("window loaded");
   loadHospital()
     .then((loadedHospitals) => {
       hospitals = loadedHospitals;
-      console.log(hospitals);
-
       loadDepartments();
       loadDoctors();
       loadNurses();
@@ -28,7 +24,7 @@ window.onload = function () {
 };
 function loadDepartments() {
   let departmentsElement = document.getElementById("departments");
-  for (let department of Array.from(hospitals.departments) ) {
+  for (let department of Array.from(hospitals.departments)) {
     let optionElement = document.createElement("option");
     optionElement.value = department.name;
     optionElement.innerHTML = department.name;
@@ -76,12 +72,9 @@ function isDoctorExists(doctorName) {
   return false;
 }
 
-
 const radioButtons = document.getElementsByClassName("radio-button");
 Array.from(radioButtons).forEach((radioButton) => {
   radioButton.addEventListener("click", (event) => {
-    console.log(event.target + " is checked");
-    // uncheck all other radio buttons
     Array.from(radioButtons).forEach((otherRadioButton) => {
       if (otherRadioButton !== event.target) {
         otherRadioButton.checked = false;

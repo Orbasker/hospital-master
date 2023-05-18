@@ -23,5 +23,20 @@
       "name": "Dr. Bar On Odel",
       "department": "Children",
       "phoneNumber": "0505223230"
+    },
+    {
+      "name": "Dr. Bar Nager" ,
+      "department": "Otolaryngology",
+      "phoneNumber": "0505223230"
+    },
+    {
+      "name": "Dr. Conor Nager" ,
+      "department": "General Surgery",
+      "phoneNumber": "0505223230"
+    },
+    {
+      "name": "Dr. Bar Nager" ,
+      "department": "General Surgery",
+      "phoneNumber": "0505223230"
     }
   ]
