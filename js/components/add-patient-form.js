@@ -4,7 +4,7 @@ class AddPatientForm extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-        <form id="form" class="p-4 " action="php/add-patient.php" method="GET">
+        <form id="form" class="p-4 " action="#" method="post">
         <div class="space-y-12">
                 <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
@@ -67,15 +67,15 @@ class AddPatientForm extends HTMLElement {
                 <p class="mt-1 text-sm leading-6 text-gray-600">These is estimated time to Realease.</p>
                 <div class="mt-6 space-y-6 m-20">
                   <div class="flex items-center gap-x-3">
-                    <input id="one_day" name="one_day" type="radio" class="radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <input id="one_day" name="estimated_time" type="radio" class="radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
                     <label for="one_day" class=" block text-sm font-medium leading-6 text-gray-900">maximum 24 hours</label>
                   </div>
                   <div class="flex items-center gap-x-3">
-                    <input id="two_day" name="two_day" type="radio" class="radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <input id="two_day" name="estimated_time" type="radio" class="radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
                     <label for="two_day" class="block text-sm font-medium leading-6 text-gray-900">maximum 48 hours</label>
                   </div>
                   <div class="flex items-center gap-x-3">
-                    <input id="three_day" name="three_day" type="radio" class= "radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <input id="three_day" name="estimated_time" type="radio" class= "radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
                     <label for="three_day" class="block text-sm font-medium leading-6 text-gray-900">maximum 72 hours</label>
                   </div>
                 </div>
