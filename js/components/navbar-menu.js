@@ -17,13 +17,22 @@ class NavbarMenu extends HTMLElement {
                 </div>
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
                   <li>
-                    <a href="index.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    <a href="index.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home Page</a>
                   </li>
                   <li>
-                    <a href="list-view.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Department info</a>
+                    <a href="add-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add Patient</a>
                   </li>
                   <li>
-                    <a href="add-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add patient</a>
+                    <a href="release-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Release Patient</a>
+                  </li>
+                  <li>
+                    <a href="edit-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit Patient</a>
+                  </li>
+                  <li>
+                    <a href="list-view.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Information</a>
+                  </li>
+                  <li>
+                    <a href="404_page.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Managing Tools</a>
                   </li>
                 </ul>
                 <div class="py-1">

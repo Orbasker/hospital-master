@@ -1,4 +1,4 @@
-class releasePatientForm extends HTMLElement {
+class editPatientForm extends HTMLElement {
     constructor() {
         super();
     }
@@ -60,6 +60,29 @@ class releasePatientForm extends HTMLElement {
               </div>
             </div>
           </div>
+          <div class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+            <div class="max-w-2xl space-y-10 md:col-span-2">
+              <fieldset>
+                <legend class="text-sm font-semibold leading-6 text-gray-900">Estimated time</legend>
+                <p class="mt-1 text-sm leading-6 text-gray-600">These is estimated time to Realease - update the current time for the patient's discharge.</p>
+                <div class="mt-6 space-y-6 m-20">
+                  <div class="flex items-center gap-x-3">
+                    <input id="one_day" name="estimated_time" type="radio" class="radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="one_day" class=" block text-sm font-medium leading-6 text-gray-900">maximum 48 hours</label>
+                  </div>
+                  <div class="flex items-center gap-x-3">
+                    <input id="two_day" name="estimated_time" type="radio" class="radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="two_day" class="block text-sm font-medium leading-6 text-gray-900">maximum 72 hours</label>
+                  </div>
+                  <div class="flex items-center gap-x-3">
+                    <input id="three_day" name="estimated_time" type="radio" class= "radio-button h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="three_day" class="block text-sm font-medium leading-6 text-gray-900">maximum 96 hours</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
         <div class="mt-6 flex items-center justify-end gap-x-6">
           <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
           <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
@@ -68,7 +91,7 @@ class releasePatientForm extends HTMLElement {
     `;
     }
 };
-customElements.define('release-patient-form', releasePatientForm);
+customElements.define('edit-patient-form', editPatientForm);
 
 // להוסיף לייטבוקס אחרי שעושים שמור ואחכ לעשות המשך ושזה יעביר את הפרמטרים לטופס.
 {/* <div id="modal" class="fixed inset-0 flex items-center justify-center z-50 ">
