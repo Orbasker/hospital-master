@@ -1,3 +1,19 @@
+// window.location.href = "login.html";
+// Function to check session status
+function checkSession() {
+  fetch('check_session.php')
+      .then(response => response.json())
+      .then(data => {
+          if (data.status === 'active') {
+              // Session is active, do something
+              console.log('Session active:', data.user_name);
+          } else {
+            window.location.href = "login.html";
+              // Session is inactive, do something else
+          }
+      });
+}
+
 let is_clicked_dropdown = true;
 avatarButton = document.getElementById("avatarButton");
 avatarButton.addEventListener("click", function () {
@@ -37,6 +53,7 @@ function getFillColor(occupancyLevel) {
   }
 }
 window.onload = function () {
+  checkSession();
   fetch("assets/json/department-load.json")
     .then((response) => response.json())
     .then((data) => {
@@ -132,4 +149,7 @@ window.onload = function () {
     .catch((error) => {
       console.error("Error fetching system recommendation logs:", error);
     });
+    
 };
+
+

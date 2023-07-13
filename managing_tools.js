@@ -1,15 +1,11 @@
 fetch('/managing_tools.php')
 .then(response => response.json())
 .then(data => {
-    console.log(data);
+    (data);
     generateDropdown(data);
     data.forEach(user => {
         create_user_row(user);
     });
-  // Call functions to render the user data table, perform CRUD operations, and handle sorting/filtering
-//   renderUserTable(data);
-  // Add code for CRUD operations and filtering/sorting here
-
 })
 .catch(error => {
   console.error('Error:', error);
@@ -86,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div id="${user_data.user_id}-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
         <ul id="${user_data.user_id}-toggle-drop-down" class="py-1 text-sm" aria-labelledby="${user_data.user_id}-dropdown-button">
           <li>
-            <button type="button" id="${user_data.user_id}-edit-button" data-modal-target="updateProductModal" data-modal-toggle="updateProductModal" class="flex w-full items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-700 dark:text-gray-200">
+            <button type="button" id="${user_data.user_id}-edit-button" data-modal-target="updateUserModal" data-modal-toggle="updateUserModal" class="flex w-full items-center py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-gray-700 dark:text-gray-200">
               <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
@@ -119,56 +115,43 @@ document.addEventListener('DOMContentLoaded', () => {
         const {target} = event;
       
         if (target.closest("[id$='-dropdown']")) {
-          // Clicked inside the dropdown, do nothing
           return;
         }
       
         dropdown.classList.toggle("hidden");
       });
-    //   console.log(actionsCell);
-    //   console.log(actionsCell.querySelector(`-edit-button`));
-    //  // ...
     const editButton = actionsCell.querySelector(`[id$="-edit-button"]`);
     editButton.addEventListener("click", (event) => {
     event.stopPropagation();
     fillUpdateFieldsWithData(user_data);
     openUpdateModal();
-    console.log("edit button clicked");
+    ("edit button clicked");
     const update_button = document.getElementById("update_user_edit");
-    // update_button.addEventListener("click", (handleUpdateUser(user_data)));
 
     const delete_button = document.getElementById("delete_user_edit");
-    // console.log(delete_button);
     delete_button.addEventListener("click", () => {
             openDeleteModal(user_id = user_data.user_id);
-    //     const cancelButton = deleteModal.querySelector("[data-modal-toggle='deleteModal']");
-    //     cancelButton.addEventListener("click", closeDeleteModal);
-    //     const confirmButton = deleteModal.querySelector("[type='submit']");
-    //     confirmButton.addEventListener("click", (handleConfirmDeleteUser(user_data)));
-    //     console.log("delete button clicked in edit modal");
     
 
     });
     });
     const previewButton = actionsCell.querySelector(`[id$="-preview-button"]`);
-    // console.log(previewButton);
     previewButton.addEventListener("click", (event) => {
-        console.log("preview button clicked");
+        ("preview button clicked");
     event.stopPropagation();
     openPreviewModal();
     fillPreviewFieldsWithData(user_data);
     
-    console.log(user_data);
+    (user_data);
     });
     const deleteButton = actionsCell.querySelector(`[id$="-delete-button"]`);
     deleteButton.addEventListener("click", (event) => {
-        console.log("delete button clicked");
+        ("delete button clicked");
     event.stopPropagation();
     openDeleteModal(user_id=0);
     const cancelButton = deleteModal.querySelector("[data-modal-toggle='deleteModal']");
             cancelButton.addEventListener("click", closeDeleteModal);
             const confirmButton = deleteModal.querySelector("[type='submit']");
-            // confirmButton.addEventListener("submit", (handleConfirmDeleteUser(user_data)));
     });
 
 
@@ -231,36 +214,29 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener("click", toggleContainerVisibility);
 };
   
-      // Function to toggle the dropdown visibility
       function toggleContainerVisibility() {
           const filterDropdown = document.getElementById("filterDropdown");
           filterDropdown.classList.toggle("hidden");
       };
-    //function to clean the table body
       function cleanTableBody() {
           const tableBody = document.getElementById("users_tbl");
           tableBody.innerHTML = "";
       };
-    // Function to refresh the data
     function refreshData() {
-        // let query = "";
         let arr =[];
         const selectedCheckboxes = document.querySelectorAll("#filterDropdown input[type='checkbox']:checked");
-        // const selectedValues = Array.from(selectedCheckboxes).map(checkbox => checkbox.name);
         selectedCheckboxes.forEach(checkbox => {
             arr.push(checkbox.id);
         });
-        // console.log(arr);
-        // const selectedValues = Array.from(selectedCheckboxes).map(checkbox => checkbox.id);
         const query = arr.join(',');
         cleanTableBody();
       
     
-        console.log('/managing_tools.php' + '?values='+query);
+        ('/managing_tools.php' + '?values='+query);
       fetch('/managing_tools.php' + '?values='+query) 
       .then(response => response.json())
       .then(jsonData => {
-          console.log(jsonData);
+          (jsonData);
           jsonData.forEach(user => {
             create_user_row(user);
           });
@@ -273,99 +249,116 @@ document.addEventListener('DOMContentLoaded', () => {
         const actionsDropdown = document.getElementById("actionsDropdown");
         actionsDropdown.classList.toggle("hidden");
     };
-//           // Get the add product option and add a click event listener
-// const addProductOption = document.getElementById("addProductOption");
-// addProductOption.addEventListener("click", addProduct);
-
-// // Function to handle the click event of the add product option
-// function addProduct(event) {
-//   event.preventDefault();
-//   // Add your code here to handle the "Add product" functionality
-//   console.log("Add product clicked");
-// }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Get all elements that should open the modal
-    const modalToggleElements_update = document.querySelectorAll("[target='updateProductModal']");
-    // console.log(modalToggleElements_update);
+    const modalToggleElements_update = document.querySelectorAll("[target='updateUserModal']");
     const modalToggleElements_preview = document.querySelectorAll("[target='readClientModal']");
-    // console.log(modalToggleElements_preview);
     const modalToggleElements_delete = document.querySelectorAll("[target='deleteModal']");
-    // console.log(modalToggleElements_delete);
+    const modalToggleElements_add = document.querySelectorAll("[target='createUserModal']");
+  
     // Get the update modal element
-    const updateModal = document.getElementById("updateProductModal");
+    const updateModal = document.getElementById("updateUserModal");
     const previewModal = document.getElementById("readClientModal");
     const deleteModal = document.getElementById("deleteModal");
-
+    const addModal = document.getElementById("createUserModal");
+  
     // Get the close button inside the modal
-    const closeModalButton = updateModal.querySelector("[data-modal-toggle='updateProductModal']");
+    const closeModalButton = updateModal.querySelector("[data-modal-toggle='updateUserModal']");
+    ("closeModalButton" + closeModalButton);
+    (closeModalButton);
     const closeModalButton_preview = previewModal.querySelector("[data-modal-toggle='readClientModal']");
+    ("closeModalButton_preview" + closeModalButton_preview);
     const closeModalButton_delete = deleteModal.querySelector("[data-modal-toggle='deleteModal']");
-
-    
+    const closeModalButton_add = addModal.querySelector("[data-modal-toggle='createUserModal']");
+  
     // Add a click event listener to each modal toggle element
     modalToggleElements_update.forEach((element) => {
-        element.addEventListener("click", (event) => {
-            event.preventDefault();
-            const modalTarget = element.getAttribute("data-modal-target");
-            const modal = document.getElementById(modalTarget);
-            const closeModalButton = modal.querySelector("[data-modal-toggle='" + modalTarget + "']");
-            closeModalButton.addEventListener("click", closeUpdateModal);
-            modal.addEventListener("click", (event) => {
-                if (event.target === modal) {
-                    closeUpdateModal();
-                }
-            });
+      element.addEventListener("click", (event) => {
+        event.preventDefault();
+        const modalTarget = element.getAttribute("data-modal-target");
+        const modal = document.getElementById(modalTarget);
+        const closeModalButton = modal.querySelector("[data-modal-toggle='" + modalTarget + "']");
+        closeModalButton.addEventListener("click", closeUpdateModal);
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            closeUpdateModal();
+          }
         });
+      });
     });
+  
     modalToggleElements_preview.forEach((element) => {
-        element.addEventListener("click", (event) => {
-            event.preventDefault();
-            const modalTarget = element.getAttribute("data-modal-target");
-            const modal = document.getElementById(modalTarget);
-            const closeModalButton = modal.querySelector("[data-modal-toggle='" + modalTarget + "']");
-            closeModalButton.addEventListener("click", closePreviewModal);
-            modal.addEventListener("click", (event) => {
-                if (event.target === modal) {
-                    closePreviewModal();
-                }
-            });
+        ("element is" + element);
+      element.addEventListener("click", (event) => {
+        event.preventDefault();
+        ("clicked");
+        ("event" + event);
+        ("target" + event.target);
+        const modalTarget = element.getAttribute("data-modal-target");
+        ("modatl target" + modalTarget);
+        const modal = document.getElementById(modalTarget);
+        ("modal" + modal);
+        const closeModalButton = modal.querySelector("[data-modal-toggle='" + modalTarget + "']");
+        ("close modal button" + closeModalButton);
+        closeModalButton.addEventListener("click", closePreviewModal);
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            closePreviewModal();
+          }
         });
+      });
     });
+  
     modalToggleElements_delete.forEach((element) => {
+      element.addEventListener("click", (event) => {
+        event.preventDefault();
+        const modalTarget = element.getAttribute("data-modal-target");
+        const modal = document.getElementById(modalTarget);
+        const closeModalButton = modal.querySelector("[data-modal-toggle='" + modalTarget + "']");
+        closeModalButton.addEventListener("click", closeDeleteModal);
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            closeDeleteModal();
+          }
+        });
+  
+      });
+    });
+    modalToggleElements_add.forEach((element) => {
         element.addEventListener("click", (event) => {
             event.preventDefault();
             const modalTarget = element.getAttribute("data-modal-target");
             const modal = document.getElementById(modalTarget);
             const closeModalButton = modal.querySelector("[data-modal-toggle='" + modalTarget + "']");
-            closeModalButton.addEventListener("click", closeDeleteModal);
+            closeModalButton.addEventListener("click", closeAddModal);
             modal.addEventListener("click", (event) => {
                 if (event.target === modal) {
-                    closeDeleteModal();
+                    closeAddModal();
                 }
             });
-            
         });
     });
-
+  
     // Add a click event listener to the close button
     closeModalButton.addEventListener("click", closeUpdateModal);
     closeModalButton_preview.addEventListener("click", closePreviewModal);
     closeModalButton_delete.addEventListener("click", closeDeleteModal);
-
-});
-
+    closeModalButton_add.addEventListener("click", closeAddModal);
+  
+    
+  
+//   };
+  
 
   function openUpdateModal() {
-    let update_modal = document.getElementById("updateProductModal");
+    let update_modal = document.getElementById("updateUserModal");
     update_modal.classList.remove("hidden");
   }
 
   // Function to close the update modal
   function closeUpdateModal() {
-    console.log("closeUpdateModal");
-    let update_modal = document.getElementById("updateProductModal");
+    ("closeUpdateModal");
+    let update_modal = document.getElementById("updateUserModal");
     update_modal.classList.add("hidden");
   }
   
@@ -440,7 +433,7 @@ function handleConfirmDeleteUser(user_data) {
     fetch(`/managing_tools.php?delete_user=${user_data.user_id}`)
       .then(response => response.json())
       .then(data => {
-        console.log("Success:", data);
+        ("Success:", data);
         if (data == 200) {
           window.location.href = "managing_tools.html";
         } else {
@@ -455,8 +448,8 @@ function handleConfirmDeleteUser(user_data) {
   
 
   function handleUpdateUser(user_data) {
-    console.log("handleUpdateUser");
-    console.log(user_data);
+    ("handleUpdateUser");
+    (user_data);
     
     const data = {
        
@@ -493,16 +486,16 @@ function handleConfirmDeleteUser(user_data) {
   
 
   document.getElementById("update_modal_form").addEventListener("submit", event => {
-    console.log("update_modal_form");
+    ("update_modal_form");
     event.preventDefault();
     let form_data = new FormData(event.target);
     let user_data = Object.fromEntries(form_data.entries());
-    console.log(user_data);
+    (user_data);
     handleUpdateUser(user_data);
   });
 
   document.getElementById("delete_modal_form").addEventListener("submit", event => {
-    console.log("delete_modal_form");
+    ("delete_modal_form");
     event.preventDefault();
     let form_data = new FormData(event.target);
     let user_data = Object.fromEntries(form_data.entries());
@@ -520,14 +513,14 @@ document.getElementById("action_add").addEventListener("click", openAddModal);
 
 document.getElementById('createUserForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
-    console.log(event);
-    console.log(event.target);
-    console.log(event.target.elements);
-    console.log(event.target.elements.firstName);
-    console.log(event.target.elements.firstName.value);
-    console.log(event.target.elements.lastName.value);
-    console.log(event.target.elements.username.value);
-    console.log(event.target.elements.password.value);
+    (event);
+    (event.target);
+    (event.target.elements);
+    (event.target.elements.firstName);
+    (event.target.elements.firstName.value);
+    (event.target.elements.lastName.value);
+    (event.target.elements.username.value);
+    (event.target.elements.password.value);
     // Get form data
     let firstName = event.target.elements.firstName.value;
     let lastName = event.target.elements.lastName.value;
@@ -543,7 +536,7 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
       password: password,
       userType: userType
     };
-    console.log(user);
+    (user);
     // Send user data as JSON to PHP script
     const controller = new AbortController();
     const {signal} = controller;
@@ -569,7 +562,7 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
         return response.json();
       })
       .then(data => {
-        console.log('Success:', data);
+        ('Success:', data);
         if (data === true) {
           window.location.href = "managing_tools.html";
         } else {
@@ -582,3 +575,126 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
       });
     });
     
+
+
+    // Get the table element by its ID or any other appropriate selector
+const table = document.getElementById('users_tbl');
+const rowsPerPage = 20; // Number of rows per page
+
+// Calculate the number of rows and total pages
+const rowCount = table.rows.length;
+const totalPages = Math.ceil(rowCount / rowsPerPage);
+
+// Get the navigation container element
+const navContainer = document.querySelector('.table-navigation');
+
+// Create the navigation elements
+const nav = document.createElement('nav');
+nav.className = 'flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4';
+nav.setAttribute('aria-label', 'Table navigation');
+
+const infoSpan = document.createElement('span');
+infoSpan.className = 'text-sm font-normal text-gray-500 dark:text-gray-400';
+const infoText = document.createTextNode(`Showing 1-${rowsPerPage} of ${rowCount}`);
+infoSpan.appendChild(infoText);
+
+const ul = document.createElement('ul');
+ul.className = 'inline-flex items-stretch -space-x-px';
+
+// Create the previous button
+const prevLi = document.createElement('li');
+const prevButton = createNavButton('Previous', 'Previous', 'flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white');
+prevLi.appendChild(prevButton);
+
+// Create the page buttons
+for (let i = 1; i <= totalPages; i++) {
+  const li = document.createElement('li');
+  const pageButton = createNavButton(i, i, 'flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white');
+  li.appendChild(pageButton);
+  ul.appendChild(li);
+}
+
+// Create the next button
+const nextLi = document.createElement('li');
+const nextButton = createNavButton('Next', 'Next', 'flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white');
+nextLi.appendChild(nextButton);
+
+// Append the elements to the navigation container
+nav.appendChild(infoSpan);
+nav.appendChild(ul);
+navContainer.appendChild(nav);
+
+// Function to create a navigation button
+function createNavButton(text, ariaLabel, className) {
+  const button = document.createElement('a');
+  button.href = '#';
+  button.className = className;
+  button.setAttribute('aria-label', ariaLabel);
+  button.textContent = text;
+  return button;
+}
+
+// Function to update the navigation buttons
+function updateNavigationButtons() {
+  // Enable/disable previous button based on the current page
+  prevButton.disabled = currentPage === 1;
+
+  // Enable/disable next button based on the current page
+  nextButton.disabled = currentPage === totalPages;
+
+  // Remove the "active" class from all page buttons
+  pageButtons.forEach((button) => {
+    button.classList.remove('active');
+  });
+
+  // Add the "active" class to the current page button
+  pageButtons[currentPage - 1].classList.add('active');
+}
+
+// Function to go to the previous page
+function goToPreviousPage() {
+  if (currentPage > 1) {
+    currentPage--;
+    updateNavigationButtons();
+    // Perform actions to load the previous page of data
+    // ...
+  }
+}
+
+// Function to go to the next page
+function goToNextPage() {
+  if (currentPage < totalPages) {
+    currentPage++;
+    updateNavigationButtons();
+    // Perform actions to load the next page of data
+    // ...
+  }
+}
+
+// Function to go to a specific page
+function goToPage(pageNumber) {
+  if (pageNumber >= 1 && pageNumber <= totalPages) {
+    currentPage = pageNumber;
+    updateNavigationButtons();
+    // Perform actions to load the selected page of data
+    // ...
+  }
+}
+
+// Add click event listeners to the previous and next buttons
+prevButton.addEventListener('click', goToPreviousPage);
+nextButton.addEventListener('click', goToNextPage);
+
+// Get the page buttons and add click event listeners
+const pageButtons = ul.querySelectorAll('li a');
+pageButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    goToPage(index + 1);
+  });
+});
+
+// Set the initial page to 1
+let currentPage = 1;
+
+// Update the navigation buttons initially
+updateNavigationButtons();

@@ -90,6 +90,7 @@ ini_set('display_errors', 1);
         
         $result = json_encode($result);
     }
-    echo $result;
     header("Content-Type: application/json");
+
+    echo $result;
 ?>
