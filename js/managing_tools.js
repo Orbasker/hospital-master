@@ -1,4 +1,4 @@
-fetch('/managing_tools.php')
+fetch('/php/managing_tools.php')
 .then(response => response.json())
 .then(data => {
     (data);
@@ -232,8 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cleanTableBody();
       
     
-        ('/managing_tools.php' + '?values='+query);
-      fetch('/managing_tools.php' + '?values='+query) 
+        ('/php/managing_tools.php' + '?values='+query);
+      fetch('/php/managing_tools.php' + '?values='+query) 
       .then(response => response.json())
       .then(jsonData => {
           (jsonData);
@@ -430,7 +430,7 @@ function closeAddModal() {
 
 
 function handleConfirmDeleteUser(user_data) {
-    fetch(`/managing_tools.php?delete_user=${user_data.user_id}`)
+    fetch(`/php/managing_tools.php?delete_user=${user_data.user_id}`)
       .then(response => response.json())
       .then(data => {
         ("Success:", data);
@@ -466,7 +466,7 @@ function handleConfirmDeleteUser(user_data) {
     const jsonData = JSON.stringify(data);
   
     // Send a PUT request to the server
-    fetch("/managing_tools.php?update_user=" + user_data.userId, {
+    fetch("/php/managing_tools.php?update_user=" + user_data.userId, {
       method: "PUT",
       body: jsonData
     })
@@ -549,7 +549,7 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
       controller.abort(); // Abort the request if it takes too long
     }, timeoutValue);
     
-    fetch('/managing_tools.php?add_user=true', {
+    fetch('/php/managing_tools.php?add_user=true', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

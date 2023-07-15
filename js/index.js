@@ -1,18 +1,5 @@
 // window.location.href = "login.html";
 // Function to check session status
-function checkSession() {
-  fetch('check_session.php')
-      .then(response => response.json())
-      .then(data => {
-          if (data.status === 'active') {
-              // Session is active, do something
-              console.log('Session active:', data.user_name);
-          } else {
-            window.location.href = "login.html";
-              // Session is inactive, do something else
-          }
-      });
-}
 
 let is_clicked_dropdown = true;
 avatarButton = document.getElementById("avatarButton");
@@ -53,7 +40,8 @@ function getFillColor(occupancyLevel) {
   }
 }
 window.onload = function () {
-  checkSession();
+  // checkSession();
+  // console.log("onload");
   fetch("assets/json/department-load.json")
     .then((response) => response.json())
     .then((data) => {

@@ -73,7 +73,7 @@ class NavbarMenu extends HTMLElement {
                   </a>
                </li>
                <li>
-                  <a href="add-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="add_patient.html" class="flex items-center p-2 text-gray-900 rounded-lg">
                     <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5ZM23,16a1,1,0,0,1-1,1H19v3a1,1,0,0,1-2,0V17H14a1,1,0,0,1,0-2h3V12a1,1,0,0,1,2,0v3h3A1,1,0,0,1,23,16Z"/></svg>
                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Add Patient</span>
                   </a>
@@ -102,7 +102,7 @@ class NavbarMenu extends HTMLElement {
                 <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Information</span>
               </a>
                </li>
-               <li>
+               <li id="admin" class="hidden">
                   <a href="managing_tools.html" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" height="25px" width="25px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     viewBox="0 0 340.279 340.279" xml:space="preserve">
@@ -146,7 +146,7 @@ class NavbarMenu extends HTMLElement {
                   </a>
                </li>
                <li>
-                  <a href="logout.php" id="log-out" class="flex items-center p-2 text-black rounded-lg">
+                  <a href="php/logout.php" id="log-out" class="flex items-center p-2 text-black rounded-lg">
                     <svg width="25px" height="25px" class="flex-shrink-0 w-6 h-6 text-black transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Log Out</span>
                   </a>
