@@ -17,7 +17,7 @@ function openModal() {
     console.log(formData);
     console.log(formData.get('patient_id'));
     // Make a POST request to the php/login.php page, passing the form data as the body of the request
-    fetch('../php/delete_patient.php', {
+    fetch('../php/search_edit.php?crud=delete', {
         method: 'POST',
         body: formData
     })

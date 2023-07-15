@@ -72,44 +72,58 @@ else if (isset($_GET['crud']) && $_GET['crud'] == 'delete')
         $query = "DELETE FROM dbShnkr23stud2.tbl_209_patients WHERE patient_id = '$id'";
         $result = execute_query($query);
         if ($result) {
-            $result = array(
-                'status' => 'Patient deleted successfully'
-            );
-            echo json_encode($result);
+            echo "Patient deleted successfully";
+            header("Location:" .base_url);
         } else {
-            $result = array(
-                'status' => 'Error deleting patient'
-            );
-            echo json_encode($result);
+            echo "Error deleting patient: " . $query;
         }
     }
     else
     {
-        $result = array(
-            'status' => 'No id provided',
-        );
-        echo json_encode($result);
+        echo "No id provided";
     }
 }
 else if (isset($_GET['crud'])&& $_GET['crud'] == 'add')
 {
+    session_start();
     if( isset($_POST['nurses']) && isset($_POST['doctors']) && isset($_POST['departments']) && isset($_POST['id']) && isset($_POST['last-name']) && isset($_POST['first-name']))
     {
         $add_patient_query =" insert into dbShnkr23stud2.tbl_209_patients (patient_first_name, patient_last_name, patient_id, patient_department, patient_doctor,patient_nurse, patient_estimated_time)
-         values('". $_POST['first-name']."', '". $_POST['last-name']."', '". $_POST['id']."', '". $_POST['departments']."', '". $_POST['doctors']."', '". $_POST['nurses']."', '". $_POST['estimated_time']."') ";
-        $result = execute_query($add_patient_query);
-        if ($result) {
-            $result = array(
-                'status' => 'Patient added successfully'
-            );
-            echo json_encode($result);
+        values('". $_POST['first-name']."', '". $_POST['last-name']."', '". $_POST['id']."', '". $_POST['departments']."', '". $_POST['doctors']."', '". $_POST['nurses']."', '". $_POST['estimated_time']."') ";
+        $response = execute_query($add_patient_query);
+        // echo '<h3>'.$add_patient_query.'</h3>';
+        if ($response) {
+            echo "Patient added successfully";
+            header("Location:" .base_url);
         } else {
-            $result = array(
-                'status' => 'Error adding patient'
-            );
-            echo json_encode($result);
+            echo "Error adding patient: " . $add_patient_query;
         }
+
     }
+    else
+    {
+        $response = array(
+            'status' => 'No id provided',
+        );
+        echo json_encode($response);
+    }
+    // if( isset($_POST['nurses']) && isset($_POST['doctors']) && isset($_POST['departments']) && isset($_POST['id']) && isset($_POST['last-name']) && isset($_POST['first-name']))
+    // {
+    //     $add_patient_query =" insert into dbShnkr23stud2.tbl_209_patients (patient_first_name, patient_last_name, patient_id, patient_department, patient_doctor,patient_nurse, patient_estimated_time)
+    //      values('". $_POST['first-name']."', '". $_POST['last-name']."', '". $_POST['id']."', '". $_POST['departments']."', '". $_POST['doctors']."', '". $_POST['nurses']."', '". $_POST['estimated_time']."') ";
+    //     $result = execute_query($add_patient_query);
+    //     if ($result) {
+    //         $result = array(
+    //             'status' => 'Patient added successfully'
+    //         );
+    //         echo json_encode($result);
+    //     } else {
+    //         $result = array(
+    //             'status' => 'Error adding patient'
+    //         );
+    //         echo json_encode($result);
+    //     }
+    // }
 }
 else
 {

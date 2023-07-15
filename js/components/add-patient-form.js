@@ -4,7 +4,7 @@ class AddPatientForm extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-        <form id="form" class="p-4 " action="../../php/add-patient.php" method="post">
+        <form id="form" class="p-4 " action="../../php/search_edit.php?crud=add" method="post">
         <div class="space-y-12">
                 <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
