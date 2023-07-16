@@ -18,5 +18,6 @@
         <!-- <script src="js/js/index.js"></script> -->
         <script src="js/validate_form.js"></script>
         <script src="js/validate_user.js"></script>
+        <script src="js/add_patient.js"></script>
     </body>
 </html>

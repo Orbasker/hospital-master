@@ -24,17 +24,15 @@ function openModal() {
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        if (data.status === 'active') {
-            setSessionCookie('session', data.user_id);
-            setSessionCookie('user_name', data.user_name);
-            setSessionCookie('user_type', data.user_type);
-            setSessionCookie('user_id', data.user_id);
+        if (data.status === 'Patient deleted successfully') {
+           
             window.location.href = 'index.php';
         } else {
-            const alertMessage = document.getElementById('alert-meesage');
-            alertMessage.innerHTML = data.message;
-            // alertMessage.classList
-            alertMessage.classList.remove('hidden');
+            // const alertMessage = document.getElementById('alert-meesage');
+            // alertMessage.innerHTML = data.message;
+            // // alertMessage.classList
+            // alertMessage.classList.remove('hidden');
+            console.log(data);
         }
     })
   });

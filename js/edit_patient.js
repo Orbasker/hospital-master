@@ -27,11 +27,14 @@ function openModal() {
     })
     .then(response => response.json())
     .then(data => {
-        data = JSON.parse(data)
-        if (data.status === 'Patient found') {
+        // data = JSON.parse(data)
+        console.log(data);
+        if (data.status === 'success') {
             search_patient = document.getElementById('search_patient').classList.add('hidden');
-            ;
-            let patient = data[0];
+            // console.log(data.data.data);
+            // console.log();
+            let patient = data.data.data[0];
+            // console.log(patient);
             // console.log(data);
         //    console.log(data[0]);
             //  console.log(data[0].patient_first_name);

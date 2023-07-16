@@ -7,8 +7,8 @@ class editPatientForm extends HTMLElement {
         <div class="relative">
   <form id="search_patient" class="  p-4 mx-auto relative z-10" action="#" method="post">
     <div class="mb-4">
-      <h2 class="text-lg font-semibold leading-7 text-gray-900">Release Patient</h2>
-      <p class="mt-1 text-sm text-gray-600">Enter the patient's ID to release them.</p>
+      <h2 class="text-lg font-semibold leading-7 text-gray-900">Edit Patient</h2>
+      <p class="mt-1 text-sm text-gray-600">Enter the patient's ID you want edit them.</p>
     </div>
     <div class="mb-6">
       <label for="id" class="block text-sm font-medium leading-6 text-gray-900">Patient ID</label>

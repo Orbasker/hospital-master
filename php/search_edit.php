@@ -9,26 +9,44 @@ if (isset($_GET['crud']) && $_GET['crud'] == 'select')
         $query = "SELECT * FROM dbShnkr23stud2.tbl_209_patients WHERE patient_id = '$id'";
         // echo $query;
         $result = execute_query($query);
-        if ($result) {
-            echo json_encode($result);
+        // echo $result;
+        $result = json_decode($result, true);
+        // echo json_encode($result);
+        if ($result['status'] == 'success')
+        {
+            $response = array(
+                'status' => 'success',
+                'message' => 'Patient selected successfully',
+                'data' => $result['data']
+            );
+        }
+        // echo $result;
+        if ($result['status'] !== 'error') {
+            $response = array(
+                'status' => 'success',
+                'message' => 'Patient selected successfully',
+                'data' => $result
+            );
+            // echo json_encode($result);
         } else {
             // echo "Error deleting patient: ";
-            $result = array(
+            $response = array(
                 'status' => 'Error selecting patient',
-                // 'query' => $result
+                'query' => $query,
+                'data' => $result
             );
-            echo json_encode($result);
         }
     }
     else
     {
         // echo "No id provided";
-        $result = array(
+        $response = array(
             'status' => 'No id provided',
             'query' => $query
         );
-        echo json_encode($result);
     }
+    echo json_encode($response);
+
 }
 else if (isset($_GET['crud']) && $_GET['crud'] == 'update')
 {
@@ -43,7 +61,7 @@ else if (isset($_GET['crud']) && $_GET['crud'] == 'update')
         $patient_estimated_time = $_POST['estimated_time'];
 
         // Construct your SQL query and perform the update
-        $query = "UPDATE dbShnkr23stud2.tbl_209_patients SET patient_first_name = '".$patient_first_name."', patient_last_name = '".$patient_id."', patient_id = '".$patient_last_name."', patient_department = '".$patient_department."', patient_doctor = '".$patient_doctor."', patient_nurse = '".$patient_nurse."', patient_estimated_time = '".$patient_estimated_time."' WHERE patient_id = '".$patient_id."'";
+        $query = "UPDATE dbShnkr23stud2.tbl_209_patients SET patient_first_name = '".$patient_first_name."', patient_last_name = '".$patient_last_name."', patient_id = '".$patient_id."', patient_department = '".$patient_department."', patient_doctor = '".$patient_doctor."', patient_nurse = '".$patient_nurse."', patient_estimated_time = '".$patient_estimated_time."' WHERE patient_id = '".$patient_id."'";
         $result = execute_query($query);
 
         if ($result) {
@@ -71,43 +89,65 @@ else if (isset($_GET['crud']) && $_GET['crud'] == 'delete')
         $id = $_POST['id'];
         $query = "DELETE FROM dbShnkr23stud2.tbl_209_patients WHERE patient_id = '$id'";
         $result = execute_query($query);
-        if ($result) {
-            echo "Patient deleted successfully";
-            header("Location:" .base_url);
+        $result = json_decode($result, true);
+        if ($result['status'] != 'error') {
+           $response = array(
+               'status' => 'Patient deleted successfully'
+           );
         } else {
-            echo "Error deleting patient: " . $query;
+            $response = array(
+                'status' => 'Error deleting patient',
+                'query' => $query,
+                'result' => $result
+            );
         }
-    }
-    else
-    {
-        echo "No id provided";
-    }
-}
-else if (isset($_GET['crud'])&& $_GET['crud'] == 'add')
-{
-    session_start();
-    if( isset($_POST['nurses']) && isset($_POST['doctors']) && isset($_POST['departments']) && isset($_POST['id']) && isset($_POST['last-name']) && isset($_POST['first-name']))
-    {
-        $add_patient_query =" insert into dbShnkr23stud2.tbl_209_patients (patient_first_name, patient_last_name, patient_id, patient_department, patient_doctor,patient_nurse, patient_estimated_time)
-        values('". $_POST['first-name']."', '". $_POST['last-name']."', '". $_POST['id']."', '". $_POST['departments']."', '". $_POST['doctors']."', '". $_POST['nurses']."', '". $_POST['estimated_time']."') ";
-        $response = execute_query($add_patient_query);
-        // echo '<h3>'.$add_patient_query.'</h3>';
-        if ($response) {
-            echo "Patient added successfully";
-            header("Location:" .base_url);
-        } else {
-            echo "Error adding patient: " . $add_patient_query;
-        }
-
     }
     else
     {
         $response = array(
             'status' => 'No id provided',
         );
+
+    }
+    echo json_encode($response);
+
+}
+else if (isset($_GET['crud']) && $_GET['crud'] == 'add') {
+    // session_start();
+    if (isset($_POST['nurses']) && isset($_POST['doctors']) && isset($_POST['departments']) && isset($_POST['id']) && isset($_POST['last-name']) && isset($_POST['first-name'])) {
+        $add_patient_query = "INSERT INTO dbShnkr23stud2.tbl_209_patients (patient_first_name, patient_last_name, patient_id, patient_department, patient_doctor, patient_nurse, patient_estimated_time) " .
+            "VALUES('" . $_POST['first-name'] . "', '" . $_POST['last-name'] . "', '" . $_POST['id'] . "', '" . $_POST['departments'] . "', '" . $_POST['doctors'] . "', '" . $_POST['nurses'] . "', '" . $_POST['estimated_time'] . "') ";
+        $result = execute_query($add_patient_query);
+        // echo '<h3>'.$add_patient_query.'</h3>';
+        $result = json_decode($result, true);
+        if ($result['status'] !== 'error') {
+            $response = array(
+                'status' => 'Patient added successfully',
+                'query' => $add_patient_query,
+                'result' => $result
+            );
+            echo json_encode($response);
+        } elseif ($result['status'] === 'error') {
+            $response = array(
+                'status' => 'Error adding patient',
+                'query' => $add_patient_query,
+                'result' => $result
+            );
+            echo json_encode($response);
+        } else {
+            $response = array(
+                'status' => 'Error adding patient',
+                'query' => $add_patient_query,
+                'result' => $result
+            );
+            echo json_encode($response);
+        }
+    } else {
+        $response = array(
+            'status' => 'No id provided',
+        );
         echo json_encode($response);
     }
-  
 }
 else
 {
