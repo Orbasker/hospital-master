@@ -5,7 +5,7 @@ class releasePatientForm extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div class="relative">
-        <form id="delete_patient" class="p-4 mx-auto relative z-10" action="php/delete-patient.php" method="post">
+        <form id="delete_patient" class="p-4 mx-auto relative z-10" action="php/search_edit.php?crud=delete" method="post">
           <div class="mb-4">
             <h2 class="text-lg font-semibold leading-7 text-gray-900">Release Patient</h2>
             <p class="mt-1 text-sm text-gray-600">Enter the patient's ID to release them.</p>

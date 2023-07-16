@@ -17,19 +17,19 @@ class NavbarMenu extends HTMLElement {
                 </div>
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
                   <li>
-                    <a href="index.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home Page</a>
+                    <a href="index.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home Page</a>
                   </li>
                   <li>
                     <a href="add-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add Patient</a>
                   </li>
                   <li>
-                    <a href="release-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Release Patient</a>
+                    <a href="release-patient.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Release Patient</a>
                   </li>
                   <li>
-                    <a href="edit-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit Patient</a>
+                    <a href="edit-patient.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit Patient</a>
                   </li>
                   <li>
-                    <a href="list-view.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Information</a>
+                    <a href="list-view.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Information</a>
                   </li>
                   <li>
                     <a href="404_page.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Managing Tools</a>
@@ -47,7 +47,7 @@ class NavbarMenu extends HTMLElement {
                 </svg>
               </button>
               <div class="flex items-center justify-center flex-1">
-                <a href="index.html" class="flex items-center ml-3 md:mr-24">
+                <a href="index.php" class="flex items-center ml-3 md:mr-24">
                   <img src="assets/svg/logo1.svg" class="h-8" alt="Hospital Master">
                   <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap"></span>
                 </a>
@@ -67,31 +67,31 @@ class NavbarMenu extends HTMLElement {
          <div class="h-full m-4 px-3 pb-4 overflow-y-auto bg-gray-200">
             <ul class="space-y-2 font-medium">
                <li>
-                  <a href="index.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="index.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/></svg>
                   <span class="ml-3 hover:text-white" id="rubik">Home Page</span>
                   </a>
                </li>
                <li>
-                  <a href="add_patient.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="add_patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                     <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5ZM23,16a1,1,0,0,1-1,1H19v3a1,1,0,0,1-2,0V17H14a1,1,0,0,1,0-2h3V12a1,1,0,0,1,2,0v3h3A1,1,0,0,1,23,16Z"/></svg>
                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Add Patient</span>
                   </a>
                </li>
                <li>
-                  <a href="release-patient.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="release-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M1,20a1,1,0,0,0,1,1h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5Zm12.707,9.707L20.414,17l2.293,2.293a1,1,0,1,1-1.414,1.414L19,18.414l-2.293,2.293a1,1,0,0,1-1.414-1.414L17.586,17l-2.293-2.293a1,1,0,0,1,1.414-1.414L19,15.586l2.293-2.293a1,1,0,0,1,1.414,1.414Z"></path></g></svg>
                      <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Release Patient</span>
                   </a>
                </li>
                <li>
-                  <a href="edit-patient.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="edit-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21H8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5ZM20.207,9.293a1,1,0,0,0-1.414,0l-6.25,6.25a1.011,1.011,0,0,0-.241.391l-1.25,3.75A1,1,0,0,0,12,21a1.014,1.014,0,0,0,.316-.051l3.75-1.25a1,1,0,0,0,.391-.242l6.25-6.25a1,1,0,0,0,0-1.414Zm-5,8.583-1.629.543.543-1.629L19.5,11.414,20.586,12.5Z"/></svg>
                      <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Edit Patient</span>
                   </a>
                </li>
                <li>
-               <a href="list-view.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+               <a href="list-view.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                 <svg width="25px" height="25px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                   <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -103,7 +103,7 @@ class NavbarMenu extends HTMLElement {
               </a>
                </li>
                <li id="admin" class="hidden">
-                  <a href="managing_tools.html" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="managing_tools.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" height="25px" width="25px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     viewBox="0 0 340.279 340.279" xml:space="preserve">
                     <g>

@@ -83,7 +83,7 @@ function load_data() {
         let bedCell = document.createElement("td");
         let statusCell = document.createElement("td");
         let link = document.createElement("a");
-        link.href = `showDetails.html?bed_number=${patient.bed_number}`;
+        link.href = `showDetails.php?bed_number=${patient.bed_number}`;
         link.textContent = patient.patient_name;
         nameCell.appendChild(link);
         doctorCell.appendChild(document.createTextNode(patient.doctor));
@@ -133,7 +133,7 @@ function load_data() {
         status.classList.add("text-black-500");
         status.textContent = `Status: ${patient.status}`;
         const link = document.createElement("a");
-        link.href = `showDetails.html?bed_number=${patient.bed_number}`;
+        link.href = `showDetails.php?bed_number=${patient.bed_number}`;
         link.appendChild(title);
         link.appendChild(name);
         link.appendChild(doctor);

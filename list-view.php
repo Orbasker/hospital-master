@@ -14,7 +14,7 @@
     </navbar-menu>
     <script src="js/components/navbar-menu.js"></script>
     <script src="js/components/list-view.js"></script>
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
     <script src="js/validate_user.js"></script>
   </body>
 </html>

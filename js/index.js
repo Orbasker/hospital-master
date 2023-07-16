@@ -1,4 +1,4 @@
-// window.location.href = "login.html";
+// window.location.href = "login.php";
 // Function to check session status
 
 let is_clicked_dropdown = true;

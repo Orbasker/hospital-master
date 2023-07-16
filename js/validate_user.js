@@ -12,7 +12,7 @@ document.getElementById("log-out").addEventListener("click", function () {
                 deleteSessionCookie('user_name');
                 deleteSessionCookie('user_type');
                 deleteSessionCookie('user_id');
-              window.location.href = "login.html";
+              window.location.href = "login.php";
                 // Session is inactive
             }
         })
@@ -25,7 +25,7 @@ document.getElementById("log-out").addEventListener("click", function () {
     let sessionCookie = getSessionCookie('session');
     console.log(sessionCookie);
     if (!sessionCookie) {
-        window.location.href = "login.html";
+        window.location.href = "login.php";
     }
 
     fetch('php/check_session.php')
@@ -38,7 +38,7 @@ document.getElementById("log-out").addEventListener("click", function () {
                   document.getElementById("admin").classList.remove("hidden");
                 }
             } else {
-              window.location.href = "login.html";
+              window.location.href = "login.php";
                 // Session is inactive, do something else
             }
         });
@@ -65,7 +65,7 @@ checkSession();
 //   if (!sessionCookie) {
 //     // Session cookie is not present, redirect to login page
 //     console.log('Session cookie not found, redirecting to login page');
-//     window.location.href = 'login.html'; // Replace with the actual login page URL
+//     window.location.href = 'login.php'; // Replace with the actual login page URL
 //   }
 // window.addEventListener('DOMContentLoaded', (event) => {
 //         checkSession();

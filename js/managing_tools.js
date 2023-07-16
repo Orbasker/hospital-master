@@ -435,7 +435,7 @@ function handleConfirmDeleteUser(user_data) {
       .then(data => {
         ("Success:", data);
         if (data == 200) {
-          window.location.href = "managing_tools.html";
+          window.location.href = "managing_tools.php";
         } else {
           alert("User could not be deleted");
         }
@@ -473,7 +473,7 @@ function handleConfirmDeleteUser(user_data) {
       .then(response => response.status)
       .then(data => {
         if (data === 200) {
-          window.location.href = "managing_tools.html";
+          window.location.href = "managing_tools.php";
         } else {
           alert("User could not be updated");
         }
@@ -564,7 +564,7 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
       .then(data => {
         ('Success:', data);
         if (data === true) {
-          window.location.href = "managing_tools.html";
+          window.location.href = "managing_tools.php";
         } else {
           alert("User could not be added");
         }
