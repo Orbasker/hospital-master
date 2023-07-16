@@ -107,23 +107,7 @@ else if (isset($_GET['crud'])&& $_GET['crud'] == 'add')
         );
         echo json_encode($response);
     }
-    // if( isset($_POST['nurses']) && isset($_POST['doctors']) && isset($_POST['departments']) && isset($_POST['id']) && isset($_POST['last-name']) && isset($_POST['first-name']))
-    // {
-    //     $add_patient_query =" insert into dbShnkr23stud2.tbl_209_patients (patient_first_name, patient_last_name, patient_id, patient_department, patient_doctor,patient_nurse, patient_estimated_time)
-    //      values('". $_POST['first-name']."', '". $_POST['last-name']."', '". $_POST['id']."', '". $_POST['departments']."', '". $_POST['doctors']."', '". $_POST['nurses']."', '". $_POST['estimated_time']."') ";
-    //     $result = execute_query($add_patient_query);
-    //     if ($result) {
-    //         $result = array(
-    //             'status' => 'Patient added successfully'
-    //         );
-    //         echo json_encode($result);
-    //     } else {
-    //         $result = array(
-    //             'status' => 'Error adding patient'
-    //         );
-    //         echo json_encode($result);
-    //     }
-    // }
+  
 }
 else
 {

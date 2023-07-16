@@ -1,7 +1,14 @@
-fetch('/php/managing_tools.php')
+fetch('/php/crud_users.php')
 .then(response => response.json())
 .then(data => {
     (data);
+    // console.log(data)
+    data = JSON.parse(data);
+    // console.log(data);
+    data = data.data;
+    // console.log(data);
+    // console.log(json);
+    // console.log(data[0]);
     generateDropdown(data);
     data.forEach(user => {
         create_user_row(user);
@@ -430,7 +437,7 @@ function closeAddModal() {
 
 
 function handleConfirmDeleteUser(user_data) {
-    fetch(`/php/managing_tools.php?delete_user=${user_data.user_id}`)
+    fetch(`/php/crud_users.php?delete_user=${user_data.user_id}`)
       .then(response => response.json())
       .then(data => {
         ("Success:", data);
@@ -466,7 +473,7 @@ function handleConfirmDeleteUser(user_data) {
     const jsonData = JSON.stringify(data);
   
     // Send a PUT request to the server
-    fetch("/php/managing_tools.php?update_user=" + user_data.userId, {
+    fetch("/php/crud_users.php?update_user=" + user_data.userId, {
       method: "PUT",
       body: jsonData
     })
@@ -549,7 +556,7 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
       controller.abort(); // Abort the request if it takes too long
     }, timeoutValue);
     
-    fetch('/php/managing_tools.php?add_user=true', {
+    fetch('/php/crud_users.php?add_user=true', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
