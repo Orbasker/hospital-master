@@ -10,37 +10,37 @@ class NavbarMenu extends HTMLElement {
             <div id="avatarButton" class="flex items-center justify-between">
               <div class="flex items-start relative">
                   <img src="assets/svg/peled.jpg" class="h-8" style="width: 50px; height: 50px; margin-left: 15px; border-radius: 50%;" alt="propeleduser">
-                  <div id="userDropdown" class="hidden m-6 z-10 absolute bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                  <div id="userDropdown" class="hidden m-6 z-10 absolute bg-white divide-y divide-gray-100 shadow w-44">
+                <div class="px-4 py-3 text-sm text-gray-900">
                   <div>Prof Ori Peled</div>
                   <div class="font-medium truncate">Ori_peled@hadassa.com</div>
                 </div>
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                <ul class="py-2 text-sm text-gray-700" aria-labelledby="avatarButton">
                   <li>
-                    <a href="index.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home Page</a>
+                    <a href="index.php" class="block px-4 py-2 hover:bg-gray-100">Home Page</a>
                   </li>
                   <li>
-                    <a href="add-patient.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add Patient</a>
+                    <a href="add-patient.html" class="block px-4 py-2 hover:bg-gray-100">Add Patient</a>
                   </li>
                   <li>
-                    <a href="release-patient.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Release Patient</a>
+                    <a href="release-patient.php" class="block px-4 py-2 hover:bg-gray-100">Release Patient</a>
                   </li>
                   <li>
-                    <a href="edit-patient.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit Patient</a>
+                    <a href="edit-patient.php" class="block px-4 py-2 hover:bg-gray-100">Edit Patient</a>
                   </li>
                   <li>
-                    <a href="list-view.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Information</a>
+                    <a href="list-view.php" class="block px-4 py-2 hover:bg-gray-100">Information</a>
                   </li>
                   <li>
-                    <a href="404_page.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Managing Tools</a>
+                    <a href="404_page.html" class="block px-4 py-2 hover:bg-gray-100">Managing Tools</a>
                   </li>
                 </ul>
                 <div class="py-1">
-                  <a href="404_page.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                  <a href="404_page.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
                 </div>
               </div>
                 </div>
-              <button id="hamburger" data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+              <button id="hamburger" data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                 <span class="sr-only">Open sidebar</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
@@ -154,7 +154,7 @@ class NavbarMenu extends HTMLElement {
             </ul>
          </div>
       </aside>
-        <div class = "flex m-16 p-4 ">${this.innerHTML}</div>
+        <div class = "flex m-7 p-1 ">${this.innerHTML}</div>
         <script src="index.js"></script>
      `;
   }
