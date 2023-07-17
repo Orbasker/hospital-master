@@ -4,16 +4,17 @@ class AddPatientForm extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = `
-        <form id="add_patient_form" class="p-4 " action="#" method="post">
-        <div class="space-y-12">
-                <div>
-                <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
-                <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
-              </div>
-          <div id="personal-info-section" class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20 ">
-            <div>
-              <div class="sm:col-span-3">
-                <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
+        <form id="add_patient_form" class="p-10 " action="#" method="post">
+        <div class="space-y-10">
+          <div>
+          <br>
+          <h2 class="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
+          <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
+        </div>
+        <div id="personal-info-section" class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20 ">
+          <div>
+          <div class="sm:col-span-3">
+            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First Name</label>
                 <div class="mt-2">
                   <input type="text" placeholder=" First Name" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
                 </div>
@@ -29,21 +30,19 @@ class AddPatientForm extends HTMLElement {
                 <div class="col-span-3">
                     <label for="id" class="block text-sm font-medium leading-6 text-gray-900">ID</label>
                     <div class="mt-2">
-                      <input type="text" placeholder=" ID Number - 9 digits" name="id" id="id" autocomplete="ID number" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" pattern=".{9}" required>
+                      <input type="text" placeholder=" Must to be 9 digits" name="id" id="id" autocomplete="ID number" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" pattern=".{9}" required>
                     </div>
                   </div>
             </div>
           </div>
-          <legend class="text-sm font-semibold leading-6 text-gray-900">Medical information</legend>
+          <legend class="text-sm font-semibold leading-7 text-gray-900">Medical information</legend>
                 <p class="mt-1 text-sm leading-6 text-gray-600">Here you need to fill the patients medical details.</p>
           <div id="medical-info-section" class="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3 m-20">
-          
             <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
               <div class="sm:col-span-3">
                 <label for="Department" class="block text-sm font-medium leading-6 text-gray-900">Department</label>
                 <div class="mt-2">
-                  <select id="departments" name="departments" autocomplete="department-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
-                  </select>
+                  <select id="departments" name="departments" autocomplete="department-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"></select>
                 </div>
               </div>
               <div class="sm:col-span-3">
