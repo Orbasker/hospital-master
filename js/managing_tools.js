@@ -2,13 +2,8 @@ fetch('/php/crud_users.php')
 .then(response => response.json())
 .then(data => {
     (data);
-    // console.log(data)
     data = JSON.parse(data);
-    // console.log(data);
     data = data.data;
-    // console.log(data);
-    // console.log(json);
-    // console.log(data[0]);
     generateDropdown(data);
     data.forEach(user => {
         create_user_row(user);
@@ -17,66 +12,53 @@ fetch('/php/crud_users.php')
 .catch(error => {
   console.error('Error:', error);
 });
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const userTable = document.getElementById('userTable');
-  
-    
   });
-  
-
   function create_user_row(user_data) {
     // Create the table row element
     let row = document.createElement('tr');
     row.classList.add('border-b', 'dark:border-gray-700');
-  
     // Create and append the table cell for the user ID
     let userIdCell = document.createElement('td');
     userIdCell.classList.add('px-4', 'py-3');
     userIdCell.textContent = user_data.user_id;
     row.appendChild(userIdCell);
-  
     // Create and append the table cell for the user first name
     let firstNameCell = document.createElement('td');
     firstNameCell.classList.add('px-4', 'py-3');
     firstNameCell.textContent = user_data.user_first_name;
     row.appendChild(firstNameCell);
-  
     // Create and append the table cell for the username
     let usernameCell = document.createElement('td');
     usernameCell.classList.add('px-4', 'py-3');
     usernameCell.textContent = user_data.username;
     row.appendChild(usernameCell);
-  
     // Create and append the table cell for the user last name
     let lastNameCell = document.createElement('td');
     lastNameCell.classList.add('px-4', 'py-3');
     lastNameCell.textContent = user_data.user_last_name;
     row.appendChild(lastNameCell);
-  
     // Create and append the table cell for the user password
     let passwordCell = document.createElement('td');
     passwordCell.classList.add('px-4', 'py-3');
     passwordCell.textContent = user_data.user_password;
     row.appendChild(passwordCell);
-  
     // Create and append the table cell for the user type
     let userTypeCell = document.createElement('td');
     userTypeCell.classList.add('px-4', 'py-3');
     userTypeCell.textContent = user_data.user_type;
     row.appendChild(userTypeCell);
-  
     // Create and append the table cell for the user creation date
     let createDateCell = document.createElement('td');
     createDateCell.classList.add('px-4', 'py-3');
     createDateCell.textContent = user_data.user_create_date;
     row.appendChild(createDateCell);
-  
     // Create and append the table cell for the last modified date
     let lastModifiedDateCell = document.createElement('td');
     lastModifiedDateCell.classList.add('px-4', 'py-3');
     lastModifiedDateCell.textContent = user_data.last_modified_date;
     row.appendChild(lastModifiedDateCell);
-  
     // Create and append the table cell for the actions
     let actionsCell = document.createElement('td');
     actionsCell.classList.add('px-4', 'py-3', 'flex', 'items-center', 'justify-end');
@@ -138,8 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const delete_button = document.getElementById("delete_user_edit");
     delete_button.addEventListener("click", () => {
             openDeleteModal(user_id = user_data.user_id);
-    
-
     });
     });
     const previewButton = actionsCell.querySelector(`[id$="-preview-button"]`);
@@ -160,17 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
             cancelButton.addEventListener("click", closeDeleteModal);
             const confirmButton = deleteModal.querySelector("[type='submit']");
     });
-
-
-
-      
-      
     row.appendChild(actionsCell);
-    
-
     tableBody = document.getElementById("users_tbl");
     tableBody.appendChild(row);
-
   }
 
   function generateDropdown(jsonData) {
@@ -220,7 +192,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById("filterDropdownButton");
     button.addEventListener("click", toggleContainerVisibility);
 };
-  
       function toggleContainerVisibility() {
           const filterDropdown = document.getElementById("filterDropdown");
           filterDropdown.classList.toggle("hidden");
@@ -237,8 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const query = arr.join(',');
         cleanTableBody();
-      
-    
         ('/php/managing_tools.php' + '?values='+query);
       fetch('/php/managing_tools.php' + '?values='+query) 
       .then(response => response.json())
@@ -249,26 +218,20 @@ document.addEventListener('DOMContentLoaded', () => {
           });
       });
     };
-   
     let actionsDropdownButton = document.getElementById("actionsDropdownButton");
     actionsDropdownButton.addEventListener("click", toggleActionsDropdown);
     function toggleActionsDropdown() {
         const actionsDropdown = document.getElementById("actionsDropdown");
         actionsDropdown.classList.toggle("hidden");
     };
-
-
     const modalToggleElements_update = document.querySelectorAll("[target='updateUserModal']");
     const modalToggleElements_preview = document.querySelectorAll("[target='readClientModal']");
     const modalToggleElements_delete = document.querySelectorAll("[target='deleteModal']");
     const modalToggleElements_add = document.querySelectorAll("[target='createUserModal']");
-  
-    // Get the update modal element
     const updateModal = document.getElementById("updateUserModal");
     const previewModal = document.getElementById("readClientModal");
     const deleteModal = document.getElementById("deleteModal");
     const addModal = document.getElementById("createUserModal");
-  
     // Get the close button inside the modal
     const closeModalButton = updateModal.querySelector("[data-modal-toggle='updateUserModal']");
     ("closeModalButton" + closeModalButton);
@@ -277,7 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ("closeModalButton_preview" + closeModalButton_preview);
     const closeModalButton_delete = deleteModal.querySelector("[data-modal-toggle='deleteModal']");
     const closeModalButton_add = addModal.querySelector("[data-modal-toggle='createUserModal']");
-  
     // Add a click event listener to each modal toggle element
     modalToggleElements_update.forEach((element) => {
       element.addEventListener("click", (event) => {
@@ -293,7 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
-  
     modalToggleElements_preview.forEach((element) => {
         ("element is" + element);
       element.addEventListener("click", (event) => {
@@ -315,7 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
-  
     modalToggleElements_delete.forEach((element) => {
       element.addEventListener("click", (event) => {
         event.preventDefault();
@@ -345,33 +305,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-  
-    // Add a click event listener to the close button
     closeModalButton.addEventListener("click", closeUpdateModal);
     closeModalButton_preview.addEventListener("click", closePreviewModal);
     closeModalButton_delete.addEventListener("click", closeDeleteModal);
     closeModalButton_add.addEventListener("click", closeAddModal);
-  
-    
-  
-//   };
-  
-
   function openUpdateModal() {
     let update_modal = document.getElementById("updateUserModal");
     update_modal.classList.remove("hidden");
   }
-
-  // Function to close the update modal
   function closeUpdateModal() {
     ("closeUpdateModal");
     let update_modal = document.getElementById("updateUserModal");
     update_modal.classList.add("hidden");
   }
-  
   function fillUpdateFieldsWithData(user_data) {
-    // Sample data object
-    // Retrieve the input elements
     const userIdInput = document.getElementById("userId");
     const firstNameInput = document.getElementById("firstName");
     const usernameInput = document.getElementById("username");
@@ -379,8 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordInput = document.getElementById("password");
     const userTypeInput = document.getElementById("userType");
     const lastModifiedDateInput = document.getElementById("lastModifiedDate");
-  
-    // Set the values of the input fields
     userIdInput.value = user_data.user_id;
     firstNameInput.value = user_data.user_first_name;
     usernameInput.value = user_data.username;
@@ -389,8 +334,6 @@ document.addEventListener('DOMContentLoaded', () => {
     userTypeInput.value = user_data.user_type;
     lastModifiedDateInput.value = user_data.last_modified_date;
   }
-  
- 
 function openPreviewModal() {
     let preview_modal = document.getElementById("readClientModal");
     preview_modal.classList.remove("hidden");
@@ -415,9 +358,7 @@ function fillPreviewFieldsWithData(user_data) {
     user_password.innerHTML += user_data.user_password;
     user_type.innerHTML += user_data.user_type;
     last_modified_date.innerHTML += user_data.last_modified_date;
-
 };
-
 function openDeleteModal(user_id=0) {
     let delete_modal = document.getElementById("deleteModal");
     delete_modal.classList.remove("hidden");
@@ -434,8 +375,6 @@ function closeAddModal() {
     let add_modal = document.getElementById("createUserModal");
     add_modal.classList.add("hidden");
 }
-
-
 function handleConfirmDeleteUser(user_data) {
     fetch(`/php/crud_users.php?delete_user=${user_data.user_id}`)
       .then(response => response.json())
@@ -452,27 +391,18 @@ function handleConfirmDeleteUser(user_data) {
         alert("An error occurred while deleting the user");
       });
   }
-  
-
   function handleUpdateUser(user_data) {
     ("handleUpdateUser");
     (user_data);
-    
     const data = {
-       
-        user_id: user_data.userID,
-        user_first_name: user_data.firstName,
-        username: user_data.username,
-        user_last_name: user_data.lastName,
-        user_password: user_data.password,
-        user_type: user_data.userType,
-        
-
+    user_id: user_data.userID,
+    user_first_name: user_data.firstName,
+    username: user_data.username,
+    user_last_name: user_data.lastName,
+    user_password: user_data.password,
+    user_type: user_data.userType,
     };
-    // Convert user_data to JSON string
     const jsonData = JSON.stringify(data);
-  
-    // Send a PUT request to the server
     fetch("/php/crud_users.php?update_user=" + user_data.userId, {
       method: "PUT",
       body: jsonData
@@ -490,8 +420,6 @@ function handleConfirmDeleteUser(user_data) {
         alert("An error occurred while updating the user");
       });
   }
-  
-
   document.getElementById("update_modal_form").addEventListener("submit", event => {
     ("update_modal_form");
     event.preventDefault();
@@ -500,26 +428,20 @@ function handleConfirmDeleteUser(user_data) {
     (user_data);
     handleUpdateUser(user_data);
   });
-
-  document.getElementById("delete_modal_form").addEventListener("submit", event => {
-    ("delete_modal_form");
-    event.preventDefault();
-    let form_data = new FormData(event.target);
-    let user_data = Object.fromEntries(form_data.entries());
-
-    handleConfirmDeleteUser(user_data);
-  });
-
+document.getElementById("delete_modal_form").addEventListener("submit", event => {
+  ("delete_modal_form");
+  event.preventDefault();
+  let form_data = new FormData(event.target);
+  let user_data = Object.fromEntries(form_data.entries());
+  handleConfirmDeleteUser(user_data);
+});
 document.getElementById("edit_user_preview").addEventListener("click", openUpdateModal);
 document.getElementById("delete_user_preview").addEventListener("click", openDeleteModal);
 document.getElementById("action_edit").addEventListener("click", openUpdateModal);
 document.getElementById("action_delete").addEventListener("click", openDeleteModal);
 document.getElementById("action_add").addEventListener("click", openAddModal);
-
-// document.getElementById("createUserModal").addEventListener("click", openAddModal);
-
 document.getElementById('createUserForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
     (event);
     (event.target);
     (event.target.elements);
@@ -528,14 +450,11 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
     (event.target.elements.lastName.value);
     (event.target.elements.username.value);
     (event.target.elements.password.value);
-    // Get form data
     let firstName = event.target.elements.firstName.value;
     let lastName = event.target.elements.lastName.value;
     let username = event.target.elements.username.value;
     let password = event.target.elements.password.value;
     let userType = event.target.elements.userType.value;
-  
-    // Create user object
     let user = {
       firstName: firstName,
       username: username,
@@ -544,16 +463,11 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
       userType: userType
     };
     (user);
-    // Send user data as JSON to PHP script
     const controller = new AbortController();
     const {signal} = controller;
-    
-    // Set the desired timeout value in milliseconds
-    const timeoutValue = 10000; // 5 seconds
-    
-    // Start the timer
+    const timeoutValue = 10000;    
     const timeout = setTimeout(() => {
-      controller.abort(); // Abort the request if it takes too long
+      controller.abort(); 
     }, timeoutValue);
     
     fetch('/php/crud_users.php?add_user=true', {
@@ -562,10 +476,10 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(user),
-      signal: signal // Pass the signal option
+      signal: signal 
     })
       .then(response => {
-        clearTimeout(timeout); // Clear the timeout if the request completes within the timeout value
+        clearTimeout(timeout); 
         return response.json();
       })
       .then(data => {
@@ -580,11 +494,8 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
         clearTimeout(timeout); // Clear the timeout if an error occurs
         console.error('Error:', error);
       });
-    });
-    
-
-
-    // Get the table element by its ID or any other appropriate selector
+    });    
+// Get the table element by its ID or any other appropriate selector
 const table = document.getElementById('users_tbl');
 const rowsPerPage = 20; // Number of rows per page
 
@@ -620,17 +531,14 @@ for (let i = 1; i <= totalPages; i++) {
   li.appendChild(pageButton);
   ul.appendChild(li);
 }
-
 // Create the next button
 const nextLi = document.createElement('li');
 const nextButton = createNavButton('Next', 'Next', 'flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white');
 nextLi.appendChild(nextButton);
-
 // Append the elements to the navigation container
 nav.appendChild(infoSpan);
 nav.appendChild(ul);
 navContainer.appendChild(nav);
-
 // Function to create a navigation button
 function createNavButton(text, ariaLabel, className) {
   const button = document.createElement('a');
@@ -640,58 +548,43 @@ function createNavButton(text, ariaLabel, className) {
   button.textContent = text;
   return button;
 }
-
 // Function to update the navigation buttons
 function updateNavigationButtons() {
-  // Enable/disable previous button based on the current page
-  prevButton.disabled = currentPage === 1;
-
-  // Enable/disable next button based on the current page
-  nextButton.disabled = currentPage === totalPages;
-
-  // Remove the "active" class from all page buttons
-  pageButtons.forEach((button) => {
-    button.classList.remove('active');
-  });
-
-  // Add the "active" class to the current page button
+// Enable/disable previous button based on the current page
+prevButton.disabled = currentPage === 1;
+// Enable/disable next button based on the current page
+nextButton.disabled = currentPage === totalPages;
+// Remove the "active" class from all page buttons
+pageButtons.forEach((button) => {
+  button.classList.remove('active');
+});
+// Add the "active" class to the current page button
   pageButtons[currentPage - 1].classList.add('active');
 }
-
 // Function to go to the previous page
 function goToPreviousPage() {
   if (currentPage > 1) {
     currentPage--;
     updateNavigationButtons();
-    // Perform actions to load the previous page of data
-    // ...
   }
 }
-
 // Function to go to the next page
 function goToNextPage() {
   if (currentPage < totalPages) {
     currentPage++;
     updateNavigationButtons();
-    // Perform actions to load the next page of data
-    // ...
   }
 }
-
 // Function to go to a specific page
 function goToPage(pageNumber) {
   if (pageNumber >= 1 && pageNumber <= totalPages) {
     currentPage = pageNumber;
     updateNavigationButtons();
-    // Perform actions to load the selected page of data
-    // ...
   }
 }
-
 // Add click event listeners to the previous and next buttons
 prevButton.addEventListener('click', goToPreviousPage);
 nextButton.addEventListener('click', goToNextPage);
-
 // Get the page buttons and add click event listeners
 const pageButtons = ul.querySelectorAll('li a');
 pageButtons.forEach((button, index) => {
@@ -699,9 +592,7 @@ pageButtons.forEach((button, index) => {
     goToPage(index + 1);
   });
 });
-
 // Set the initial page to 1
 let currentPage = 1;
-
 // Update the navigation buttons initially
 updateNavigationButtons();

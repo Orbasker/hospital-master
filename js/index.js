@@ -1,6 +1,3 @@
-// window.location.href = "login.php";
-// Function to check session status
-
 let is_clicked_dropdown = true;
 avatarButton = document.getElementById("avatarButton");
 avatarButton.addEventListener("click", function () {
@@ -13,7 +10,6 @@ avatarButton.addEventListener("click", function () {
     is_clicked_dropdown = true;
   }
 });
-
 let is_clicked_hamburger = true;
 hamburgerButton = document.getElementById("hamburger");
 hamburgerButton.addEventListener("click", function () {
@@ -26,7 +22,6 @@ hamburgerButton.addEventListener("click", function () {
     is_clicked_hamburger = true;
   }
 });
-
 function getFillColor(occupancyLevel) {
   switch (occupancyLevel) {
     case "high":
@@ -40,8 +35,6 @@ function getFillColor(occupancyLevel) {
   }
 }
 window.onload = function () {
-  // checkSession();
-  // console.log("onload");
   fetch("assets/json/department-load.json")
     .then((response) => response.json())
     .then((data) => {

@@ -1,11 +1,8 @@
-
-
 document.getElementById("log-out").addEventListener("click", function () {
     fetch('php/logout.php')
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
-                // Session is active, do something
                 console.log('Session active:', data.user_name);
             } else {
                 deleteSessionCookie('session');
@@ -13,7 +10,6 @@ document.getElementById("log-out").addEventListener("click", function () {
                 deleteSessionCookie('user_type');
                 deleteSessionCookie('user_id');
               window.location.href = "login.php";
-                // Session is inactive
             }
         })
         .catch(error => {
@@ -27,33 +23,25 @@ document.getElementById("log-out").addEventListener("click", function () {
     if (!sessionCookie) {
         window.location.href = "login.php";
     }
-
     fetch('php/check_session.php')
         .then(response => response.json())
         .then(data => {
             if (data.status === 'active') {
-                // Session is active, do something
                 console.log('Session active:', data.user_name);
                 if (data.user_type == "Admin") {
                   document.getElementById("admin").classList.remove("hidden");
                 }
             } else {
               window.location.href = "login.php";
-                // Session is inactive, do something else
             }
         });
   }
-  
-
   function getSessionCookie(name) {
-    // Function to retrieve the value of a cookie by its name
-    // console.log(document.cookie);
     const cookies = document.cookie.split(';');
     console.log(cookies);
     for (let i = 0; i < cookies.length; i++) {
       const cookie = cookies[i].trim();
       if (cookie.startsWith(name + '=')) {
-        // console.log(cookie.substring(name.length + 1));
         return cookie.substring(name.length + 1);
       }
     }
@@ -73,7 +61,6 @@ checkSession();
 // });
 function deleteSessionCookie(name) {
     const expirationDate = new Date();
-    // Set the cookie expiration to a past date to delete it
     expirationDate.setTime(expirationDate.getTime() - 1);
     const cookie = `${encodeURIComponent(name)}=;expires=${expirationDate.toUTCString()};path=/`;
     document.cookie = cookie;

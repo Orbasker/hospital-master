@@ -2,13 +2,10 @@ function openModal() {
     const modal = document.getElementById('modal');
     modal.style.display = 'block';
   }
-
   function closeModal() {
     const modal = document.getElementById('modal');
     modal.style.display = 'none';
   }
-
-  // delete_patient = document.getElementById('delete_patient');
   modal = document.getElementById('modal');
   modal.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -16,7 +13,6 @@ function openModal() {
     const formData = new FormData(modal);
     console.log(formData);
     console.log(formData.get('patient_id'));
-    // Make a POST request to the php/login.php page, passing the form data as the body of the request
     fetch('../php/search_edit.php?crud=delete', {
         method: 'POST',
         body: formData
@@ -28,10 +24,6 @@ function openModal() {
            
             window.location.href = 'index.php';
         } else {
-            // const alertMessage = document.getElementById('alert-meesage');
-            // alertMessage.innerHTML = data.message;
-            // // alertMessage.classList
-            // alertMessage.classList.remove('hidden');
             console.log(data);
         }
     })

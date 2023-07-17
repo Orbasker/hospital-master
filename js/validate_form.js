@@ -71,7 +71,6 @@ function isDoctorExists(doctorName) {
   }
   return false;
 }
-
 const radioButtons = document.getElementsByClassName("radio-button");
 Array.from(radioButtons).forEach((radioButton) => {
   radioButton.addEventListener("click", (event) => {

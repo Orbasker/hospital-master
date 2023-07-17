@@ -15,8 +15,6 @@
         </navbar-menu>
         <script src="../js/components/release-patient-form.js"> </script>
         <script src="../js/components/navbar-menu.js"></script>
-        <!-- <script src="../js/index.js"></script> -->
-        <!-- <script src="../js/validate_form.js"></script> -->
         <script src="js/validate_user.js"></script>
         <script src="js/delete_patient.js"></script>
     </body>

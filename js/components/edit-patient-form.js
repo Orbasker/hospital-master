@@ -116,19 +116,3 @@ class editPatientForm extends HTMLElement {
 };
 customElements.define('edit-patient-form', editPatientForm);
 
-// להוסיף לייטבוקס אחרי שעושים שמור ואחכ לעשות המשך ושזה יעביר את הפרמטרים לטופס.
-{/* <div id="modal" class="fixed inset-0 flex items-center justify-center z-50 ">
-<div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
-  <div class="modal-container bg-white w-1/2 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
-  <div class="modal-content py-4 text-left px-6">
-    <div class="flex justify-between items-center pb-3">
-      <p class="text-2xl font-bold">Warning!</p>
-      <button id="modalClose" class="modal-close cursor-pointer z-50"></button>
-    </div>
-    <p>
-        <label for="departments" class="block mb-2 text-sm font-medium text-gray-900">Are you sure you want to make the changes?</label>
-        <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
-        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Continue</button>
-    </p>
-    </div>
-  </div> */}
