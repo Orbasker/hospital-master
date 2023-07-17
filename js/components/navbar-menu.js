@@ -69,25 +69,25 @@ class NavbarMenu extends HTMLElement {
                <li>
                   <a href="index.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/></svg>
-                  <span class="ml-3 hover:text-white" id="rubik">Home Page</span>
+                  <span class="ml-3 hover:text-white">Home Page</span>
                   </a>
                </li>
                <li>
                   <a href="add_patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                     <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5ZM23,16a1,1,0,0,1-1,1H19v3a1,1,0,0,1-2,0V17H14a1,1,0,0,1,0-2h3V12a1,1,0,0,1,2,0v3h3A1,1,0,0,1,23,16Z"/></svg>
-                    <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Add Patient</span>
+                    <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Add Patient</span>
                   </a>
                </li>
                <li>
                   <a href="release-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M1,20a1,1,0,0,0,1,1h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5Zm12.707,9.707L20.414,17l2.293,2.293a1,1,0,1,1-1.414,1.414L19,18.414l-2.293,2.293a1,1,0,0,1-1.414-1.414L17.586,17l-2.293-2.293a1,1,0,0,1,1.414-1.414L19,15.586l2.293-2.293a1,1,0,0,1,1.414,1.414Z"></path></g></svg>
-                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Release Patient</span>
+                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Release Patient</span>
                   </a>
                </li>
                <li>
                   <a href="edit-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21H8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5ZM20.207,9.293a1,1,0,0,0-1.414,0l-6.25,6.25a1.011,1.011,0,0,0-.241.391l-1.25,3.75A1,1,0,0,0,12,21a1.014,1.014,0,0,0,.316-.051l3.75-1.25a1,1,0,0,0,.391-.242l6.25-6.25a1,1,0,0,0,0-1.414Zm-5,8.583-1.629.543.543-1.629L19.5,11.414,20.586,12.5Z"/></svg>
-                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Edit Patient</span>
+                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Edit Patient</span>
                   </a>
                </li>
                <li>
@@ -99,7 +99,7 @@ class NavbarMenu extends HTMLElement {
                     <path fill-rule="evenodd" d="M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm8-4a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm.01 8a1 1 0 102 0V9a1 1 0 10-2 0v5z"></path>
                   </g>
                 </svg>
-                <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Information</span>
+                <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Information</span>
               </a>
                </li>
                <li id="admin" class="hidden">
@@ -142,13 +142,13 @@ class NavbarMenu extends HTMLElement {
                     l-22.081-22.077C183.972,203.046,183.972,201.058,185.195,199.829z"/>
                     </g>
                   </svg>
-                  <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Managing Tools</span>
+                  <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Managing Tools</span>
                   </a>
                </li>
                <li>
                   <a href="php/logout.php" id="log-out" class="flex items-center p-2 text-black rounded-lg">
                     <svg width="25px" height="25px" class="flex-shrink-0 w-6 h-6 text-black transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
-                    <span class="flex-1 ml-3 whitespace-nowrap hover:text-white" id="rubik">Log Out</span>
+                    <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Log Out</span>
                   </a>
                </li>
             </ul>
