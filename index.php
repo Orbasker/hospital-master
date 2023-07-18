@@ -8,7 +8,6 @@ include 'php/check_session.php';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="js/components/navbar-menu.js"></script>
     <script src="js/validate_user.js"></script>
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
     <!--bootstrap-->
@@ -28,7 +27,8 @@ include 'php/check_session.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="js/validate_user.js" as="script">
-    <title>Hospital Master </title>
+    <title>Hospital Master</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="https://icons8.com/icon/15199/traffic-light">
     </head>
   <body>
     <navbar-menu></navbar-menu>
@@ -119,6 +119,5 @@ include 'php/check_session.php';
     </main>
     <footer></footer>
     <script src="js/index.js"></script>
-
   </body>
 </html>
