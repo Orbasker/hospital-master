@@ -23,12 +23,12 @@
                             <input type="password" name="password" id="password" placeholder="Four or more characters" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" pattern=".{4,}" required>
                         </div>
                         <div class="flex items-center justify-between">
-                            <a href="https://www.hadassah.org.il/contact-us/" class="text-sm font-medium text-primary-600 hover:underline">Forgot Your Password?</a>
+                            <a href="https://www.hadassah.org.il/contact-us/" target="_blank" class="text-sm font-medium text-primary-600 hover:underline">Forgot Your Password?</a>
                         </div>
                         <div>
                             <button type="submit" class="flex w-full justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign In</button>
                         </div>
-                        <p class="text-sm font-light text-blak">Don’t have an account yet?<a href="https://www.hadassah.org.il/contact-us/" class="font-medium text-primary-600 hover:underline">Sign Up</a></p>
+                        <p class="text-sm font-light text-blak">Don’t have an account yet?<a href="https://www.hadassah.org.il/contact-us/" target="_blank" class="font-medium text-primary-600 hover:underline">Sign Up</a></p>
                     </form>
                 </div>
             </div>
