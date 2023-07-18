@@ -1,3 +1,6 @@
+<?php 
+include 'php/check_session.php';
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,15 +11,26 @@
   <body>
     <navbar-menu>
       <section class="p-4 sm:ml-64 m-16">
-        <h1>Patient Details</h1>
-        <h2><strong>Patient ID:</strong> <span id="patient_id"></span></h2>
-        <h2><strong>Patient Name:</strong> <span id="patient_name"></span></h2>
-        <h2><strong>Doctor:</strong> <span id="patient_doctor"></span></h2>
-        <h2><strong>Status:</strong> <span id="patient_status"></span></h2>
+      <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Patient Details</h5>
+        <div class="space-y-4 my-4">
+        <p class="text-sm font-medium text-gray-500 dark:text-gray-400" >Patient ID: <span class="font-normal text-gray-900 dark:text-white" id="patient-id" ></span></p>
+        <p class="text-sm font-medium text-gray-500 dark:text-gray-400" >Patient Name: <span class="font-normal text-gray-900 dark:text-white patient-name" id="patient-name" ></span></p>
+        <p class="text-sm font-medium text-gray-500 dark:text-gray-400" >Doctor: <span class="font-normal text-gray-900 dark:text-white doctor" id="doctor" ></span></p>
+        <p class="text-sm font-medium text-gray-500 dark:text-gray-400" >Status: <span class="font-normal text-gray-900 dark:text-white status" id="status" ></span></p>
+        <p class="text-sm font-medium text-gray-500 dark:text-gray-400" >Bed Number: <span class="font-normal text-gray-900 dark:text-white bed-number" id="bed-number"></span></p>
+      </div>
+        <button type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose Bed</button>
+    </div>
+        <message-modal class="p-4"></message-modal>
       </section>
     </navbar-menu>
-    <script src="js/components/showDetails.js"></script>
+    <script src="js/showDetails.js"></script>
     <script src="js/validate_user.js"></script>
+    <script src="js/components/message-modal.js"></script>
+    <script src="js/custom_message.js"></script>
     <!-- <script src="js/js/index.js"></script> -->
   </body>
 </html>
+
+

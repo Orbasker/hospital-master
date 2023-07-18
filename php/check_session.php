@@ -1,7 +1,9 @@
 <?php
 session_start();
-
+include 'config.php';
 if (isset($_SESSION["user_id"]) && !empty($_SESSION["user_id"])) {
+    if (isset($_GET["get"]) && $_GET["get"] == "session" )
+    {
     $response = array(
         'status' => 'active',
         'user_id' => $_SESSION['user_id'],
@@ -9,12 +11,17 @@ if (isset($_SESSION["user_id"]) && !empty($_SESSION["user_id"])) {
         'user_type' => $_SESSION['user_type'],
         'message' => 'Session active'
     );
+    echo json_encode($response);
+    }
+
 } else {
-    $response = array(
-        'status' => 'inactive',
-        'message' => 'No active session'
-    );
+    // $response = array(
+    //     'status' => 'inactive',
+    //     'message' => 'No active session'
+    // );
+    header("Location: " .base_url."login.php");
+    exit();
 }
 
-echo json_encode($response);
+// echo json_encode($response);
 ?>

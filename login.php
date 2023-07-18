@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,15 +31,14 @@
                         </div>
                         <p class="text-sm font-light text-blak">Don’t have an account yet?<a href="https://www.hadassah.org.il/contact-us/" target="_blank" class="font-medium text-primary-600 hover:underline">Sign Up</a></p>
                     </form>
-                </div>
-            </div>
-            <div class="hidden alert-meesage" id="alert-meesage">
-                <div class="hidden p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50" role="alert">
-                    <span class="font-medium">Warning alert!</span>
+                    <message-modal></message-modal>
+
                 </div>
             </div>
         </div>
     </section>
     <script src="js/login.js"></script>
+    <script src="js/components/message-modal.js"></script>
+    <script src="js/custom_message.js"></script>
 </body>
 </html>

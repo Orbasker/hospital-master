@@ -149,6 +149,26 @@ else if (isset($_GET['crud']) && $_GET['crud'] == 'add') {
         echo json_encode($response);
     }
 }
+elseif (isset($_GET['crud']) && $_GET['crud'] == "all")
+{
+    $query = "SELECT * FROM dbShnkr23stud2.tbl_209_patients";
+    $result = execute_query($query);
+    $result = json_decode($result, true);
+    if ($result['status'] !== 'error') {
+        $response = array(
+            'status' => 'success',
+            'message' => 'Patients selected successfully',
+            'data' => $result['data']
+        );
+    } else {
+        $response = array(
+            'status' => 'Error selecting patients',
+            'query' => $query,
+            'data' => $result
+        );
+    }
+    echo json_encode($response);
+}
 else
 {
     $result = array(

@@ -5,6 +5,7 @@ class AddPatientForm extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <form id="add_patient_form" class="p-10 " action="#" method="post">
+        <message-modal></message-modal>
         <div class="space-y-10">
           <div>
           <br>
@@ -87,6 +88,7 @@ class AddPatientForm extends HTMLElement {
           <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
         </div>
       </form>
+      <script src="js/components/message-modal.js"></script>
        
     `;
     }

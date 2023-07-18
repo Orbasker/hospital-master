@@ -1,8 +1,14 @@
+<?php 
+include 'php/check_session.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="js/components/navbar-menu.js"></script>
+    <script src="js/validate_user.js"></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
     <!--bootstrap-->
@@ -112,8 +118,7 @@
       </section>
     </main>
     <footer></footer>
-    <script src="js/components/navbar-menu.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/validate_user.js"></script>
+
   </body>
 </html>

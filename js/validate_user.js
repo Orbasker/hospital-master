@@ -1,15 +1,16 @@
 document.getElementById("log-out").addEventListener("click", function () {
-    fetch('php/logout.php')
+    fetch('php/sessions_managment.php?action=logout')
         .then(response => response.json())
         .then(data => {
-            if (data.status === 'success') {
+          console.log(data);
+            if (data.status === 'active') {
                 console.log('Session active:', data.user_name);
             } else {
                 deleteSessionCookie('session');
                 deleteSessionCookie('user_name');
                 deleteSessionCookie('user_type');
                 deleteSessionCookie('user_id');
-              window.location.href = "login.php";
+              // window.location.href = "login.php";
             }
         })
         .catch(error => {
@@ -23,7 +24,7 @@ document.getElementById("log-out").addEventListener("click", function () {
     if (!sessionCookie) {
         window.location.href = "login.php";
     }
-    fetch('php/check_session.php')
+    fetch('php/check_session.php?get=session')
         .then(response => response.json())
         .then(data => {
             if (data.status === 'active') {

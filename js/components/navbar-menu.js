@@ -20,23 +20,23 @@ class NavbarMenu extends HTMLElement {
                     <a href="index.php" class="block px-4 py-2 hover:bg-gray-100">Home Page</a>
                   </li>
                   <li>
-                    <a href="add-patient.html" class="block px-4 py-2 hover:bg-gray-100">Add Patient</a>
+                    <a href="add_patient.php" class="block px-4 py-2 hover:bg-gray-100">Add Patient</a>
                   </li>
                   <li>
-                    <a href="release-patient.php" class="block px-4 py-2 hover:bg-gray-100">Release Patient</a>
+                    <a href="release_patient.php" class="block px-4 py-2 hover:bg-gray-100">Release Patient</a>
                   </li>
                   <li>
-                    <a href="edit-patient.php" class="block px-4 py-2 hover:bg-gray-100">Edit Patient</a>
+                    <a href="edit_patient.php" class="block px-4 py-2 hover:bg-gray-100">Edit Patient</a>
                   </li>
                   <li>
-                    <a href="list-view.php" class="block px-4 py-2 hover:bg-gray-100">Information</a>
+                    <a href="list_view.php" class="block px-4 py-2 hover:bg-gray-100">Information</a>
                   </li>
                   <li>
-                    <a href="404_page.html" class="block px-4 py-2 hover:bg-gray-100">Managing Tools</a>
+                    <a href="managing_tools.php" class="block px-4 py-2 hover:bg-gray-100">Managing Tools</a>
                   </li>
                 </ul>
                 <div class="py-1">
-                  <a href="404_page.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                  <a href="sessions_managment?action=logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
                 </div>
               </div>
                 </div>
@@ -146,7 +146,7 @@ class NavbarMenu extends HTMLElement {
                   </a>
                </li>
                <li>
-                  <a href="php/logout.php" id="log-out" class="flex items-center p-2 text-black rounded-lg">
+                  <a href="php/sessions_managment.php?action=logout" id="log-out" class="flex items-center p-2 text-black rounded-lg">
                     <svg width="25px" height="25px" class="flex-shrink-0 w-6 h-6 text-black transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Log Out</span>
                   </a>
