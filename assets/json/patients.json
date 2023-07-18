@@ -1,85 +1,85 @@
 [
   {
-    "patient_name": "John Doe",
-    "doctor": "Dr. Braydon Smith",
+    "patient_name": "Alice Johnson",
+    "doctor": "Dr. Smith",
     "bed_number": 1,
     "status": "Critical"
   },
   {
-    "patient_name": "Jane Smith",
-    "doctor": "Dr. Olivia Henton",
+    "patient_name": "Ethan Thompson",
+    "doctor": "Dr. Braydon Smith",
     "bed_number": 2,
     "status": "Stable"
   },
   {
-    "patient_name": "Bob Johnson",
+    "patient_name": "Olivia Rodriguez",
     "doctor": "Dr. Lee Soltes",
     "bed_number": 3,
     "status": "Serious"
   },
   {
-    "patient_name": "Sally Lee",
-    "doctor": "Dr. Earl Doe",
+    "patient_name": "Liam Wilson",
+    "doctor": "Dr. Fred Kolppa",
     "bed_number": 4,
     "status": "Critical"
   },
   {
-    "patient_name": "Joe Doe",
-    "doctor": "Dr. Fred Kolppa ",
+    "patient_name": "Ava Anderson",
+    "doctor": "Dr. Drew Witherbee",
     "bed_number": 5,
     "status": "Stable"
     },
     {
-    "patient_name": "Woody Leela",
+    "patient_name": "Noah Garcia",
     "doctor": "Dr. Drew Witherbee",
     "bed_number": 6,
     "status": "Critical"
     },
     {
-    "patient_name": "Marion Naveen",
+    "patient_name": "Sophia Clark",
     "doctor": "Dr. Olivia Henton",
     "bed_number": 7,
     "status": "Critical"
     },
     {
-    "patient_name": "Theo Vitus",
-    "doctor": "Dr. Annabelle Allende",
+    "patient_name": "Mia Hernandez",
+    "doctor": "Dr. Braydon Smith",
     "bed_number": 8,
     "status": "Critical"
     },
     {
-    "patient_name": "Ani Takouhi",
+    "patient_name": "Oliver Young",
     "doctor": "Dr. Ryan Soltes",
     "bed_number": 9,
     "status": "Critical"
     },
     {
-    "patient_name": "Manvel Maria",
-    "doctor": "Dr. Braydon Vanzante",
+    "patient_name": "Henry Mitchell",
+    "doctor": "Dr. Drew Witherbee",
     "bed_number": 10,
     "status": "Critical"
     },
     {
-    "patient_name": "Angelina Elen",
-    "doctor": "Dr. Marco Briceno",
+    "patient_name": "Isabella Turner",
+    "doctor": "Dr. Braydon Smith",
     "bed_number": 11,
     "status": "Critical"
     },
     {
-    "patient_name": "Arpi Vahan",
-    "doctor": "Dr. Cleo Littrell",
+    "patient_name": "William Garcia",
+    "doctor": "Dr. Drew Witherbee",
     "bed_number": 12,
     "status": "Critical"
     },
     {
-    "patient_name": "Lena Almast",
-    "doctor": "Dr. Earl Lehnhoff",
+    "patient_name": "James Rivera",
+    "doctor": "Dr. Braydon Smith",
     "bed_number": 13,
     "status": "Critical"
     },
     {
-    "patient_name": "Elen Arevig",
-    "doctor": "Dr. Kevin Russwurm",
+    "patient_name": "Harper Collins",
+    "doctor": "Dr. Lee Soltes",
     "bed_number": 14,
     "status": "Stable"
     }
