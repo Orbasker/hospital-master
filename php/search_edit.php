@@ -1,4 +1,3 @@
-
 <?php 
 include 'db.php';
 if (isset($_GET['crud']) && $_GET['crud'] == 'select')
@@ -7,11 +6,8 @@ if (isset($_GET['crud']) && $_GET['crud'] == 'select')
     {
         $id = $_POST['id'];
         $query = "SELECT * FROM dbShnkr23stud2.tbl_209_patients WHERE patient_id = '$id'";
-        // echo $query;
         $result = execute_query($query);
-        // echo $result;
         $result = json_decode($result, true);
-        // echo json_encode($result);
         if ($result['status'] == 'success')
         {
             $response = array(
@@ -20,16 +16,13 @@ if (isset($_GET['crud']) && $_GET['crud'] == 'select')
                 'data' => $result['data']
             );
         }
-        // echo $result;
         if ($result['status'] !== 'error') {
             $response = array(
                 'status' => 'success',
                 'message' => 'Patient selected successfully',
                 'data' => $result
             );
-            // echo json_encode($result);
         } else {
-            // echo "Error deleting patient: ";
             $response = array(
                 'status' => 'Error selecting patient',
                 'query' => $query,
@@ -39,19 +32,16 @@ if (isset($_GET['crud']) && $_GET['crud'] == 'select')
     }
     else
     {
-        // echo "No id provided";
         $response = array(
             'status' => 'No id provided',
             'query' => $query
         );
     }
     echo json_encode($response);
-
 }
 else if (isset($_GET['crud']) && $_GET['crud'] == 'update')
 {
     if (isset($_POST['first-name'])) {
-        // Extract data from $_POST
         $patient_first_name = $_POST['first-name'];
         $patient_last_name = $_POST['last-name'];
         $patient_id = $_POST['patient_id'];
@@ -59,11 +49,8 @@ else if (isset($_GET['crud']) && $_GET['crud'] == 'update')
         $patient_doctor = $_POST['doctors'];
         $patient_nurse = $_POST['nurses'];
         $patient_estimated_time = $_POST['estimated_time'];
-
-        // Construct your SQL query and perform the update
         $query = "UPDATE dbShnkr23stud2.tbl_209_patients SET patient_first_name = '".$patient_first_name."', patient_last_name = '".$patient_last_name."', patient_id = '".$patient_id."', patient_department = '".$patient_department."', patient_doctor = '".$patient_doctor."', patient_nurse = '".$patient_nurse."', patient_estimated_time = '".$patient_estimated_time."' WHERE patient_id = '".$patient_id."'";
         $result = execute_query($query);
-
         if ($result) {
             $response = array(
                 'status' => 'Patient updated successfully'
@@ -107,18 +94,14 @@ else if (isset($_GET['crud']) && $_GET['crud'] == 'delete')
         $response = array(
             'status' => 'No id provided',
         );
-
     }
     echo json_encode($response);
-
 }
 else if (isset($_GET['crud']) && $_GET['crud'] == 'add') {
-    // session_start();
     if (isset($_POST['nurses']) && isset($_POST['doctors']) && isset($_POST['departments']) && isset($_POST['id']) && isset($_POST['last-name']) && isset($_POST['first-name'])) {
         $add_patient_query = "INSERT INTO dbShnkr23stud2.tbl_209_patients (patient_first_name, patient_last_name, patient_id, patient_department, patient_doctor, patient_nurse, patient_estimated_time) " .
             "VALUES('" . $_POST['first-name'] . "', '" . $_POST['last-name'] . "', '" . $_POST['id'] . "', '" . $_POST['departments'] . "', '" . $_POST['doctors'] . "', '" . $_POST['nurses'] . "', '" . $_POST['estimated_time'] . "') ";
         $result = execute_query($add_patient_query);
-        // echo '<h3>'.$add_patient_query.'</h3>';
         $result = json_decode($result, true);
         if ($result['status'] !== 'error') {
             $response = array(

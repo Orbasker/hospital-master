@@ -10,7 +10,6 @@ document.getElementById("log-out").addEventListener("click", function () {
                 deleteSessionCookie('user_name');
                 deleteSessionCookie('user_type');
                 deleteSessionCookie('user_id');
-              // window.location.href = "login.php";
             }
         })
         .catch(error => {
@@ -18,7 +17,6 @@ document.getElementById("log-out").addEventListener("click", function () {
             });
   });
   function checkSession() {
-    // Function to check session status in cookie
     let sessionCookie = getSessionCookie('session');
     console.log(sessionCookie);
     if (!sessionCookie) {
@@ -49,17 +47,6 @@ document.getElementById("log-out").addEventListener("click", function () {
     return null;
   }
 checkSession();
-  // Check if the session cookie is present
-//   const sessionCookie = getSessionCookie('session');
-//   if (!sessionCookie) {
-//     // Session cookie is not present, redirect to login page
-//     console.log('Session cookie not found, redirecting to login page');
-//     window.location.href = 'login.php'; // Replace with the actual login page URL
-//   }
-// window.addEventListener('DOMContentLoaded', (event) => {
-//         checkSession();
-//         console.log("DOM fully loaded and parsed");
-// });
 function deleteSessionCookie(name) {
     const expirationDate = new Date();
     expirationDate.setTime(expirationDate.getTime() - 1);

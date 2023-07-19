@@ -6,7 +6,6 @@ include 'php/check_session.php';
     <head>
         <meta charset="UTF-8" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <!-- <script type="application/json" id="hospitals-data"></script> -->
         <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
         <title>Add Patient - Hospital Master</title>
     </head>
@@ -20,7 +19,6 @@ include 'php/check_session.php';
         </navbar-menu>
         <script src="js/components/add-patient-form.js"> </script>
         <script src="js/components/navbar-menu.js"></script>
-        <!-- <script src="js/js/index.js"></script> -->
         <script src="js/validate_form.js"></script>
         <script src="js/validate_user.js"></script>
         <script src="js/add_patient.js"></script>

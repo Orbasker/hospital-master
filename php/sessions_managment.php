@@ -44,20 +44,12 @@
     }
     echo json_encode($response);
 }
-
-
 if (isset($_GET["action"]) && $_GET["action"] == 'logout')
 {
     include 'config.php';
-
-
-    // logout.php
     session_start();
-    // header("Location: " . base_url . "index.php");
     $_SESSION = array();
     $result = session_destroy();
-
-// Destroy the session
 if ($result) {
     $response = array(
         'status' => 'inactive',
@@ -70,6 +62,5 @@ if ($result) {
         'message' => 'Session not destroyed'
     );
 }
-// echo json_encode($response);
 }
 ?>

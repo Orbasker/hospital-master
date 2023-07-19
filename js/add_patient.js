@@ -29,12 +29,8 @@ const formData = new FormData(form);
                 window.location.href = 'index.php';
 
                 }, 3000);
-
-
-
             }
         });
-            // window.location.href = 'index.php';
         } else {
             console.log(data);
             messageModal = document.getElementById('messageModal');
@@ -45,7 +41,6 @@ const formData = new FormData(form);
             customMessage = document.getElementById('customMessage');
             customMessage.classList.add('text-white');
             customMessage.innerHTML = `Error: ${data.status}<br/> Please try again`;
-
         }
     })
 });

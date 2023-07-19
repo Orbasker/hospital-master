@@ -16,50 +16,40 @@ fetch('/php/crud_users.php')
     const userTable = document.getElementById('userTable');
   });
   function create_user_row(user_data) {
-    // Create the table row element
     let row = document.createElement('tr');
     row.classList.add('border-b', 'dark:border-gray-700');
-    // Create and append the table cell for the user ID
     let userIdCell = document.createElement('td');
     userIdCell.classList.add('px-4', 'py-3');
     userIdCell.textContent = user_data.user_id;
     row.appendChild(userIdCell);
-    // Create and append the table cell for the user first name
     let firstNameCell = document.createElement('td');
     firstNameCell.classList.add('px-4', 'py-3');
     firstNameCell.textContent = user_data.user_first_name;
     row.appendChild(firstNameCell);
-    // Create and append the table cell for the username
     let usernameCell = document.createElement('td');
     usernameCell.classList.add('px-4', 'py-3');
     usernameCell.textContent = user_data.username;
     row.appendChild(usernameCell);
-    // Create and append the table cell for the user last name
     let lastNameCell = document.createElement('td');
     lastNameCell.classList.add('px-4', 'py-3');
     lastNameCell.textContent = user_data.user_last_name;
     row.appendChild(lastNameCell);
-    // Create and append the table cell for the user password
     let passwordCell = document.createElement('td');
     passwordCell.classList.add('px-4', 'py-3');
     passwordCell.textContent = user_data.user_password;
     row.appendChild(passwordCell);
-    // Create and append the table cell for the user type
     let userTypeCell = document.createElement('td');
     userTypeCell.classList.add('px-4', 'py-3');
     userTypeCell.textContent = user_data.user_type;
     row.appendChild(userTypeCell);
-    // Create and append the table cell for the user creation date
     let createDateCell = document.createElement('td');
     createDateCell.classList.add('px-4', 'py-3');
     createDateCell.textContent = user_data.user_create_date;
     row.appendChild(createDateCell);
-    // Create and append the table cell for the last modified date
     let lastModifiedDateCell = document.createElement('td');
     lastModifiedDateCell.classList.add('px-4', 'py-3');
     lastModifiedDateCell.textContent = user_data.last_modified_date;
     row.appendChild(lastModifiedDateCell);
-    // Create and append the table cell for the actions
     let actionsCell = document.createElement('td');
     actionsCell.classList.add('px-4', 'py-3', 'flex', 'items-center', 'justify-end');
     actionsCell.innerHTML = `
@@ -102,11 +92,9 @@ fetch('/php/crud_users.php')
     actionsCell.addEventListener("click", (event) => {
         const dropdown = actionsCell.querySelector("[id$='-dropdown']");
         const {target} = event;
-      
         if (target.closest("[id$='-dropdown']")) {
           return;
         }
-      
         dropdown.classList.toggle("hidden");
       });
     const editButton = actionsCell.querySelector(`[id$="-edit-button"]`);
@@ -116,7 +104,6 @@ fetch('/php/crud_users.php')
     openUpdateModal();
     ("edit button clicked");
     const update_button = document.getElementById("update_user_edit");
-
     const delete_button = document.getElementById("delete_user_edit");
     delete_button.addEventListener("click", () => {
             openDeleteModal(user_id = user_data.user_id);
@@ -128,7 +115,6 @@ fetch('/php/crud_users.php')
     event.stopPropagation();
     openPreviewModal();
     fillPreviewFieldsWithData(user_data);
-    
     (user_data);
     });
     const deleteButton = actionsCell.querySelector(`[id$="-delete-button"]`);
@@ -144,7 +130,6 @@ fetch('/php/crud_users.php')
     tableBody = document.getElementById("users_tbl");
     tableBody.appendChild(row);
   }
-
   function generateDropdown(jsonData) {
     const ulElement = document.createElement("ul");
     ulElement.classList.add("space-y-2", "text-sm");
@@ -182,7 +167,6 @@ fetch('/php/crud_users.php')
         "dark:text-gray-100"
       );
       labelElement.innerText = `${user.user_first_name} ${user.user_last_name} (${user.user_id})`;
-  
       liElement.appendChild(inputElement);
       liElement.appendChild(labelElement);
       ulElement.appendChild(liElement);
@@ -232,7 +216,6 @@ fetch('/php/crud_users.php')
     const previewModal = document.getElementById("readClientModal");
     const deleteModal = document.getElementById("deleteModal");
     const addModal = document.getElementById("createUserModal");
-    // Get the close button inside the modal
     const closeModalButton = updateModal.querySelector("[data-modal-toggle='updateUserModal']");
     ("closeModalButton" + closeModalButton);
     (closeModalButton);
@@ -240,7 +223,6 @@ fetch('/php/crud_users.php')
     ("closeModalButton_preview" + closeModalButton_preview);
     const closeModalButton_delete = deleteModal.querySelector("[data-modal-toggle='deleteModal']");
     const closeModalButton_add = addModal.querySelector("[data-modal-toggle='createUserModal']");
-    // Add a click event listener to each modal toggle element
     modalToggleElements_update.forEach((element) => {
       element.addEventListener("click", (event) => {
         event.preventDefault();
@@ -491,55 +473,39 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
         }
       })
       .catch(error => {
-        clearTimeout(timeout); // Clear the timeout if an error occurs
+        clearTimeout(timeout); 
         console.error('Error:', error);
       });
     });    
-// Get the table element by its ID or any other appropriate selector
 const table = document.getElementById('users_tbl');
-const rowsPerPage = 20; // Number of rows per page
-
-// Calculate the number of rows and total pages
+const rowsPerPage = 20;
 const rowCount = table.rows.length;
 const totalPages = Math.ceil(rowCount / rowsPerPage);
-
-// Get the navigation container element
 const navContainer = document.querySelector('.table-navigation');
-
-// Create the navigation elements
 const nav = document.createElement('nav');
 nav.className = 'flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4';
 nav.setAttribute('aria-label', 'Table navigation');
-
 const infoSpan = document.createElement('span');
 infoSpan.className = 'text-sm font-normal text-gray-500 dark:text-gray-400';
 const infoText = document.createTextNode(`Showing 1-${rowsPerPage} of ${rowCount}`);
 infoSpan.appendChild(infoText);
-
 const ul = document.createElement('ul');
 ul.className = 'inline-flex items-stretch -space-x-px';
-
-// Create the previous button
 const prevLi = document.createElement('li');
 const prevButton = createNavButton('Previous', 'Previous', 'flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white');
 prevLi.appendChild(prevButton);
-
-// Create the page buttons
 for (let i = 1; i <= totalPages; i++) {
   const li = document.createElement('li');
   const pageButton = createNavButton(i, i, 'flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white');
   li.appendChild(pageButton);
   ul.appendChild(li);
 }
-// Create the next button
 const nextLi = document.createElement('li');
 const nextButton = createNavButton('Next', 'Next', 'flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white');
 nextLi.appendChild(nextButton);
-// Append the elements to the navigation container
 nav.appendChild(infoSpan);
 nav.appendChild(ul);
 navContainer.appendChild(nav);
-// Function to create a navigation button
 function createNavButton(text, ariaLabel, className) {
   const button = document.createElement('a');
   button.href = '#';
@@ -548,51 +514,39 @@ function createNavButton(text, ariaLabel, className) {
   button.textContent = text;
   return button;
 }
-// Function to update the navigation buttons
 function updateNavigationButtons() {
-// Enable/disable previous button based on the current page
 prevButton.disabled = currentPage === 1;
-// Enable/disable next button based on the current page
 nextButton.disabled = currentPage === totalPages;
-// Remove the "active" class from all page buttons
 pageButtons.forEach((button) => {
   button.classList.remove('active');
 });
-// Add the "active" class to the current page button
   pageButtons[currentPage - 1].classList.add('active');
 }
-// Function to go to the previous page
 function goToPreviousPage() {
   if (currentPage > 1) {
     currentPage--;
     updateNavigationButtons();
   }
 }
-// Function to go to the next page
 function goToNextPage() {
   if (currentPage < totalPages) {
     currentPage++;
     updateNavigationButtons();
   }
 }
-// Function to go to a specific page
 function goToPage(pageNumber) {
   if (pageNumber >= 1 && pageNumber <= totalPages) {
     currentPage = pageNumber;
     updateNavigationButtons();
   }
 }
-// Add click event listeners to the previous and next buttons
 prevButton.addEventListener('click', goToPreviousPage);
 nextButton.addEventListener('click', goToNextPage);
-// Get the page buttons and add click event listeners
 const pageButtons = ul.querySelectorAll('li a');
 pageButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
     goToPage(index + 1);
   });
 });
-// Set the initial page to 1
 let currentPage = 1;
-// Update the navigation buttons initially
 updateNavigationButtons();

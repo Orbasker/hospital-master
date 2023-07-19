@@ -28,7 +28,6 @@ include 'php/check_session.php';
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="js/validate_user.js" as="script">
     <title>Hospital Master</title>
-    <link type="image/png" sizes="16x16" rel="icon" href="https://icons8.com/icon/15199/traffic-light">
     </head>
   <body>
     <navbar-menu></navbar-menu>

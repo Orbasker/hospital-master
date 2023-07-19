@@ -1,6 +1,4 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-
 messageModal = document.getElementById('messageModal');
             closeModalButton = document.getElementById('closeModalButton');
             closeModalButton.addEventListener('click', function() {

@@ -1,6 +1,5 @@
 <?php
 include 'db.php';
-
 if (isset($_GET['action']) && $_GET['action'] == 'select') {
     if (isset($_POST['id'])) {
         $id = $_POST['id'];
@@ -31,11 +30,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'select') {
         $query = "SELECT * FROM dbShnkr23stud2.tbl_209_beds WHERE bed_id = '$bed_number'";
         $result = execute_query($query);
         $result = json_decode($result, true);
-        // echo json_encode($result);
-        // $result_data = $result['data'][0];
         $patient_id = $result['data'][0]['patient_id'];
-        // var_dump($patient_id);
-        // echo json_encode($result_data);
         if ($result['status'] == 'success') {
             $patient_query = "SELECT * FROM dbShnkr23stud2.tbl_209_patients WHERE patient_id ='".$patient_id."'";
             $patient_result = execute_query($patient_query);
@@ -108,18 +103,15 @@ if (isset($_GET['action']) && $_GET['action'] == 'select') {
                 }
                 else
                 {
-                    // echo "Error deleting patient: ";
                     $response = array(
                         'status' => 'Error assign bed',
                         'query' => $query,
                         'data' => $result
                     );
                 }
-
             }
             else
             {
-                // echo "Error deleting patient: ";
                 $response = array(
                     'status' => 'Error selecting patient',
                     'query' => $query,
