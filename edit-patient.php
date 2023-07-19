@@ -18,8 +18,6 @@ include 'php/check_session.php';
         </navbar-menu>
         <script src="../js/components/edit-patient-form.js"> </script>
         <script src="../js/components/navbar-menu.js"></script>
-        <!-- <script src="../js/index.js"></script> -->
-        <!-- <script src="../js/validate_form.js"></script> -->
         <script src="js/validate_user.js"></script>
         <script src="js/edit_patient.js"></script>
         <script src="js/validate_form.js"></script>
