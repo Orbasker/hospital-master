@@ -1,3 +1,5 @@
+let base_url = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209"
+
 class NavbarMenu extends HTMLElement {
   constructor() {
     super();
@@ -20,10 +22,10 @@ class NavbarMenu extends HTMLElement {
                     <a href="index.php" class="block px-4 py-2 hover:bg-gray-100">Home Page</a>
                   </li>
                   <li>
-                    <a href="add_patient.php" class="block px-4 py-2 hover:bg-gray-100">Add Patient</a>
+                    <a href="${base_url}/add_patient.php" class="block px-4 py-2 hover:bg-gray-100">Add Patient</a>
                   </li>
                   <li>
-                    <a href="release_patient.php" class="block px-4 py-2 hover:bg-gray-100">Release Patient</a>
+                    <a href="${base_url}release_patient.php" class="block px-4 py-2 hover:bg-gray-100">Release Patient</a>
                   </li>
                   <li>
                     <a href="edit_patient.php" class="block px-4 py-2 hover:bg-gray-100">Edit Patient</a>

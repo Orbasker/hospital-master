@@ -1,4 +1,5 @@
 // window.base_url = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/web1/dev_209"
+let base_url = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209"
 // let base_url = ""
 const loginForm = document.getElementById('login_form');
 loginForm.addEventListener('submit', (event) => {
