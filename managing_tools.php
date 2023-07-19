@@ -10,7 +10,7 @@ include 'php/check_session.php';
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>User Administration</title>
+    <title>Managing Tools - user administration</title>
     <script src="js/components/navbar-menu.js"></script>
     <script src="js/components/managing-tool.js"></script>
   </head>
