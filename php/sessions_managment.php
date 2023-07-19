@@ -52,7 +52,8 @@ if (isset($_GET["action"]) && $_GET["action"] == 'login') {
 
 // Check if the action is 'logout'
 if (isset($_GET["action"]) && $_GET["action"] == 'logout') {
-include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/config.php';
+// include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/config.php';
+    session_start();
 
     // Check if the session is active before attempting to destroy it
     if (isset($_SESSION['user_id']) && isset($_SESSION['user_name']) && isset($_SESSION['user_type'])) {
@@ -80,8 +81,8 @@ include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/config.php'
 // Check if the action is 'check_session'
 if (isset($_GET["action"]) && $_GET["action"] == 'check_session') {
     // Check if the session is active
-include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/config.php';
-
+// include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/config.php';
+session_start();
     if (isset($_SESSION["user_id"]) && isset($_SESSION["user_name"]) && isset($_SESSION["user_type"])) {
         $response = array(
             'status' => 'active',
