@@ -4,10 +4,10 @@ document.getElementById("log-out").addEventListener("click", function () {
         .then(data => {
           console.log(data);
             if (data.status === 'inactive') {
-                deleteSessionCookie('session');
-                deleteSessionCookie('user_name');
-                deleteSessionCookie('user_type');
-                deleteSessionCookie('user_id');
+                // deleteSessionCookie('session');
+                // deleteSessionCookie('user_name');
+                // deleteSessionCookie('user_type');
+                // deleteSessionCookie('user_id');
                 window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
             } else {
                 console.log('Error:', data.message);
@@ -38,21 +38,21 @@ document.getElementById("log-out").addEventListener("click", function () {
             }
         });
   }
-  function getSessionCookie(name) {
-    const cookies = document.cookie.split(';');
-    console.log(cookies);
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i].trim();
-      if (cookie.startsWith(name + '=')) {
-        return cookie.substring(name.length + 1);
-      }
-    }
-    return null;
-  }
-checkSession();
-function deleteSessionCookie(name) {
-    const expirationDate = new Date();
-    expirationDate.setTime(expirationDate.getTime() - 1);
-    const cookie = `${encodeURIComponent(name)}=;expires=${expirationDate.toUTCString()};path=/`;
-    document.cookie = cookie;
-  }
+//   function getSessionCookie(name) {
+//     const cookies = document.cookie.split(';');
+//     console.log(cookies);
+//     for (let i = 0; i < cookies.length; i++) {
+//       const cookie = cookies[i].trim();
+//       if (cookie.startsWith(name + '=')) {
+//         return cookie.substring(name.length + 1);
+//       }
+//     }
+//     return null;
+//   }
+// checkSession();
+// function deleteSessionCookie(name) {
+//     const expirationDate = new Date();
+//     expirationDate.setTime(expirationDate.getTime() - 1);
+//     const cookie = `${encodeURIComponent(name)}=;expires=${expirationDate.toUTCString()};path=/`;
+//     document.cookie = cookie;
+//   }
