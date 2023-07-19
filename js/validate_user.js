@@ -29,7 +29,7 @@ document.getElementById("log-out").addEventListener("click", function () {
                 console.log('Session active:', data.user_name);
                 if (data.user_type == "Admin") {
                   document.getElementById("admin").classList.remove("hidden");
-                  document.getElementById("profilLogo").src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/svg/sapir.jpg"
+                  document.getElementById("profilLogo").src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/svg/peled.jpg"
                 }
             } else {
               window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
