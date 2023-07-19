@@ -6,7 +6,6 @@ include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_sessi
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
     <!--bootstrap-->
@@ -27,6 +26,7 @@ include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_sessi
     <link rel="stylesheet" href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/css/style.css">
     <link rel="preload" href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js" as="script">
     <title>Hospital Master</title>
+    <link rel="icon" type="image/png" href="assets/svg/logoCarmel.png">
     </head>
   <body>
     <navbar-menu></navbar-menu>

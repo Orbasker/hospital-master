@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>login - Hospital Master</title>
+    <link rel="icon" type="image/png" href="assets/svg/logoCarmel.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
