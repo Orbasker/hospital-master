@@ -10,7 +10,7 @@ class NavbarMenu extends HTMLElement {
           <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div id="avatarButton" class="flex items-center justify-between">
               <div class="flex items-start relative">
-                  <img src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/svg/peled.jpg" id="profilLogo" class="h-8" style="width: 50px; height: 50px; margin-left: 15px; border-radius: 50%;" alt="propeleduser">
+                  <img id="profilLogo" class="h-8" style="width: 50px; height: 50px; margin-left: 15px; border-radius: 50%;" alt="propeleduser">
                   <div id="userDropdown" class="hidden m-6 z-10 absolute bg-white divide-y divide-gray-100 shadow w-44">
                 <div class="px-4 py-3 text-sm text-gray-900">
                   <div>Prof Ori Peled</div>

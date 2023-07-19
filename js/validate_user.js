@@ -19,12 +19,12 @@ document.getElementById("log-out").addEventListener("click", function () {
             });
   });
   function checkSession() {
-    let sessionCookie = getSessionCookie('session');
-    console.log(sessionCookie);
-    if (!sessionCookie) {
-        window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
-    }
-    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_session.php?get=session')
+    // let sessionCookie = getSessionCookie('session');
+    // console.log(sessionCookie);
+    // if (!sessionCookie) {
+    //     window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
+    // }
+    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=check_session')
         .then(response => response.json())
         .then(data => {
             if (data.status === 'active') {
@@ -32,6 +32,10 @@ document.getElementById("log-out").addEventListener("click", function () {
                 if (data.user_type == "Admin") {
                   document.getElementById("admin").classList.remove("hidden");
                   document.getElementById("profilLogo").src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/svg/peled.jpg"
+                }
+                else
+                {
+                  document.getElementById("profilLogo").src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/svg/sapir.jpg"
                 }
             } else {
               window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
@@ -56,3 +60,4 @@ document.getElementById("log-out").addEventListener("click", function () {
 //     const cookie = `${encodeURIComponent(name)}=;expires=${expirationDate.toUTCString()};path=/`;
 //     document.cookie = cookie;
 //   }
+checkSession();

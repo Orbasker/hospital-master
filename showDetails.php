@@ -1,5 +1,5 @@
 <?php 
-include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_session.php';
+include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=check_session';
 ?>
 <!DOCTYPE html>
 <html>
