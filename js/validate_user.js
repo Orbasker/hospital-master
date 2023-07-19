@@ -3,13 +3,15 @@ document.getElementById("log-out").addEventListener("click", function () {
         .then(response => response.json())
         .then(data => {
           console.log(data);
-            if (data.status === 'active') {
-                console.log('Session active:', data.user_name);
-            } else {
+            if (data.status === 'inactive') {
                 deleteSessionCookie('session');
                 deleteSessionCookie('user_name');
                 deleteSessionCookie('user_type');
                 deleteSessionCookie('user_id');
+                window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
+            } else {
+                console.log('Error:', data.message);
+                console.log('Error:', data);
             }
         })
         .catch(error => {

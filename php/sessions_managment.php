@@ -50,17 +50,21 @@ if (isset($_GET["action"]) && $_GET["action"] == 'logout')
     session_start();
     $_SESSION = array();
     $result = session_destroy();
+    echo json_encode($result);
 if ($result) {
     $response = array(
         'status' => 'inactive',
         'message' => 'Session destroyed'
     );
-    header("Location: " .base_url."index.php");
+    echo json_encode($response);
+    header("Location: http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/index.php");
+    // header("Location: " .base_url."index.php");
 } else {
     $response = array(
         'status' => 'active',
         'message' => 'Session not destroyed'
     );
+    echo json_encode($response);
 }
 }
 ?>
