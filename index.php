@@ -26,7 +26,7 @@ include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_sessi
     <link rel="stylesheet" href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/css/style.css">
     <link rel="preload" href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js" as="script">
     <title>Hospital Master</title>
-    <link rel="icon" type="image/png" href="assets/svg/logoCarmel.png">
+    <link rel="icon" type="image/png" href="assets/svg/favicon-16x16.png">
     </head>
   <body>
     <navbar-menu></navbar-menu>
