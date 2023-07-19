@@ -1,3 +1,7 @@
+
+
+// showDetails.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const bedNumber = urlParams.get('bed_number');
@@ -6,16 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
       fetchDetails(bedNumber);
     }
   });
+  
   function fetchDetails(bedNumber) {
     const formData = new FormData();
     formData.append('bed_number', bedNumber);
-    fetch('../php/bed.php?action=select', {
+  
+    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/bed.php?action=select', {
       method: 'POST',
       body: formData,
     })
       .then((response) => response.json())
       .then((data) => {
         if (data.status === 'success') {
+            // console.log(data.data.data);
+
           updatePatientCard(data.data.data);
         } else {
             let messageModal = document.getElementById('messageModal');
@@ -26,21 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
             let customMessage = document.getElementById('customMessage');
             customMessage.classList.add('text-white');
             customMessage.innerHTML = `Error: ${data.status}<br/> Please try again`;
+
         }
       })
       .catch((error) => {
         console.error('Error fetching patient details:', error);
       });
   }
+  
   function updatePatientCard(data) {
     console.log(data);
     data = data[0];
+    // const patientIdSpan = document.querySelector('.patient-id span');
+    // console.log(patientIdSpan);
+    // const patientNameSpan = document.querySelector('.patient-name span');
+    // const doctorSpan = document.querySelector('.doctor span');
+    // const statusSpan = document.querySelector('.status span');
+    // const bedNumberSpan = document.querySelector('.bed-number span');
+
     const patientIdSpan = document.getElementById('patient-id');
     const patientNameSpan = document.getElementById('patient-name');
     const doctorSpan = document.getElementById('doctor');
     const statusSpan = document.getElementById('status');
     const bedNumberSpan = document.getElementById('bed-number');
     console.log(patientIdSpan);  
+  
     if (patientIdSpan) {
       patientIdSpan.innerHTML += data.patient_id;
     }

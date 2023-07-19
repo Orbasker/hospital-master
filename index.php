@@ -1,13 +1,12 @@
 <?php 
-include 'php/check_session.php';
+include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="js/components/navbar-menu.js"></script>
-    <script src="js/validate_user.js"></script>
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
     <!--bootstrap-->
@@ -25,8 +24,8 @@ include 'php/check_session.php';
     <link rel="stylesheet" href="https://cdn.tailwindcss.com">
     </link>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="js/validate_user.js" as="script">
+    <link rel="stylesheet" href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/css/style.css">
+    <link rel="preload" href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js" as="script">
     <title>Hospital Master</title>
     </head>
   <body>
@@ -117,6 +116,9 @@ include 'php/check_session.php';
       </section>
     </main>
     <footer></footer>
-    <script src="js/index.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/navbar-menu.js"></script>
+
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/index.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js"></script>
   </body>
 </html>

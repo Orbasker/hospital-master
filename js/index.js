@@ -35,7 +35,7 @@ function getFillColor(occupancyLevel) {
   }
 }
 window.onload = function () {
-  fetch("assets/json/department-load.json")
+  fetch("http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/json/department-load.json")
     .then((response) => response.json())
     .then((data) => {
       const loads = data.logs;
@@ -46,9 +46,9 @@ window.onload = function () {
           const { occupancyLevel } = log;
           const fillColor = getFillColor(occupancyLevel);
           return `
-        <tr class="bg-white border-b">
+        <tr class="bg-white border-b text-left">
         <th scope="row" class="px-2 py-3 md:px-6 md:py-4 font-medium text-gray-900 whitespace-nowrap ">${departmentName}</th>
-          <td class="flex justify-center items-center">
+          <td class="flex justify-center items-center m-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="${fillColor}" class="bi bi-circle-fill" viewBox="0 0 16 16">
               <circle cx="8" cy="8" r="8"/>
             </svg>
@@ -72,13 +72,13 @@ window.onload = function () {
     .catch((error) => {
       console.error("Error fetching department load data:", error);
     });
-  fetch("assets/json/doctors.json")
+  fetch("http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/json/doctors.json")
     .then((response) => response.json())
     .then((data) => {
       const tbody = document.getElementById("doctorsContainer");
       data.forEach((doctor) => {
         const row = document.createElement("tr");
-        row.classList.add("bg-white", "border-b", "bg-white", "border-b");
+        row.classList.add("bg-white", "border-b", "bg-white", "border-b", "text-left");
         const nameCell = document.createElement("th");
         nameCell.scope = "row";
         nameCell.classList.add(
@@ -105,7 +105,7 @@ window.onload = function () {
     .catch((error) => {
       console.error("Error fetching doctors data:", error);
     });
-  fetch("assets/json/logs.json")
+    fetch("http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/json/logs.json")
     .then((response) => response.json())
     .then((data) => {
       const logsContainer = document.getElementById("logsContainer");
@@ -114,22 +114,25 @@ window.onload = function () {
           const { logId, logText } = log;
           const detailsLink = log.detailsLink || "";
           return `
-              <li class="p-4">
-                  <div class="flex items-center justify-between">
-                  <span class="tdark:text-white">Log ${logId}</span>
-                  </div>
-                  <p class="tdark:text-white">${logText}<a href="${detailsLink}" color="#2563eb">Click for more details.</a></p>
-              </li>
-              `;
+            <li class="p-4 m-4">
+              <div class="flex items-center justify-between">
+                <span class="text-black-900 font-bold">Log ${logId}</span>
+              </div>
+              <p class="text-black-400">${logText} <br/>
+                <a href="${detailsLink}" class="font-bold">Click for more details.</a>
+              </p>
+            </li>
+          `;
         })
         .join("");
       logsContainer.innerHTML = `
-              <ul class="shadow-md rounded-lg divide-y divide-gray-50">${logsHTML}</ul>
-          `;
+        <ul class="shadow-md rounded-lg divide-y divide-gray-50">${logsHTML}</ul>
+      `;
     })
     .catch((error) => {
       console.error("Error fetching system recommendation logs:", error);
     });
+  
     
 };
 

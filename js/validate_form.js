@@ -1,5 +1,5 @@
 function loadHospital() {
-  return fetch("assets/json/hospitals.json")
+  return fetch("http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/json/hospitals.json")
     .then((response) => response.json())
     .then((data) => {
       return data;

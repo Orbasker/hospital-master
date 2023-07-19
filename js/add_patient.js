@@ -2,14 +2,14 @@ form = document.getElementById('add_patient_form');
 form.addEventListener('submit', (event) => {
 event.preventDefault();
 const formData = new FormData(form);
-    fetch('../php/search_edit.php?crud=add', {
+    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/search_edit.php?crud=add', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
         if (data.status === 'Patient added successfully') {
-            fetch('../php/bed.php?action=add',
+            fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/bed.php?action=add',
             {method: 'POST',
             body: formData})
         .then(response => response.json())

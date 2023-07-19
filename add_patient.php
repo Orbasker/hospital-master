@@ -1,5 +1,5 @@
 <?php 
-include 'php/check_session.php';
+include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +7,9 @@ include 'php/check_session.php';
         <meta charset="UTF-8" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
+        <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/message-modal.js"></script>
+        <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/add-patient-form.js"> </script>
+        <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/navbar-menu.js"></script>
         <title>Add Patient - Hospital Master</title>
     </head>
     <body>
@@ -17,12 +20,10 @@ include 'php/check_session.php';
                 </add-patient-form>
             </section>
         </navbar-menu>
-        <script src="js/components/add-patient-form.js"> </script>
-        <script src="js/components/navbar-menu.js"></script>
-        <script src="js/validate_form.js"></script>
-        <script src="js/validate_user.js"></script>
-        <script src="js/add_patient.js"></script>
-        <script src="js/components/message-modal.js"></script>
-        <script src="js/custom_message.js"></script>
+        <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/custom_message.js"></script>
+        
+        <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_form.js"></script>
+        <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js"></script>
+        <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/add_patient.js"></script>
     </body>
 </html>

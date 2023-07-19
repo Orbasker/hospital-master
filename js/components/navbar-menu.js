@@ -1,5 +1,4 @@
 let base_url = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209"
-
 class NavbarMenu extends HTMLElement {
   constructor() {
     super();
@@ -11,7 +10,7 @@ class NavbarMenu extends HTMLElement {
           <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div id="avatarButton" class="flex items-center justify-between">
               <div class="flex items-start relative">
-                  <img src="assets/svg/peled.jpg" class="h-8" style="width: 50px; height: 50px; margin-left: 15px; border-radius: 50%;" alt="propeleduser">
+                  <img src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/svg/peled.jpg" class="h-8" style="width: 50px; height: 50px; margin-left: 15px; border-radius: 50%;" alt="propeleduser">
                   <div id="userDropdown" class="hidden m-6 z-10 absolute bg-white divide-y divide-gray-100 shadow w-44">
                 <div class="px-4 py-3 text-sm text-gray-900">
                   <div>Prof Ori Peled</div>
@@ -22,10 +21,10 @@ class NavbarMenu extends HTMLElement {
                     <a href="index.php" class="block px-4 py-2 hover:bg-gray-100">Home Page</a>
                   </li>
                   <li>
-                    <a href="${base_url}/add_patient.php" class="block px-4 py-2 hover:bg-gray-100">Add Patient</a>
+                    <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/add_patient.php" class="block px-4 py-2 hover:bg-gray-100">Add Patient</a>
                   </li>
                   <li>
-                    <a href="${base_url}release_patient.php" class="block px-4 py-2 hover:bg-gray-100">Release Patient</a>
+                    <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/release_patient.php" class="block px-4 py-2 hover:bg-gray-100">Release Patient</a>
                   </li>
                   <li>
                     <a href="edit_patient.php" class="block px-4 py-2 hover:bg-gray-100">Edit Patient</a>
@@ -34,7 +33,7 @@ class NavbarMenu extends HTMLElement {
                     <a href="list_view.php" class="block px-4 py-2 hover:bg-gray-100">Information</a>
                   </li>
                   <li>
-                    <a href="managing_tools.php" class="block px-4 py-2 hover:bg-gray-100">Managing Tools</a>
+                    <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/managing_tools.php" class="block px-4 py-2 hover:bg-gray-100">Managing Tools</a>
                   </li>
                 </ul>
                 <div class="py-1">
@@ -75,25 +74,25 @@ class NavbarMenu extends HTMLElement {
                   </a>
                </li>
                <li>
-                  <a href="add_patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/add_patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                     <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5ZM23,16a1,1,0,0,1-1,1H19v3a1,1,0,0,1-2,0V17H14a1,1,0,0,1,0-2h3V12a1,1,0,0,1,2,0v3h3A1,1,0,0,1,23,16Z"/></svg>
                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Add Patient</span>
                   </a>
                </li>
                <li>
-                  <a href="release-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/release-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M1,20a1,1,0,0,0,1,1h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5Zm12.707,9.707L20.414,17l2.293,2.293a1,1,0,1,1-1.414,1.414L19,18.414l-2.293,2.293a1,1,0,0,1-1.414-1.414L17.586,17l-2.293-2.293a1,1,0,0,1,1.414-1.414L19,15.586l2.293-2.293a1,1,0,0,1,1.414,1.414Z"></path></g></svg>
                      <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Release Patient</span>
                   </a>
                </li>
                <li>
-                  <a href="edit-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/edit-patient.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21H8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5ZM20.207,9.293a1,1,0,0,0-1.414,0l-6.25,6.25a1.011,1.011,0,0,0-.241.391l-1.25,3.75A1,1,0,0,0,12,21a1.014,1.014,0,0,0,.316-.051l3.75-1.25a1,1,0,0,0,.391-.242l6.25-6.25a1,1,0,0,0,0-1.414Zm-5,8.583-1.629.543.543-1.629L19.5,11.414,20.586,12.5Z"/></svg>
                      <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Edit Patient</span>
                   </a>
                </li>
                <li>
-               <a href="list-view.php" class="flex items-center p-2 text-gray-900 rounded-lg">
+               <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/list-view.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                 <svg width="25px" height="25px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                   <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -105,7 +104,7 @@ class NavbarMenu extends HTMLElement {
               </a>
                </li>
                <li id="admin" class="hidden">
-                  <a href="managing_tools.php" class="flex items-center p-2 text-gray-900 rounded-lg">
+                  <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/managing_tools.php" class="flex items-center p-2 text-gray-900 rounded-lg">
                   <svg fill="#000000" height="25px" width="25px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     viewBox="0 0 340.279 340.279" xml:space="preserve">
                     <g>
@@ -148,7 +147,7 @@ class NavbarMenu extends HTMLElement {
                   </a>
                </li>
                <li>
-                  <a href="php/sessions_managment.php?action=logout" id="log-out" class="flex items-center p-2 text-black rounded-lg">
+                  <a href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=logout" id="log-out" class="flex items-center p-2 text-black rounded-lg">
                     <svg width="25px" height="25px" class="flex-shrink-0 w-6 h-6 text-black transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
                     <span class="flex-1 ml-3 whitespace-nowrap hover:text-white">Log Out</span>
                   </a>

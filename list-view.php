@@ -12,8 +12,8 @@
         <list-view class="m-4 p-4 relative"></list-view>
       </div>
     </navbar-menu>
-    <script src="js/components/navbar-menu.js"></script>
-    <script src="js/components/list-view.js"></script>
-    <script src="js/validate_user.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/navbar-menu.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/list-view.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js"></script>
   </body>
 </html>

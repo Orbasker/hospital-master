@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config.php';
+include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/config.php';
 if (isset($_SESSION["user_id"]) && !empty($_SESSION["user_id"])) {
     if (isset($_GET["get"]) && $_GET["get"] == "session" )
     {
@@ -14,7 +14,7 @@ if (isset($_SESSION["user_id"]) && !empty($_SESSION["user_id"])) {
         echo json_encode($response);
     }
 } else {
-    header("Location: " .base_url."login.php");
+    header("Location:http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php");
     exit();
 }
 ?>

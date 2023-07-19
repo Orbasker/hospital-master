@@ -10,7 +10,7 @@ search_patient = document.getElementById('search_patient');
 search_patient.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(search_patient);
-    fetch('php/search_edit.php?crud=select', {
+    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/search_edit.php?crud=select', {
         method: 'POST',
         body: formData
     })
@@ -39,9 +39,16 @@ search_patient.addEventListener('submit', (event) => {
                     document.getElementById('three_day').checked = true;
                 }
             } else {
-                console.log(data);
-                console.log(data.status);
-                alert(data.status);
+                setTimeout(() => {
+                message_modal = document.getElementById('messageModal');
+                message_modal.classList.remove('hidden');
+                messageHeader = document.getElementById('messageHeader');
+                messageHeader.innerHTML = 'Error';
+                messageHeader.classList.add('bg-red-500');
+                customMessage = document.getElementById('customMessage');
+                customMessage.classList.add('text-white');
+                customMessage.innerHTML = `Error: ${data.status}<br/> Please try again`;
+                }, 9000);
             }
         })
 });
@@ -51,7 +58,7 @@ form.addEventListener('submit', (event) => {
     const formData = new FormData(form);
     console.log(formData);
     console.log(formData.get('first-name'));
-    fetch('php/search_edit.php?crud=update', {
+    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/search_edit.php?crud=update', {
         method: 'POST',
         body: formData
     })
@@ -59,11 +66,29 @@ form.addEventListener('submit', (event) => {
         .then(data => {
             console.log(data);
             if (data.status === 'Patient updated successfully') {
-
-                window.location.href = 'index.php';
+                setTimeout(() => {
+                    message_modal = document.getElementById('messageModal');
+                    message_modal.classList.remove('hidden');
+                    messageHeader = document.getElementById('messageHeader');
+                    messageHeader.innerHTML = 'Success';
+                    messageHeader.classList.add('text-green-500');
+                    customMessage = document.getElementById('customMessage');
+                    customMessage.classList.add('text-white');
+                    customMessage.innerHTML = `Success: ${data.status}<br/> Patient updated successfully`;
+                    window.location.href = 'index.php';
+                }, 3000);
             } else {
                 console.log(data);
                 console.log(data.status);
+                message_modal = document.getElementById('messageModal');
+                message_modal.classList.remove('hidden');
+                messageHeader = document.getElementById('messageHeader');
+                messageHeader.innerHTML = 'Error';
+                messageHeader.classList.add('bg-red-500');
+                customMessage = document.getElementById('customMessage');
+                customMessage.classList.add('text-white');
+                customMessage.innerHTML = `Error: ${data.status}<br/> Please try again`;
+
             }
         })
 }

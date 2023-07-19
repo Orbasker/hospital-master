@@ -1,4 +1,4 @@
-fetch('/php/crud_users.php')
+fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/crud_users.php')
 .then(response => response.json())
 .then(data => {
     (data);
@@ -192,8 +192,8 @@ fetch('/php/crud_users.php')
         });
         const query = arr.join(',');
         cleanTableBody();
-        ('/php/managing_tools.php' + '?values='+query);
-      fetch('/php/managing_tools.php' + '?values='+query) 
+        ('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/managing_tools.php' + '?values='+query);
+      fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/managing_tools.php' + '?values='+query) 
       .then(response => response.json())
       .then(jsonData => {
           (jsonData);
@@ -358,12 +358,12 @@ function closeAddModal() {
     add_modal.classList.add("hidden");
 }
 function handleConfirmDeleteUser(user_data) {
-    fetch(`/php/crud_users.php?delete_user=${user_data.user_id}`)
+    fetch(`http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/crud_users.php?delete_user=${user_data.user_id}`)
       .then(response => response.json())
       .then(data => {
         ("Success:", data);
         if (data == 200) {
-          window.location.href = "managing_tools.php";
+          window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/managing_tools.php";
         } else {
           alert("User could not be deleted");
         }
@@ -385,14 +385,14 @@ function handleConfirmDeleteUser(user_data) {
     user_type: user_data.userType,
     };
     const jsonData = JSON.stringify(data);
-    fetch("/php/crud_users.php?update_user=" + user_data.userId, {
+    fetch("http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/crud_users.php?update_user=" + user_data.userId, {
       method: "PUT",
       body: jsonData
     })
       .then(response => response.status)
       .then(data => {
         if (data === 200) {
-          window.location.href = "managing_tools.php";
+          window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/managing_tools.php";
         } else {
           alert("User could not be updated");
         }
@@ -452,7 +452,7 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
       controller.abort(); 
     }, timeoutValue);
     
-    fetch('/php/crud_users.php?add_user=true', {
+    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/crud_users.php?add_user=true', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -467,7 +467,7 @@ document.getElementById('createUserForm').addEventListener('submit', function(ev
       .then(data => {
         ('Success:', data);
         if (data === true) {
-          window.location.href = "managing_tools.php";
+          window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/managing_tools.php";
         } else {
           alert("User could not be added");
         }

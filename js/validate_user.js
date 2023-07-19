@@ -1,5 +1,5 @@
 document.getElementById("log-out").addEventListener("click", function () {
-    fetch('php/sessions_managment.php?action=logout')
+    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=logout')
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -20,9 +20,9 @@ document.getElementById("log-out").addEventListener("click", function () {
     let sessionCookie = getSessionCookie('session');
     console.log(sessionCookie);
     if (!sessionCookie) {
-        window.location.href = "login.php";
+        window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
     }
-    fetch('php/check_session.php?get=session')
+    fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_session.php?get=session')
         .then(response => response.json())
         .then(data => {
             if (data.status === 'active') {
@@ -31,7 +31,7 @@ document.getElementById("log-out").addEventListener("click", function () {
                   document.getElementById("admin").classList.remove("hidden");
                 }
             } else {
-              window.location.href = "login.php";
+              window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
             }
         });
   }

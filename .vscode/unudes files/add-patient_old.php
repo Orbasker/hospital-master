@@ -30,5 +30,5 @@
     </body>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="../js/components/navbar-menu.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/navbar-menu.js"></script>
 </html>

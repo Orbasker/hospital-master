@@ -6,7 +6,7 @@ loginForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const formData = new FormData(loginForm);
-    fetch(`php/sessions_managment.php?action=login`, {
+    fetch(`http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=login`, {
         method: 'POST',
         body: formData
     })

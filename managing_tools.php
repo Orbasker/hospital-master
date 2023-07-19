@@ -1,5 +1,5 @@
 <?php 
-include 'php/check_session.php';
+include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/check_session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +11,8 @@ include 'php/check_session.php';
       rel="stylesheet"
     />
     <title>Managing Tools - user administration</title>
-    <script src="js/components/navbar-menu.js"></script>
-    <script src="js/components/managing-tool.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/navbar-menu.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/managing-tool.js"></script>
   </head>
   <body>
     <navbar-menu>
@@ -21,8 +21,8 @@ include 'php/check_session.php';
       <managing-tool></managing-tool>
       </div>
     </navbar-menu>
-          <script src="js/managing_tools.js"></script>
-        <script src="js/validate_user.js"></script>
+          <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/managing_tools.js"></script>
+        <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js"></script>
 
   </body>
 </html>

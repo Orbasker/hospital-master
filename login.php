@@ -36,8 +36,8 @@
             </div>
         </div>
     </section>
-    <script src="js/login.js"></script>
-    <script src="js/components/message-modal.js"></script>
-    <script src="js/custom_message.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/login.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/message-modal.js"></script>
+    <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/custom_message.js"></script>
 </body>
 </html>
