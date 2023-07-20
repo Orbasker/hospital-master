@@ -101,20 +101,17 @@ function getStatusClass(status) {
         data.forEach((patient) => {
             uniqueDepartments.add(patient.patient_department);
         });
-        console.log(uniqueDepartments);
         uniqueDepartments.forEach((department) => {
           const option = document.createElement("option");
           option.value = department;
           option.textContent = department;
           option.classList.add("bg-gray-50", "border", "border-gray-300", "text-gray-900", "text-sm", "rounded-lg", "focus:ring-blue-500", "focus:border-blue-500", "block", "w-full", "p-2.5");
-          console.log(option);
           departmentsSelect.appendChild(option);
         });
         departmentsSelect.addEventListener("change", () => {
           const selectedDepartment = departmentsSelect.value;
         
           if (departmentsSelect.value === "Choose a department") {
-            console.log("You must choose department");
             modalClose.disabled = true;
           } else {
             modalClose.disabled = false;
