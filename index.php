@@ -1,6 +1,10 @@
 <?php 
 include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=check_session';
 session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html>

@@ -99,8 +99,9 @@ else if (isset($_GET['crud']) && $_GET['crud'] == 'delete')
 }
 else if (isset($_GET['crud']) && $_GET['crud'] == 'add') {
     if (isset($_POST['nurses']) && isset($_POST['doctors']) && isset($_POST['departments']) && isset($_POST['id']) && isset($_POST['last-name']) && isset($_POST['first-name'])) {
-        $add_patient_query = "INSERT INTO dbShnkr23stud2.tbl_209_patients (patient_first_name, patient_last_name, patient_id, patient_department, patient_doctor, patient_nurse, patient_estimated_time) " .
-            "VALUES('" . $_POST['first-name'] . "', '" . $_POST['last-name'] . "', '" . $_POST['id'] . "', '" . $_POST['departments'] . "', '" . $_POST['doctors'] . "', '" . $_POST['nurses'] . "', '" . $_POST['estimated_time'] . "') ";
+        $status = status_from_estimated_time($_POST['estimated_time']);
+        $add_patient_query = "INSERT INTO dbShnkr23stud2.tbl_209_patients (patient_first_name, patient_last_name, patient_id, patient_department, patient_doctor, patient_nurse, patient_estimated_time,status) " .
+            "VALUES('" . $_POST['first-name'] . "', '" . $_POST['last-name'] . "', '" . $_POST['id'] . "', '" . $_POST['departments'] . "', '" . $_POST['doctors'] . "', '" . $_POST['nurses'] . "', '" . $_POST['estimated_time'] . "', '" . $status . "')";
         $result = execute_query($add_patient_query);
         $result = json_decode($result, true);
         if ($result['status'] !== 'error') {
@@ -158,4 +159,26 @@ else
         'status' => 'No crud provided'
     );
     echo json_encode($result);
+}
+
+
+
+function status_from_estimated_time($estimated_time)
+{
+    if ($estimated_time == 24)
+    {
+        return "Stable";
+    }
+    else if ($estimated_time == 48)
+    {
+        return "Serious";
+    }
+    else if ($estimated_time == 72)
+    {
+        return "Critical";
+    }
+    else
+    {
+        return "Stable";
+    }
 }

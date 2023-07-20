@@ -89,17 +89,25 @@ if (isset($_GET['action']) && $_GET['action'] == 'select') {
                     {
                         $bed_id = $bed_id_result['data'][0]['bed_id'];
                         $bed_result['bed_id'] = $bed_id;
+                        $update_patient_query = "UPDATE dbShnkr23stud2.tbl_209_patients SET bed_number = '$bed_id' WHERE patient_id = '$id'";
+                        $update_patient_result = execute_query($update_patient_query);
+                        $update_patient_result = json_decode($update_patient_result, true);
+                        if ($update_patient_result['status'] == 'success')
+                        {
+                            $response = array(
+                                'status' => 'success',
+                                'message' => 'bed assign successfully',
+                                'bed_data' => $bed_result,
+                                'data' => $result['data']
+                            );
+                        }
+                        
                     }
                     else
                     {
                         $bed_result['bed_id'] = 'error';
                     }
-                    $response = array(
-                        'status' => 'success',
-                        'message' => 'bed assign successfully',
-                        'bed_data' => $bed_result,
-                        'data' => $result['data']
-                    );
+                    
                 }
                 else
                 {

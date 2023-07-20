@@ -1,10 +1,11 @@
 function openModal() {
     const modal = document.getElementById('modal');
-    modal.style.display = 'block';
+    modal.classList.remove('hidden');
   }
   function closeModal() {
     const modal = document.getElementById('modal');
-    modal.style.display = 'none';
+    
+    modal.classList.add('hidden');
   }
   modal = document.getElementById('modal');
   delete_patient = document.getElementById('delete_patient');

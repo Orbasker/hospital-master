@@ -4,10 +4,10 @@ document.getElementById("log-out").addEventListener("click", function () {
         .then(data => {
           console.log(data);
             if (data.status === 'inactive') {
+              
                 window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
             } else {
-                console.log('Error:', data.message);
-                console.log('Error:', data);
+                window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";
             }
         })
         .catch(error => {
@@ -18,8 +18,8 @@ document.getElementById("log-out").addEventListener("click", function () {
     fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=check_session')
         .then(response => response.json())
         .then(data => {
+
             if (data.status === 'active') {
-                console.log('Session active:', data.user_name);
                 if (data.user_type == "Admin") {
                   document.getElementById("admin").classList.remove("hidden");
                   document.getElementById("profilLogo").src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/svg/peled.jpg"
@@ -33,4 +33,5 @@ document.getElementById("log-out").addEventListener("click", function () {
             }
         });
   }
+
 checkSession();
