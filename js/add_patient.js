@@ -32,7 +32,6 @@ const formData = new FormData(form);
             }
         });
         } else {
-            console.log(data);
             messageModal = document.getElementById('messageModal');
             messageModal.classList.remove('hidden');
             messageHeader = document.getElementById('messageHeader');

@@ -34,14 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
   function updatePatientCard(data) {
-    console.log(data);
     data = data[0];
     const patientIdSpan = document.getElementById('patient-id');
     const patientNameSpan = document.getElementById('patient-name');
     const doctorSpan = document.getElementById('doctor');
     const statusSpan = document.getElementById('status');
     const bedNumberSpan = document.getElementById('bed-number');
-    console.log(patientIdSpan);  
     if (patientIdSpan) {
       patientIdSpan.innerHTML += data.patient_id;
     }

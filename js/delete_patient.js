@@ -12,16 +12,12 @@ function openModal() {
   delete_patient.addEventListener('submit', (event) => {
       event.preventDefault();
       const formData = new FormData(delete_patient);
-    console.log('delete_patient');
-    console.log(formData);
-    console.log(formData.get('patient_id'));
     fetch('http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/search_edit.php?crud=delete', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data);
     
         if (data.status === 'Patient deleted successfully') {
            setTimeout(() => {
