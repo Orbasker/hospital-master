@@ -2,13 +2,14 @@
 include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=check_session';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script type="application/json" id="hospitals-data"></script>
         <link rel="stylesheet" href="https://cdn.tailwindcss.com"></link>
         <title>Edit Patient - Hospital Master</title>
+        <link rel="icon" type="image/png" href="assets/svg/traffic-light-16.png">
     </head>
     <body>
         <navbar-menu>

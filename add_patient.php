@@ -2,7 +2,7 @@
 include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_managment.php?action=check_session';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8" />
         <script src="https://cdn.tailwindcss.com"></script>
@@ -11,6 +11,7 @@ include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_ma
         <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/add-patient-form.js"> </script>
         <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/navbar-menu.js"></script>
         <title>Add Patient - Hospital Master</title>
+        <link rel="icon" type="image/png" href="assets/svg/traffic-light-16.png">
     </head>
     <body>
         <navbar-menu>
@@ -21,7 +22,6 @@ include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_ma
             </section>
         </navbar-menu>
         <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/custom_message.js"></script>
-        
         <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_form.js"></script>
         <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js"></script>
         <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/add_patient.js"></script>
