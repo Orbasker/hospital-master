@@ -4,7 +4,6 @@ function openModal() {
   }
   function closeModal() {
     const modal = document.getElementById('modal');
-    
     modal.classList.add('hidden');
   }
   modal = document.getElementById('modal');

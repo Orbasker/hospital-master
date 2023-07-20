@@ -15,7 +15,7 @@ class listView extends HTMLElement {
                <div class="ml-3 text-gray-700 font-medium">Toggle Map View</div>
              </label>
            </div>
-       <table id="table_view" class="table-auto mx-auto w-full md:w-2/3 lg:w-3/4 my-8 ">
+       <table  class="table-auto mx-auto w-full md:w-2/3 lg:w-3/4 my-8 ">
            <thead>
                <tr></tr>
                <tr class="bg-blue-500 text-white">
@@ -25,7 +25,7 @@ class listView extends HTMLElement {
                    <th class="px-4 py-2">Status</th>
                </tr>
            </thead>
-           <tbody></tbody>
+           <tbody id="table_view"></tbody>
        </table>
        <div id="map_view" class="hidden ">
            <div id="patients" class="nflex flex-wrap justify-center gap-4 sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5" >    
