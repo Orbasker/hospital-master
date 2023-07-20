@@ -3,7 +3,7 @@ include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/sessions_ma
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@ session_start();
     <link rel="preload" href="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js" as="script">
     <title>Hospital Master</title>
     <link rel="icon" type="image/png" href="assets/svg/traffic-light-16.png">
-    </head>
+  </head>
   <body>
     <navbar-menu></navbar-menu>
     <main>
@@ -118,7 +118,6 @@ session_start();
     </main>
     <footer></footer>
     <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/components/navbar-menu.js"></script>
-
     <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/index.js"></script>
     <script src="http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/js/validate_user.js"></script>
   </body>
