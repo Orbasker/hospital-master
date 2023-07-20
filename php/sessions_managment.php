@@ -1,6 +1,4 @@
 <?php
-
-// Check if the action is 'login'
 if (isset($_GET["action"]) && $_GET["action"] == 'login') {
     include 'db.php';
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -44,18 +42,10 @@ if (isset($_GET["action"]) && $_GET["action"] == 'login') {
         );
     }
     echo json_encode($response);
-
-    // Redirect after login using JavaScript
-    // echo '<script>setTimeout(function(){ window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/index.php"; }, 2000);</script>';
     exit;
 }
-
-// Check if the action is 'logout'
 if (isset($_GET["action"]) && $_GET["action"] == 'logout') {
-// include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/config.php';
     session_start();
-
-    // Check if the session is active before attempting to destroy it
     if (isset($_SESSION['user_id']) && isset($_SESSION['user_name']) && isset($_SESSION['user_type'])) {
         unset($_SESSION["user_id"]);
         unset($_SESSION["user_name"]);
@@ -72,16 +62,9 @@ if (isset($_GET["action"]) && $_GET["action"] == 'logout') {
         );
     }
     echo json_encode($response);
-
-    // Redirect to login.php after logout
-    // echo '<script>window.location.href = "http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/login.php";</script>';
     exit;
 }
-
-// Check if the action is 'check_session'
 if (isset($_GET["action"]) && $_GET["action"] == 'check_session') {
-    // Check if the session is active
-// include 'http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/config.php';
 session_start();
     if (isset($_SESSION["user_id"]) && isset($_SESSION["user_name"]) && isset($_SESSION["user_type"])) {
         $response = array(

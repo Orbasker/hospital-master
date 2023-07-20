@@ -9,7 +9,6 @@ if(mysqli_connect_errno()){
         'error' => mysqli_connect_error()
     );
     echo json_encode($response);
-
 }function execute_query($query) {
     global $connection;
     try {

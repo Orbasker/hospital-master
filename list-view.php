@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Information - Hospital Master</title>
+    <link rel="icon" type="image/png" href="assets/svg/traffic-light-16.png">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>

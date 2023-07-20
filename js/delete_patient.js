@@ -11,7 +11,6 @@ function openModal() {
   delete_patient.addEventListener('submit', (event) => {
       event.preventDefault();
       const formData = new FormData(delete_patient);
-
     console.log('delete_patient');
     console.log(formData);
     console.log(formData.get('patient_id'));
@@ -36,7 +35,6 @@ function openModal() {
             window.location.href = 'index.php';
             }, 3000);
         } else {
-            // console.log(data);
             message_modal = document.getElementById('messageModal');
             message_modal.classList.remove('hidden');
             messageHeader = document.getElementById('messageHeader');

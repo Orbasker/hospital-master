@@ -67,26 +67,10 @@ function getStatusClass(status) {
       return "bg-gray-500";
   }
 }
-
-
-// fetch("http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/assets/json/hospitals.json")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     data.departments.forEach((department) => {
-      
-//     });
-//   })
-//   .catch((error) => {
-//     console.log("Error:", error);
-//   });
-
-
-  // function load_data() {
     const toggle = document.getElementById("toggle");
     const mapView = document.getElementById("map_view");
     const tableView = document.getElementById("table_view");
     const toggleBackground = document.getElementById("toggle_background");
-  
     toggle.addEventListener("change", (event) => {
       if (event.target.checked) {
         mapView.classList.remove("hidden");
@@ -100,10 +84,8 @@ function getStatusClass(status) {
         tableView.classList.remove("hidden");
       }
     });
-  
     const table = document.getElementById("table_view");
     const container = document.getElementById("patients");
-  
     fetch("http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/php/search_edit.php?crud=all") // Fetch data from the PHP script
       .then((response) => response.json())
       .then((data) => {
@@ -115,7 +97,6 @@ function getStatusClass(status) {
         modalClose.addEventListener("click", () => {
           closeModal();
         });
-
         const uniqueDepartments = new Set();
         data.forEach((patient) => {
             uniqueDepartments.add(patient.patient_department);
@@ -126,9 +107,7 @@ function getStatusClass(status) {
           option.value = department;
           option.textContent = department;
           option.classList.add("bg-gray-50", "border", "border-gray-300", "text-gray-900", "text-sm", "rounded-lg", "focus:ring-blue-500", "focus:border-blue-500", "block", "w-full", "p-2.5");
-          // option.innerHTML = department.name;
           console.log(option);
-
           departmentsSelect.appendChild(option);
         });
         departmentsSelect.addEventListener("change", () => {
@@ -143,93 +122,21 @@ function getStatusClass(status) {
           }
           showPatientsForDepartment(selectedDepartment, data);
         });
-        // data.forEach((patient) => {
-
-
-
-
-        //   let row = document.createElement("tr");
-        //   let nameCell = document.createElement("td");
-        //   let doctorCell = document.createElement("td");
-        //   let bedCell = document.createElement("td");
-        //   let statusCell = document.createElement("td");
-        //   let link1 = document.createElement("a");
-        //   link1.href = `http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/showDetails.php?bed_number=${patient.bed_number}`;
-        //   link1.textContent = patient.patient_first_name + " " + patient.patient_last_name;
-        //   nameCell.appendChild(link1);
-        //   doctorCell.appendChild(document.createTextNode(patient.patient_doctor));
-        //   bedCell.appendChild(document.createTextNode(patient.bed_number));
-        //   statusCell.appendChild(document.createTextNode(patient.status));
-        //   nameCell.classList.add("border", "px-4", "py-2");
-        //   doctorCell.classList.add("border", "px-4", "py-2");
-        //   bedCell.classList.add("border", "px-4", "py-2");
-        //   statusCell.classList.add("border", "px-4", "py-2");
-        //   row.appendChild(nameCell);
-        //   row.appendChild(doctorCell);
-        //   row.appendChild(bedCell);
-        //   row.appendChild(statusCell);
-        //   table.appendChild(row);
-  
-        //   const card = document.createElement("div");
-        //   card.classList.add(
-        //     "rounded-lg",
-        //     "shadow-md",
-        //     "p-4",
-        //     "m-4",
-        //     "flex",
-        //     "flex-col",
-        //     "justify-between",
-        //     "sm:w-full",
-        //     "md:w-50%",
-        //     "lg:w-25%",
-        //     "xl:w-20%",
-        //     `${getStatusClass(patient.status)}`
-        //   );
-        //   const title = document.createElement("h2");
-        //   title.classList.add("text-lg", "font-medium");
-        //   title.textContent = `Bed ${patient.bed_number}`;
-        //   const name = document.createElement("p");
-        //   name.classList.add("text-black-500");
-        //   name.textContent = `Patient Name: ${patient.patient_first_name} ${patient.patient_last_name}`;
-        //   const doctor = document.createElement("p");
-        //   doctor.classList.add("text-black-500");
-        //   doctor.textContent = `Doctor: ${patient.patient_doctor}`;
-        //   const status = document.createElement("p");
-        //   status.classList.add("text-black-500");
-        //   status.textContent = `Status: ${patient.status}`;
-        //   const link = document.createElement("a");
-        //   link.href = `http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/showDetails.php?bed_number=${patient.bed_number}`;
-        //   link.appendChild(title);
-        //   link.appendChild(name);
-        //   link.appendChild(doctor);
-        //   link.appendChild(status);
-        //   card.appendChild(link);
-        //   container.appendChild(card);
-        // });
       })
       .catch((error) => {
         console.error(error);
       });
-  // }
-  
-
-
-
   function showPatientsForDepartment(selectedDepartment, patientData) {
     const table = document.getElementById("table_view");
     const container = document.getElementById("patients");
-    table.innerHTML = ""; // Clear the table before adding new rows
-  
+    table.innerHTML = "";
     patientData.forEach((patient) => {
       if (patient.patient_department === selectedDepartment) {
-        // Create table row for the patient
         let row = document.createElement("tr");
         let nameCell = document.createElement("td");
         let doctorCell = document.createElement("td");
         let bedCell = document.createElement("td");
         let statusCell = document.createElement("td");
-  
-        // Set cell content
         let link1 = document.createElement("a");
         link1.href = `http://se.shenkar.ac.il/students/2022-2023/web1/dev_209/showDetails.php?bed_number=${patient.bed_number}`;
         link1.textContent = patient.patient_first_name + " " + patient.patient_last_name;
@@ -237,23 +144,15 @@ function getStatusClass(status) {
         doctorCell.appendChild(document.createTextNode(patient.patient_doctor));
         bedCell.appendChild(document.createTextNode(patient.bed_number));
         statusCell.appendChild(document.createTextNode(patient.status));
-  
-        // Add CSS classes to the cells
         nameCell.classList.add("border", "px-4", "py-2");
         doctorCell.classList.add("border", "px-4", "py-2");
         bedCell.classList.add("border", "px-4", "py-2");
         statusCell.classList.add("border", "px-4", "py-2");
-  
-        // Append cells to the row
         row.appendChild(nameCell);
         row.appendChild(doctorCell);
         row.appendChild(bedCell);
         row.appendChild(statusCell);
-  
-        // Append row to the table
         table.appendChild(row);
-  
-        // Create card for the patient
         const card = document.createElement("div");
         card.classList.add(
           "rounded-lg",
